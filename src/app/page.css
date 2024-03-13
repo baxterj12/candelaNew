@@ -1,0 +1,83 @@
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    /*height: 100vh; /* Full height of viewport */
+    /*width: 200vh;*/
+    background-color: white;
+    overflow-y: auto;
+}
+  
+.topBar {
+    height: 50px; /* Take up remaining space */
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.dropDownMenu {
+    height: 50px; /* Set the height of the yellow rectangle */
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.videoPage {
+    height: 400px;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.storyText {
+    height: 450px;
+    background-color: tan;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.newestCollection {
+    height: 250px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.allCollections {
+    height: 1000px;
+    background-color: tan;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bestSellers {
+    height: 250px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.instagramLink {
+    height: 200px;
+    background-color: tan;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.getInTouch {
+    height: 150px;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
