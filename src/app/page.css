@@ -8,12 +8,26 @@
 }
 
 .topBar {
-    height: 50px; /* Take up remaining space */
+    height: 60px; /* Take up remaining space */
     background-color: white;
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+.widen{
+    margin-left: -40px;
+    align-items: flex-start;
+    width: 245px;
+}
+
+.searchInstaBag {
+    height: 50px; /* Take up remaining space */
+    gap: 30px;
+    background-color: white;
+    display: flex;
     align-items: center;
+    justify-content: space-between;
+    margin-right: 20px;
 }
 
 .logoImage {
@@ -32,7 +46,7 @@
 
 .videoPage {
     height: 400px;
-    background-color: red;
+    background-color: grey;
     display: flex;
     justify-content: center;
     align-items: center;

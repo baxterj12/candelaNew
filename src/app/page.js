@@ -1,7 +1,10 @@
 import react from 'react';
 import './page.css';
 import { FiAlignJustify } from "react-icons/fi";
-import { FaHome, FaUser } from 'react-icons/fa';
+import { FaInstagram} from "react-icons/fa";
+import { IoSearch } from "react-icons/io5";
+import { MdOutlineShoppingBag } from "react-icons/md";
+import ReactPlayer from 'react-player';
 
 //default indicates that this is the home page
 //use classname to create different components
@@ -10,9 +13,13 @@ export default function Home() {
     <div className="container">
     
       <div className="topBar">
-        <FiAlignJustify size = {35}/>
+        <FiAlignJustify size = {60} className="widen" />
         <img src="/candelalogo.svg" alt="logo" className="logoImage" />
-        filler
+        <div className="searchInstaBag">
+          <IoSearch size = {50}/>
+          <FaInstagram size = {50}/>
+          <MdOutlineShoppingBag size = {50}/>
+        </div>
       </div>
 
       <div className="dropDownMenu">
@@ -20,7 +27,8 @@ export default function Home() {
       </div>
 
       <div className="videoPage">
-        <p> this will be the video story</p>
+        <p> attempting to show video. </p>
+        <p> maybe look into react-player</p>
       </div>
 
       <div className="storyText">
