@@ -1,13 +1,18 @@
 import react from 'react';
 import './page.css';
+import { FiAlignJustify } from "react-icons/fi";
+import { FaHome, FaUser } from 'react-icons/fa';
 
 //default indicates that this is the home page
 //use classname to create different components
 export default function Home() {
   return (
     <div className="container">
+    
       <div className="topBar">
-        <p> top bar</p>
+        <FiAlignJustify size = {35}/>
+        <img src="/candelalogo.svg" alt="logo" className="logoImage" />
+        filler
       </div>
 
       <div className="dropDownMenu">

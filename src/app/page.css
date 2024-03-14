@@ -1,5 +1,3 @@
-
-
 .container {
     display: flex;
     flex-direction: column;
@@ -8,21 +6,28 @@
     background-color: white;
     overflow-y: auto;
 }
-  
+
 .topBar {
     height: 50px; /* Take up remaining space */
     background-color: white;
     display: flex;
-    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
     align-items: center;
 }
-  
+
+.logoImage {
+    height: 250px;
+    width: 200px;
+}
+
 .dropDownMenu {
     height: 50px; /* Set the height of the yellow rectangle */
     background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: inset 0px 3px 3px rgb(174, 174, 174);
 }
 
 .videoPage {
