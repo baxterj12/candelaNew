@@ -5,6 +5,7 @@
     /*width: 200vh;*/
     background-color: white;
     overflow-y: auto;
+    color: white;
 }
 
 .topBar {
@@ -42,6 +43,7 @@
     justify-content: center;
     align-items: center;
     box-shadow: inset 0px 3px 3px rgb(174, 174, 174);
+    color: black;
 }
 
 .videoPage {
@@ -56,8 +58,19 @@
     height: 450px;
     background-color: tan;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    flex-direction: column;
+}
+
+.header{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.storyParagraphs {
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
 .newestCollection {

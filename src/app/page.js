@@ -32,7 +32,31 @@ export default function Home() {
       </div>
 
       <div className="storyText">
-        <p> this will be the text story</p>
+          <h1 className="header">Welcome to Candela</h1>
+            <p className="storyParagraphs"> "Candela is a love letter to the soul of Salvadoran culture. 
+              With each meticulously handcrafted creation, we work to ignite a flame illuminating 
+              a path for those who breathe life into our rich heritage, El Salvador artisans.
+            </p>
+            <p className="storyParagraphs">
+            In a world where impersonal mass production often overshadows individuality, 
+            Candela emerged in Founded in 2023; our brand proudly prioritizes sustainability by utilizing recycled
+            and reused materials in our handmade creations, infusing each piece with a story of rebirth and renewal.
+            </p>
+            <p className="storyParagraphs">
+              Our artisans, who come from six distinct towns in El Salvador, are not just skilled
+              craftspeople; they are dream weavers, infusing their creations with the magic 
+              of centuries-old traditions passed down through generations.
+            </p>
+            <p className="storyParagraphs">
+              Candela proudly partners with Mater Filus, a Salvadorian women’s shelter,
+              to empower women from at-risk backgrounds through training programs. 
+              Furthermore, we actively support the local artistic community by 
+              hosting educational events to preserve culture and foster job creation.
+            </p>
+            <p className="storyParagraphs">
+              Candela stands as a tribute to our roots, weaving together the threads of 
+              our heritage into a tapestry of dreams and serving as a timeless symbol of tradition and innovation."
+            </p>
       </div>
 
       <div className="newestCollection">
