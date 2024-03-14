@@ -4,13 +4,15 @@ import { FiAlignJustify } from "react-icons/fi";
 import { FaInstagram} from "react-icons/fa";
 import { IoSearch } from "react-icons/io5";
 import { MdOutlineShoppingBag } from "react-icons/md";
-import ReactPlayer from 'react-player';
+import ButtonGroup from 'react-bootstrap/ButtonGroup';
+import Dropdown from 'react-bootstrap/Dropdown';
+import DropdownButton from 'react-bootstrap/DropdownButton';
 
 //default indicates that this is the home page
 //use classname to create different components
 export default function Home() {
   return (
-    <div className="container">
+    <div class="w-full" className="container" >
     
       <div className="topBar">
         <FiAlignJustify size = {60} className="widen" />
@@ -23,12 +25,11 @@ export default function Home() {
       </div>
 
       <div className="dropDownMenu">
-        <p>this will be the dropdown menu</p>
+        <collectionsDrop/>
       </div>
 
       <div className="videoPage">
-        <p> attempting to show video. </p>
-        <p> maybe look into react-player</p>
+        <h1 className="header"> Pieces with soul. Made in El Salvador. </h1>
       </div>
 
       <div className="storyText">
@@ -57,28 +58,48 @@ export default function Home() {
               Candela stands as a tribute to our roots, weaving together the threads of 
               our heritage into a tapestry of dreams and serving as a timeless symbol of tradition and innovation."
             </p>
+            <p> </p>
       </div>
 
       <div className="newestCollection">
-        <p> this will be the newest collections</p>
+        <h1 className="header"> Our Newest Collection: Floracion Pancha</h1>
       </div>
 
       <div className="allCollections">
-        <p> this will be all collections</p>
+      <h1 className="header"> All Collections</h1>
       </div>
 
       <div className="bestSellers">
-        <p> this will be best sellers</p>
+      <h1 className="header"> Best Sellers </h1>
       </div>
 
       <div className="instagramLink">
-        <p> this will be instagram link</p>
+        <p className="handle"> @_somoscandela</p>
+        <h1 className="header"> Shop Our Instagram </h1>
       </div>
 
       <div className="getInTouch">
-        <p> this will be instagram link</p>
+        <p> this will be contact info</p>
       </div>
 
     </div>
+  );
+}
+
+function CollectionsDrop() {
+  return (
+    <DropdownButton
+      as={ButtonGroup}
+      title="Our Collections"
+      id="collections-dropdown"
+    >
+      <Dropdown.Item eventKey="1">Action</Dropdown.Item>
+      <Dropdown.Item eventKey="2">Another action</Dropdown.Item>
+      <Dropdown.Item eventKey="3" active>
+        Active Item
+      </Dropdown.Item>
+      <Dropdown.Divider />
+      <Dropdown.Item eventKey="4">Separated link</Dropdown.Item>
+    </DropdownButton>
   );
 }
