@@ -47,6 +47,11 @@
     align-items: center;
     box-shadow: inset 0px 3px 3px rgb(174, 174, 174);
     color: black;
+    overflow-y:visible;
+}
+
+.filler{
+    height:60px;
 }
 
 .videoPage {

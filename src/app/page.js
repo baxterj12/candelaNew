@@ -4,9 +4,12 @@ import { FiAlignJustify } from "react-icons/fi";
 import { FaInstagram} from "react-icons/fa";
 import { IoSearch } from "react-icons/io5";
 import { MdOutlineShoppingBag } from "react-icons/md";
-import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import Dropdown from 'react-bootstrap/Dropdown';
-import DropdownButton from 'react-bootstrap/DropdownButton';
+import DropdownToggle from 'react-bootstrap/DropdownToggle';
+import DropdownItem from 'react-bootstrap/DropdownItem';
+import DropdownMenu from 'react-bootstrap/DropdownMenu';
+
+
 
 //default indicates that this is the home page
 //use classname to create different components
@@ -25,7 +28,7 @@ export default function Home() {
       </div>
 
       <div className="dropDownMenu">
-        <collectionsDrop/>
+        <OurCollections/>
       </div>
 
       <div className="videoPage">
@@ -86,20 +89,18 @@ export default function Home() {
   );
 }
 
-function CollectionsDrop() {
+function OurCollections() {
   return (
-    <DropdownButton
-      as={ButtonGroup}
-      title="Our Collections"
-      id="collections-dropdown"
-    >
-      <Dropdown.Item eventKey="1">Action</Dropdown.Item>
-      <Dropdown.Item eventKey="2">Another action</Dropdown.Item>
-      <Dropdown.Item eventKey="3" active>
-        Active Item
-      </Dropdown.Item>
-      <Dropdown.Divider />
-      <Dropdown.Item eventKey="4">Separated link</Dropdown.Item>
-    </DropdownButton>
+    <Dropdown >
+      <DropdownToggle variant="success" id="dropdown-basic">
+        Our Collections
+      </DropdownToggle>
+      <DropdownMenu >
+        <div className="filler" />
+        <div><DropdownItem>Collection 1</DropdownItem></div>
+        <div><DropdownItem>Collection 2</DropdownItem></div>
+        <div><DropdownItem>Collection 3</DropdownItem></div>
+      </DropdownMenu>
+    </Dropdown>
   );
 }
