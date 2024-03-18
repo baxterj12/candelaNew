@@ -3,6 +3,7 @@ import './page.css';
 import { FiAlignJustify } from "react-icons/fi";
 import { FaInstagram} from "react-icons/fa";
 import { IoSearch } from "react-icons/io5";
+import { FaCircle } from "react-icons/fa6";
 import { MdOutlineShoppingBag } from "react-icons/md";
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownToggle from 'react-bootstrap/DropdownToggle';
@@ -32,7 +33,7 @@ export default function Home() {
       </div>
 
       <div className="videoPage">
-        <video src="/demovid.mp4" class="w-full"/>
+        <video src="/demovid.mp4" autoPlay loop class="w-full"/>
         <h1 className="overlay"> Pieces with soul. Made in El Salvador. </h1>
       </div>
 
@@ -67,6 +68,8 @@ export default function Home() {
 
       <div className="newestCollection">
         <h1 className="header"> Our Newest Collection: Floracion Pancha</h1>
+        <p className="twentypxFill"/>
+        <HorizontalScroll/>
       </div>
 
       <div className="allCollections">
@@ -103,5 +106,25 @@ function OurCollections() {
         <div><DropdownItem>Collection 3</DropdownItem></div>
       </DropdownMenu>
     </Dropdown>
+  );
+}
+
+const HorizontalScroll = () => {
+  return (
+    <div className="horizontal-scroll-container">
+      <div className="horizontal-scroll">
+        {/* Items go here */}
+        <div className="item">Item 1</div>
+        <div className="item">Item 2</div>
+        <div className="item">Item 3</div>
+        <div className="item">Item 1</div>
+        <div className="item">Item 2</div>
+        <div className="item">Item 3</div>
+        <div className="item">Item 1</div>
+        <div className="item">Item 2</div>
+        <div className="item">Item 3</div>
+        {/* Add more items as needed */}
+      </div>
+    </div>
   );
 }
