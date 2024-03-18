@@ -68,11 +68,18 @@ export default function Home() {
 
       <div className="newestCollection">
         <h1 className="header"> Our Newest Collection: Floracion Pancha</h1>
-        <HorizontalScroll/>
+        <NewestCollection/>
       </div>
 
       <div className="allCollections">
       <h1 className="header"> All Collections</h1>
+      <div className="singleClass">
+        <div className="headerAndPicture">
+          <h1 className="header">Floracion Pancha</h1>
+          <img src="/floracionPancha.svg" alt="logo" className="logoImage" />
+        </div>
+        <p>text</p>
+      </div>
       </div>
 
       <div className="bestSellers">
@@ -108,7 +115,7 @@ function OurCollections() {
   );
 }
 
-const HorizontalScroll = () => {
+const NewestCollection = () => {
   return (
     <div className="horizontal-scroll-container">
       <div className="horizontal-scroll">

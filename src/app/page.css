@@ -157,6 +157,20 @@
     color: white;
 }
 
+.singleCollection{
+    display: flex;
+    align-items:flex-start;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.headerAndPicture{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
 .bestSellers {
     height: 350px;
     background-color: white;
