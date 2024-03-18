@@ -32,7 +32,8 @@ export default function Home() {
       </div>
 
       <div className="videoPage">
-        <h1 className="header"> Pieces with soul. Made in El Salvador. </h1>
+        <video src="/demovid.mp4" class="w-full"/>
+        <h1 className="overlay"> Pieces with soul. Made in El Salvador. </h1>
       </div>
 
       <div className="storyText">
