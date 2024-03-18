@@ -68,7 +68,6 @@ export default function Home() {
 
       <div className="newestCollection">
         <h1 className="header"> Our Newest Collection: Floracion Pancha</h1>
-        <p className="twentypxFill"/>
         <HorizontalScroll/>
       </div>
 
@@ -114,17 +113,83 @@ const HorizontalScroll = () => {
     <div className="horizontal-scroll-container">
       <div className="horizontal-scroll">
         {/* Items go here */}
-        <div className="item">Item 1</div>
-        <div className="item">Item 2</div>
-        <div className="item">Item 3</div>
-        <div className="item">Item 1</div>
-        <div className="item">Item 2</div>
-        <div className="item">Item 3</div>
-        <div className="item">Item 1</div>
-        <div className="item">Item 2</div>
-        <div className="item">Item 3</div>
+        <div className="item">
+          <img src="/defaultimage.JPG" className="itemImage"/>
+          <RowOfCircles/>
+          <div className="itemContent">
+            <p>Product 1</p>
+            <p>$10</p>
+          </div>
+        </div>
+        <div className="item">
+          <img src="/defaultimage.JPG" className="itemImage"/>
+          <RowOfCircles/>
+          <div className="itemContent">
+            <p>Product 2</p>
+            <p>$20</p>
+          </div>
+        </div>
+        <div className="item">
+          <img src="/defaultimage.JPG" className="itemImage"/>
+          <RowOfCircles/>
+          <div className="itemContent">
+            <p>Product 3</p>
+            <p>$30</p>
+          </div>
+        </div>
+        <div className="item">
+          <img src="/defaultimage.JPG" className="itemImage"/>
+          <RowOfCircles/>
+          <div className="itemContent">
+            <p>Product 4</p>
+            <p>$40</p>
+          </div>
+        </div>
+        <div className="item">
+          <img src="/defaultimage.JPG" className="itemImage"/>
+          <RowOfCircles/>
+          <div className="itemContent">
+            <p>Product 5</p>
+            <p>$50</p>
+          </div>
+        </div>
+        <div className="item">
+          <img src="/defaultimage.JPG" className="itemImage"/>
+          <RowOfCircles/>
+          <div className="itemContent">
+            <p>Product 6</p>
+            <p>$60</p>
+          </div>
+        </div>
+        <div className="item">
+          <img src="/defaultimage.JPG" className="itemImage"/>
+          <RowOfCircles/>
+          <div className="itemContent">
+            <p>Product 7</p>
+            <p>$70</p>
+          </div>
+        </div>
+        <div className="item">
+          <img src="/defaultimage.JPG" className="itemImage"/>
+          <RowOfCircles/>
+          <div className="itemContent">
+            <p>Product 8</p>
+            <p>$80</p>
+          </div>
+        </div>
         {/* Add more items as needed */}
       </div>
+    </div>
+  );
+}
+
+const RowOfCircles =() =>{
+  return (
+    <div className="rowCircles">
+      <FaCircle size = {30} style={{ color: '#3f464f' }}/>
+      <FaCircle size = {30} style={{color: '#574f3b' }}/>
+      <FaCircle size = {30} style={{color: "#a39d8c"}}/>
+      <FaCircle size = {30} style={{color: '#5e594b'}}/>
     </div>
   );
 }

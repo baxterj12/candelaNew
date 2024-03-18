@@ -95,7 +95,7 @@
 }
 
 .newestCollection {
-    height: 400px;
+    height: 410px;
     background-color: white;
     display: flex;
     justify-content: flex-start;
@@ -103,29 +103,48 @@
     color: black;
     flex-direction: column;
 }
-.twentypxFill{
-    height: 20px;
-}
 
-.tenpxFill{
-    height: 10px;
+.horizontal-scroll-container {
+    width: 100%; /* Set fixed width for the container */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Keep items in a single line */
+    margin-left: 50px;
+    margin-top: 10px;
 }
-
-.collectionItem{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    color: black;
+  
+.horizontal-scroll {
+    display: inline-block; /* Ensure container doesn't expand */
+}
+  
+.item {
+    display: inline-block; /* Display items in a row */
+    width: 200px; /* Set width of each item */
+    height: 330px; /* Set height of each item */
+    margin-right: 40px; /* Add margin between items */
     flex-direction: column;
+    justify-content: space-between;
 }
 
-.newestCollectionImage{
-    height: 200px;
+.itemImage {
+    height: 225px;
     width: 200px;
 }
 
-.circles {
-    color:aquamarine;
+.rowCircles {
+    height: 50px;
+    width: 200px;
+    display: flex; /* Ensures the circles are displayed in a row */
+    justify-content: space-between; /* Centers the circles horizontally */
+    margin-top: 10px; /* Adjust as needed */
+}
+
+.itemContent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: -10px;
 }
 
 .allCollections {
@@ -170,21 +189,3 @@
     justify-content: center;
     align-items: center;
 }
-
-.horizontal-scroll-container {
-    width: 100%; /* Set fixed width for the container */
-    overflow-x: auto; /* Enable horizontal scrolling */
-    white-space: nowrap; /* Keep items in a single line */
-  }
-  
-  .horizontal-scroll {
-    display: inline-block; /* Ensure container doesn't expand */
-  }
-  
-  .item {
-    display: inline-block; /* Display items in a row */
-    width: 200px; /* Set width of each item */
-    height: 370px; /* Set height of each item */
-    margin-right: 10px; /* Add margin between items */
-    background-color: lightblue; /* Background color of items */
-  }
