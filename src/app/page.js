@@ -1,5 +1,5 @@
 'use client'
-import react from 'react';
+import react, {useState} from 'react';
 import './page.css';
 import { FiAlignJustify } from "react-icons/fi";
 import { FaInstagram, FaTwitter, FaEnvelope } from "react-icons/fa";
@@ -7,6 +7,7 @@ import { IoSearch } from "react-icons/io5";
 import { FaCircle } from "react-icons/fa6";
 import { MdOutlineShoppingBag } from "react-icons/md";
 import {Dropdown, DropdownTrigger, DropdownMenu, DropdownItem, Button} from "@nextui-org/react";
+import { FaChevronDown} from "react-icons/fa";
 
 
 //default indicates that this is the home page
@@ -27,10 +28,12 @@ export default function Home() {
       </div>
 
       <div className="dropDownMenu">
+        <div></div>
         <OurCollections/>
         <OurStory/>
         <OurProcess/>
-        <OurImpact/>
+        <OurImpact className="drop"/>
+        <div></div>
       </div>
 
       <div className="videoPage">
@@ -375,18 +378,16 @@ const RowOfCircles =() =>{
   return (
     <Dropdown>
       <DropdownTrigger>
-        <Button 
-          variant="bordered" 
-        >
-          Our Collections
+        <Button variant="bordered" >
+          Our Collections {' '} <FaChevronDown style={{ display: 'inline' }}/>
         </Button>
       </DropdownTrigger>
       <DropdownMenu aria-label="Static Actions" style={{ backgroundColor: '#fff' }}>
-        <DropdownItem key="floracionPancha" class="dropDownItem">Floracion Pancha</DropdownItem>
-        <DropdownItem key="laCieba" class="dropDownItem">La Cieba</DropdownItem>
-        <DropdownItem key="nahuales" class="dropDownItem">Nahuales</DropdownItem>
-        <DropdownItem key="cowboyHats"class="dropDownItem">Cowboy Hats</DropdownItem>
-        <DropdownItem key="sanSebastian" class="dropDownItem">San Sebastian</DropdownItem>
+        <DropdownItem key="floracionPancha">Floracion Pancha</DropdownItem>
+        <DropdownItem key="laCieba">La Cieba</DropdownItem>
+        <DropdownItem key="nahuales">Nahuales</DropdownItem>
+        <DropdownItem key="cowboyHats">Cowboy Hats</DropdownItem>
+        <DropdownItem key="sanSebastian">San Sebastian</DropdownItem>
       </DropdownMenu>
     </Dropdown>
   );
@@ -396,18 +397,16 @@ function OurStory() {
   return (
     <Dropdown>
       <DropdownTrigger>
-        <Button 
-          variant="bordered" 
-        >
-          Our Collections
+        <Button variant="bordered" >
+          Our Story {' '} <FaChevronDown style={{ display: 'inline' }}/>
         </Button>
       </DropdownTrigger>
       <DropdownMenu aria-label="Static Actions" style={{ backgroundColor: '#fff' }}>
-        <DropdownItem key="floracionPancha" class="dropDownItem">Story 1</DropdownItem>
-        <DropdownItem key="laCieba" class="dropDownItem">Story 2</DropdownItem>
-        <DropdownItem key="nahuales" class="dropDownItem">Story 3</DropdownItem>
-        <DropdownItem key="cowboyHats"class="dropDownItem">Story 4</DropdownItem>
-        <DropdownItem key="sanSebastian" class="dropDownItem">Story 5</DropdownItem>
+        <DropdownItem key="floracionPancha">Story 1</DropdownItem>
+        <DropdownItem key="laCieba">Story 2</DropdownItem>
+        <DropdownItem key="nahuales">Story 3</DropdownItem>
+        <DropdownItem key="cowboyHats">Story 4</DropdownItem>
+        <DropdownItem key="sanSebastian">Story 5</DropdownItem>
       </DropdownMenu>
     </Dropdown>
   );
@@ -415,20 +414,18 @@ function OurStory() {
 
 function OurProcess() {
   return (
-    <Dropdown>
+    <Dropdown >
       <DropdownTrigger>
-        <Button 
-          variant="bordered" 
-        >
-          Our Collections
+        <Button variant="bordered" >
+          Our Process {' '} <FaChevronDown style={{ display: 'inline' }}/>
         </Button>
       </DropdownTrigger>
       <DropdownMenu aria-label="Static Actions" style={{ backgroundColor: '#fff' }}>
-        <DropdownItem key="floracionPancha" class="dropDownItem">Process 1</DropdownItem>
-        <DropdownItem key="laCieba" class="dropDownItem">Process 2</DropdownItem>
-        <DropdownItem key="nahuales" class="dropDownItem">Process 3</DropdownItem>
-        <DropdownItem key="cowboyHats"class="dropDownItem">Process 4</DropdownItem>
-        <DropdownItem key="sanSebastian" class="dropDownItem">Process 5</DropdownItem>
+        <DropdownItem key="floracionPancha">Process 1</DropdownItem>
+        <DropdownItem key="laCieba">Process 2</DropdownItem>
+        <DropdownItem key="nahuales">Process 3</DropdownItem>
+        <DropdownItem key="cowboyHats">Process 4</DropdownItem>
+        <DropdownItem key="sanSebastian">Process 5</DropdownItem>
       </DropdownMenu>
     </Dropdown>
   );
@@ -438,18 +435,16 @@ function OurImpact() {
   return (
     <Dropdown>
       <DropdownTrigger>
-        <Button 
-          variant="bordered" 
-        >
-          Our Collections
+        <Button variant="bordered" >
+          Our Impact {' '} <FaChevronDown style={{ display: 'inline' }}/>
         </Button>
       </DropdownTrigger>
       <DropdownMenu aria-label="Static Actions" style={{ backgroundColor: '#fff' }}>
-        <DropdownItem key="floracionPancha" class="dropDownItem">Impact 1</DropdownItem>
-        <DropdownItem key="laCieba" class="dropDownItem">Impact 2</DropdownItem>
-        <DropdownItem key="nahuales" class="dropDownItem">Impact 3</DropdownItem>
-        <DropdownItem key="cowboyHats"class="dropDownItem">Impact 4</DropdownItem>
-        <DropdownItem key="sanSebastian" class="dropDownItem">Impact 5</DropdownItem>
+        <DropdownItem key="floracionPancha">Impact 1</DropdownItem>
+        <DropdownItem key="laCieba">Impact 2</DropdownItem>
+        <DropdownItem key="nahuales">Impact 3</DropdownItem>
+        <DropdownItem key="cowboyHats">Impact 4</DropdownItem>
+        <DropdownItem key="sanSebastian">Impact 5</DropdownItem>
       </DropdownMenu>
     </Dropdown>
   );
