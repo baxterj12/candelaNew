@@ -1,7 +1,7 @@
 import react from 'react';
 import './page.css';
 import { FiAlignJustify } from "react-icons/fi";
-import { FaInstagram} from "react-icons/fa";
+import { FaInstagram, FaTwitter, FaEnvelope } from "react-icons/fa";
 import { IoSearch } from "react-icons/io5";
 import { FaCircle } from "react-icons/fa6";
 import { MdOutlineShoppingBag } from "react-icons/md";
@@ -83,16 +83,54 @@ export default function Home() {
       </div>
 
       <div className="bestSellers">
-      <h1 className="header"> Best Sellers </h1>
+        <h1 className="header"> Best Sellers </h1>
+      <BestSellers/>
       </div>
 
-      <div className="instagramLink">
-        <p className="handle"> @_somoscandela</p>
+      <div className="instagram">
+        <a href="https://www.instagram.com/_somoscandela/" target="_blank" rel="noopener noreferrer">@_somoscandela</a>
         <h1 className="header"> Shop Our Instagram </h1>
+        <div className="instagram-posts">
+        <a href="https://www.instagram.com/p/C4ZG0HvIx7w/" target="_blank" rel="noopener noreferrer">
+          <img src="birds.png" className="image"/>
+        </a>
+        <a href="https://www.instagram.com/p/C4MT6j4IFlF/?img_index=1" target="_blank" rel="noopener noreferrer">
+          <img src="boots.png" className="image" />
+        </a>
+        <a href="https://www.instagram.com/p/C4HITQUo74z/" target="_blank" rel="noopener noreferrer">
+          <img src="cactus.png" className="image"/>
+        </a>
+        <a href="https://www.instagram.com/p/C36JtEDopdQ/?img_index=1" target="_blank" rel="noopener noreferrer">
+          <img src="man.png" className="image"/>
+        </a>
+        </div>
       </div>
 
-      <div className="getInTouch">
-        <p> this will be contact info</p>
+      <div className="contactInfo">
+        <div className="format">
+          <div className="getInTouch">
+            <h2>GET IN TOUCH</h2>
+            <div className="icons">
+              <FaTwitter size = {25}/>
+              <FaInstagram size = {25}/>
+              <FaEnvelope size={25} />
+              <p className="email">info@sequencecollection.com</p>
+            </div>
+          </div>
+          <div className="newsletter">
+            <h2>NEWSLETTER</h2>
+            <p>Sign up for the latest news, offers, and styles</p>
+            <div className = "input-group">
+              <input type="email" placeholder="Your email" />
+              <button type="submit">Subscribe</button>
+              </div>
+          </div>
+        </div>
+        <div className ="space">
+          
+        </div>
+        <p>@CopyRight © 2024, Sequence Collection. Ecommerce Software by Shopify</p>
+        <p>Design by GreySkyGraphics</p>
       </div>
 
     </div>
@@ -116,6 +154,81 @@ function OurCollections() {
 }
 
 const NewestCollection = () => {
+  return (
+    <div className="horizontal-scroll-container">
+      <div className="horizontal-scroll">
+        {/* Items go here */}
+        <div className="item">
+          <img src="/defaultimage.JPG" className="itemImage"/>
+          <RowOfCircles/>
+          <div className="itemContent">
+            <p>Product 1</p>
+            <p>$10</p>
+          </div>
+        </div>
+        <div className="item">
+          <img src="/defaultimage.JPG" className="itemImage"/>
+          <RowOfCircles/>
+          <div className="itemContent">
+            <p>Product 2</p>
+            <p>$20</p>
+          </div>
+        </div>
+        <div className="item">
+          <img src="/defaultimage.JPG" className="itemImage"/>
+          <RowOfCircles/>
+          <div className="itemContent">
+            <p>Product 3</p>
+            <p>$30</p>
+          </div>
+        </div>
+        <div className="item">
+          <img src="/defaultimage.JPG" className="itemImage"/>
+          <RowOfCircles/>
+          <div className="itemContent">
+            <p>Product 4</p>
+            <p>$40</p>
+          </div>
+        </div>
+        <div className="item">
+          <img src="/defaultimage.JPG" className="itemImage"/>
+          <RowOfCircles/>
+          <div className="itemContent">
+            <p>Product 5</p>
+            <p>$50</p>
+          </div>
+        </div>
+        <div className="item">
+          <img src="/defaultimage.JPG" className="itemImage"/>
+          <RowOfCircles/>
+          <div className="itemContent">
+            <p>Product 6</p>
+            <p>$60</p>
+          </div>
+        </div>
+        <div className="item">
+          <img src="/defaultimage.JPG" className="itemImage"/>
+          <RowOfCircles/>
+          <div className="itemContent">
+            <p>Product 7</p>
+            <p>$70</p>
+          </div>
+        </div>
+        <div className="item">
+          <img src="/defaultimage.JPG" className="itemImage"/>
+          <RowOfCircles/>
+          <div className="itemContent">
+            <p>Product 8</p>
+            <p>$80</p>
+          </div>
+        </div>
+        {/* Add more items as needed */}
+      </div>
+    </div>
+  );
+}
+
+const BestSellers = () => {
   return (
     <div className="horizontal-scroll-container">
       <div className="horizontal-scroll">

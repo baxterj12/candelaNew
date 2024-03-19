@@ -73,7 +73,7 @@
 
 .storyText {
     height: 500px;
-    background-color: tan;
+    background-color: #ACA190;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -149,7 +149,7 @@
 
 .allCollections {
     height: 1000px;
-    background-color: tan;
+    background-color: #ACA190;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -172,7 +172,7 @@
 }
 
 .bestSellers {
-    height: 350px;
+    height: 410px;
     background-color: white;
     display: flex;
     justify-content: flex-start;
@@ -181,25 +181,139 @@
     color: black;
 }
 
-.instagramLink {
-    height: 300px;
-    background-color: tan;
+.instagram {
+    height: 450px;
+    background-color: #ACA190;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
     color: white;
 }
+
+.instagram a{
+    margin-top: 15px;
+    font-size: 20px;
+    color: #fff;
+}
+
+.instagram h1 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.instagram-posts{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.image {
+    width: 250px;
+    height: 250px;
+}
+
 .handle {
     margin-top: 10px;
     font-size: 20px;
 }
 
+.contactInfo {
+  background-color: #222222;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px 0;
+}
+  
+.contactInfo p {
+    font-size: 10px;
+    text-align: center;
+}
+
+.contactInfo h2 {
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+  
+.format {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+  
+.format > div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
 .getInTouch {
-    height: 250px;
-    background-color: black;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  align-items: center;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.newsletter {
+  display: flex;
+  align-items: center; 
+  justify-content: space-between;
+}
+
+.newsletter p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.input-group {
+  display: flex;
+  border: 1px solid #505050;
+  background-color: white;
+  border-radius: 2px;
+  overflow: hidden;
+  height: 30px;
+  width: 300px;
+}
+  
+.input-group input[type="email"] {
+  flex-grow: 1;
+  border: none;
+  padding: 15px;
+  font-size: 10px;
+  line-height: 30px;
+  margin-right: -1px;
+  outline: none;
+}
+  
+.input-group button {
+  background-color: #888;
+  padding: 0px 10px;
+  color: white;
+  cursor: pointer;
+  outline: none;
+  font-size: 10px;
+  border-radius: 2px;
+  margin: 1px 1px 1px 0px;
+  line-height: normal;
+}
+  
+
+.space {
+  background-color: #222222;
+  height: 20px;
 }
