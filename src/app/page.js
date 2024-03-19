@@ -72,13 +72,20 @@ export default function Home() {
       </div>
 
       <div className="allCollections">
-      <h1 className="header"> All Collections</h1>
-      <div className="singleClass">
+      <h1 className="header"> Our Collections</h1>
+      <div className="singleCollection">
         <div className="headerAndPicture">
-          <h1 className="header">Floracion Pancha</h1>
-          <img src="/floracionPancha.svg" alt="logo" className="logoImage" />
+          <h1 className="collectionHeader">Floracion Pancha</h1>
+          <img src="/floracionPancha.svg" alt="logo" className="collectionImage" />
         </div>
-        <p>text</p>
+        <p className="collectionText">Every first sunday of may, the residents of panchimalco adorn themselves 
+          with flowers and create colorful palm fronds that parade in the procession 
+          in honor of the virgin of the rosary and the immaculate conception. To the 
+          sounds of marimbas, the dance of the historiantes, and the smells of 
+          traditional food, the “festival de las flores y las palmas” is celebrated. 
+          this collection is a tribute to our history and the vibrant colors that 
+          emanate from the celebration. It is crafted using traditional techniques 
+          from El Salvador, such as waist loom weaving and manual sewing techniques.</p>
       </div>
       </div>
 

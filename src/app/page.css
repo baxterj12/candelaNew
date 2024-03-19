@@ -169,6 +169,29 @@
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
+    margin-right: 200px;
+    height:450px;
+    width: 400px;
+}
+
+.collectionHeader{
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-left: 250px;
+    width: 482px;
+}
+.collectionImage {
+    height:435px;
+    width: 482px;
+    margin-left: 250px;
+    margin-top: 30px;
+}
+
+.collectionText {
+    margin-top: 100px;
+    margin-right: 50px;
+    font-size: 26px;
 }
 
 .bestSellers {
