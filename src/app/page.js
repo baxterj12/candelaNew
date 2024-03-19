@@ -23,7 +23,9 @@ export default function Home() {
         <img src="/candelalogo.svg" alt="logo" className="logoImage" />
         <div className="searchInstaBag">
           <IoSearch size = {50}/>
-          <FaInstagram size = {50}/>
+          <a href="https://www.instagram.com/_somoscandela/" target="_blank" rel="noopener noreferrer">
+            <FaInstagram size = {50}/>
+          </a>
           <MdOutlineShoppingBag size = {50}/>
         </div>
       </div>
