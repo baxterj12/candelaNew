@@ -148,7 +148,7 @@
 }
 
 .allCollections {
-    height: 1000px;
+    height:3050px;
     background-color: #ACA190;
     display: flex;
     justify-content: flex-start;
@@ -162,13 +162,151 @@
     align-items:flex-start;
     justify-content: space-between;
     text-align: center;
+    margin-bottom: 20px;
 }
 
-.headerAndPicture{
+.floracionPancha{
     display: flex;
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
+    margin-right: 200px;
+    width: 400px;
+}
+
+.floracionPanchaHeader{
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-left: 250px;
+    width: 482px;
+}
+.floracionPanchaImage {
+    height:435px;
+    width: 482px;
+    margin-left: 250px;
+    margin-top: 30px;
+}
+
+.floracionPanchaText {
+    margin-top: 100px;
+    margin-right: 60px;
+    font-size: 25px;
+}
+
+.laCiebaText {
+    margin-top: 100px;
+    margin-left: 50px;
+    font-size: 25px;
+}
+
+.laCieba {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 200px;
+    width: 450px;
+}
+
+.laCiebaHeader{
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-right: 250px;
+    width: 482px;
+}
+.laCiebaImage {
+    height:570px;
+    width: 600px;
+    margin-right: 250px;
+    margin-top: 30px;
+}
+
+.nahuales{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    margin-right: 200px;
+    width: 400px;
+}
+
+.nahualesHeader{
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-left: 250px;
+    width: 482px;
+}
+.nahualesImage {
+    height:435px;
+    width: 482px;
+    margin-left: 250px;
+    margin-top: 30px;
+}
+
+.nahualesText {
+    margin-top: 100px;
+    margin-right: 60px;
+    font-size: 25px;
+}
+
+.cowboyHatsText {
+    margin-top: 125px;
+    margin-left: 70px;
+    font-size: 25px;
+}
+
+.cowboyHats {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 200px;
+    width: 450px;
+}
+
+.cowboyHatsHeader{
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-right: 250px;
+    width: 482px;
+}
+.cowboyHatsImage {
+    height:570px;
+    width: 600px;
+    margin-right: 250px;
+}
+
+.sanSebastian{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    margin-right: 200px;
+    width: 400px;
+}
+
+.sanSebastianHeader{
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-left: 250px;
+    width: 482px;
+}
+.sanSebastianImage {
+    height:435px;
+    width: 482px;
+    margin-left: 250px;
+    margin-top: 30px;
+}
+
+.sanSebastianText {
+    margin-top: 175px;
+    margin-right: 70px;
+    font-size: 25px;
 }
 
 .bestSellers {

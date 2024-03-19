@@ -23,7 +23,9 @@ export default function Home() {
         <img src="/candelalogo.svg" alt="logo" className="logoImage" />
         <div className="searchInstaBag">
           <IoSearch size = {50}/>
-          <FaInstagram size = {50}/>
+          <a href="https://www.instagram.com/_somoscandela/" target="_blank" rel="noopener noreferrer">
+            <FaInstagram size = {50}/>
+          </a>
           <MdOutlineShoppingBag size = {50}/>
         </div>
       </div>
@@ -72,14 +74,86 @@ export default function Home() {
       </div>
 
       <div className="allCollections">
-      <h1 className="header"> All Collections</h1>
-      <div className="singleClass">
-        <div className="headerAndPicture">
-          <h1 className="header">Floracion Pancha</h1>
-          <img src="/floracionPancha.svg" alt="logo" className="logoImage" />
+        <h1 className="header"> Our Collections</h1>
+        <div className="singleCollection">
+          <div className="floracionPancha">
+            <h1 className="floracionPanchaHeader">Floracion Pancha</h1>
+            <img src="/floracionPancha.svg" className="floracionPanchaImage" />
+          </div>
+          <p className="floracionPanchaText">Every first sunday of may, the residents of panchimalco adorn themselves 
+            with flowers and create colorful palm fronds that parade in the procession 
+            in honor of the virgin of the rosary and the immaculate conception. To the 
+            sounds of marimbas, the dance of the historiantes, and the smells of 
+            traditional food, the “festival de las flores y las palmas” is celebrated. 
+            this collection is a tribute to our history and the vibrant colors that 
+            emanate from the celebration. It is crafted using traditional techniques 
+            from El Salvador, such as waist loom weaving and manual sewing techniques.</p>
         </div>
-        <p>text</p>
-      </div>
+        <div className="singleCollection">
+          <p className="laCiebaText">
+          A captivating capsule collection inspired by indigenous dance jewelry, 
+          meticulously crafted by Salvadoran artisans of Mayan heritage. Rooted in 
+          chromotherapy principles, this vibrant collection embraces ancestral wisdom. 
+          Each piece features intricate beadwork depicting creatures like spiders, jaguars, 
+          panthers, and scorpions, alongside symbols of healing and tradition. Each bracelet 
+          reflects the beauty of Mayan culture. Elements such as the mother cell and animals 
+          depicted beautifully through the beaded work. Symbolism merges with craftsmanship, 
+          with each design bearing profound significance. Unique in their creation, no two 
+          bracelets are alike, showcasing the artisan's skill and tradition's spirit. Explore 
+          heritage and adornments power in this distinctive collection, where artistry 
+          and tradition unite seamlessly. 
+          </p>
+          <div className="laCieba">
+            <h1 className="laCiebaHeader">La Cieba</h1>
+            <img src="/laCieba.svg" className="laCiebaImage" />
+          </div>
+        </div>
+        <div className="singleCollection">
+          <div className="nahuales">
+            <h1 className="nahualesHeader">Nahuales</h1>
+            <img src="/nahuales.svg" className="nahualesImage" />
+          </div>
+          <p className="nahualesText">
+          Introducing “nahuales” a captivating capsule collection inspired 
+          by indigenous dance jewelry, crafted by Salvadoran artisans of 
+          mayan heritage. Rooted in chromotherapy principles, this collection 
+          exudes vibrancy and meaning. Each piece features beadwork with colorful 
+          geometric designs and one of the twenty Mayan Nahuales – symbols of energy 
+          and spirit. “Nahual” means the essence of beings and nature. These accessories 
+          offer a link to mayan culture and a connection to our heritage. This collection 
+          invites customers to explore mayan traditions and discover their own nahual.
+          </p>
+        </div>
+        <div className="singleCollection">
+          <p className="cowboyHatsText">
+          Our cowboy hat collection pays homage to the rich palm and yute weaving 
+          techniques employed in crafting these iconic accessories. Each design is 
+          hand-painted, making them one-of-a-kind and customizable. Originating from the 
+          artisanal hubs of tenancingo and cojutepeque, this tradition traces back to the 
+          skilled hands that fashioned hats for "el cipitio," a legendary figure in salvadoran 
+          folklore. Designed for the adventurous and free-spirited, our hats embody a sense of 
+          exploration and cultural heritage. In addition to their inherent craftsmanship, our 
+          cowboy hats offer a personalized touch. 
+          </p>
+          <div className="cowboyHats">
+            <h1 className="cowboyHatsHeader">Cowboy Hats</h1>
+            <img src="/cowboyHats.svg" className="cowboyHatsImage" />
+          </div>
+        </div>
+        <div className="singleCollection">
+          <div className="sanSebastian">
+            <h1 className="sanSebastianHeader">San Sebastian</h1>
+            <img src="/sanSebastian.svg" className="sanSebastianImage" />
+          </div>
+          <p className="sanSebastianText">
+          Presenting "San Sebastian," a refined capsule collection inspired 
+          by the artisans of San Sebastian. Our goal is to honor and preserve 
+          handloom weaving traditions while highlighting the beauty of handmade 
+          fabrics and elevating everyday basics. This collection merges traditional 
+          Salvadoran fashion with everyday wear, infusing delicate linen pieces with 
+          colorful handwoven textiles.
+          </p>
+        </div>
       </div>
 
       <div className="bestSellers">
