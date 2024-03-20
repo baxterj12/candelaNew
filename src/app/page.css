@@ -8,7 +8,7 @@
 }
 
 .topBar {
-    height: 60px; /* Take up remaining space */
+    height: 10vh; /* Take up remaining space */
     background-color: white;
     display: flex;
     align-items: center;
@@ -17,46 +17,27 @@
     overflow-y: hidden;
 }
 .widen{
-    margin-left: -40px;
     align-items: flex-start;
-    width: 245px;
+    width: 15vw;
 }
 
 .searchInstaBag {
-    height: 50px; /* Take up remaining space */
-    gap: 30px;
+    height: 10vh; /* Take up remaining space */
+    gap: 2vw;
     background-color: white;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-right: 20px;
+    margin-right: 2vw;
 }
 
 .logoImage {
-    height: 250px;
-    width: 200px;
-}
-
-.dropDownMenu {
-    height: 50px; /* Set the height of the yellow rectangle */
-    background-color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: black;
-    box-shadow: inset 0px 3px 3px grey;
-    overflow-y:visible;
-}
-
-.drop{
-    flex-direction: row;
-}
-.filler{
-    height:60px;
+    height: 40vh;
+    width: 15vw;
 }
 
 .videoPage {
-    height: 700px;
+    height: 100vh;
     background-color: grey;
     display: flex;
     justify-content: center;
@@ -67,36 +48,42 @@
 
 .overlay{
     position: absolute;
-    font-size: 30px;
+    font-size: 5vh;
     font-weight: bold;
-    margin-top: 10px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    opacity: 0.8;
 }
 
 .storyText {
-    height: 500px;
-    background-color: #ACA190;
+    height: 300vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
-    font-size: 18px;
+    font-size: 6vh;
     text-align: center;
-    color: white;
+    background-color: white;
+    color: black;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-.header{
-    font-size: 30px;
+.header {
+    margin-top: 10vh;
+    font-size: 60px;
     font-weight: bold;
-    margin-top: 10px;
 }
+
 
 .storyParagraphs {
-    margin-left: 75px;
-    margin-right: 75px;
+    margin-left: 7vw;
+    margin-right: 7vw;
 }
 
 .newestCollection {
-    height: 410px;
+    height: 250vh;
     background-color: white;
     display: flex;
     justify-content: flex-start;
@@ -109,8 +96,8 @@
     width: 100%; /* Set fixed width for the container */
     overflow-x: auto; /* Enable horizontal scrolling */
     white-space: nowrap; /* Keep items in a single line */
-    margin-left: 50px;
-    margin-top: 10px;
+    margin-left: 25vw;
+    margin-top: 3vh;
 }
   
 .horizontal-scroll {
@@ -119,24 +106,24 @@
   
 .item {
     display: inline-block; /* Display items in a row */
-    width: 200px; /* Set width of each item */
-    height: 330px; /* Set height of each item */
-    margin-right: 40px; /* Add margin between items */
+    width: 100vw; /* Set width of each item */
+    height: 225vh; /* Set height of each item */
+    margin-right: 3vw; /* Add margin between items */
     flex-direction: column;
     justify-content: space-between;
 }
 
 .itemImage {
-    height: 225px;
-    width: 200px;
+    height: 175vh;
+    width: 75vw;
 }
 
 .rowCircles {
-    height: 50px;
-    width: 200px;
+    height: 20vh;
+    width: 75vw;
     display: flex; /* Ensures the circles are displayed in a row */
     justify-content: space-between; /* Centers the circles horizontally */
-    margin-top: 10px; /* Adjust as needed */
+    margin-top: 3vh; /* Adjust as needed */
 }
 
 .itemContent{
@@ -145,7 +132,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    margin-top: -10px;
+    margin-top: -5vh;
 }
 
 .allCollections {
