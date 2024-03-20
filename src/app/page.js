@@ -1,15 +1,13 @@
-import react from 'react';
+'use client'
+import react, {useState} from 'react';
 import './page.css';
 import { FiAlignJustify } from "react-icons/fi";
 import { FaInstagram, FaTwitter, FaEnvelope } from "react-icons/fa";
 import { IoSearch } from "react-icons/io5";
 import { FaCircle } from "react-icons/fa6";
 import { MdOutlineShoppingBag } from "react-icons/md";
-import Dropdown from 'react-bootstrap/Dropdown';
-import DropdownToggle from 'react-bootstrap/DropdownToggle';
-import DropdownItem from 'react-bootstrap/DropdownItem';
-import DropdownMenu from 'react-bootstrap/DropdownMenu';
-
+import {Dropdown, DropdownTrigger, DropdownMenu, DropdownItem, Button} from "@nextui-org/react";
+import { FaChevronDown} from "react-icons/fa";
 
 
 //default indicates that this is the home page
@@ -17,7 +15,6 @@ import DropdownMenu from 'react-bootstrap/DropdownMenu';
 export default function Home() {
   return (
     <div class="w-full" className="container" >
-    
       <div className="topBar">
         <FiAlignJustify size = {60} className="widen" />
         <img src="/candelalogo.svg" alt="logo" className="logoImage" />
@@ -31,7 +28,12 @@ export default function Home() {
       </div>
 
       <div className="dropDownMenu">
+        <div></div>
         <OurCollections/>
+        <OurStory/>
+        <OurProcess/>
+        <OurImpact className="drop"/>
+        <div></div>
       </div>
 
       <div className="videoPage">
@@ -206,24 +208,7 @@ export default function Home() {
         <p>@CopyRight © 2024, Sequence Collection. Ecommerce Software by Shopify</p>
         <p>Design by GreySkyGraphics</p>
       </div>
-
     </div>
-  );
-}
-
-function OurCollections() {
-  return (
-    <Dropdown >
-      <DropdownToggle variant="success" id="dropdown-basic">
-        Our Collections
-      </DropdownToggle>
-      <DropdownMenu >
-        <div className="filler" />
-        <div><DropdownItem>Collection 1</DropdownItem></div>
-        <div><DropdownItem>Collection 2</DropdownItem></div>
-        <div><DropdownItem>Collection 3</DropdownItem></div>
-      </DropdownMenu>
-    </Dropdown>
   );
 }
 
@@ -385,5 +370,82 @@ const RowOfCircles =() =>{
       <FaCircle size = {30} style={{color: "#a39d8c"}}/>
       <FaCircle size = {30} style={{color: '#5e594b'}}/>
     </div>
+  );
+}
+
+
+ function OurCollections() {
+  return (
+    <Dropdown>
+      <DropdownTrigger>
+        <Button variant="bordered" >
+          Our Collections {' '} <FaChevronDown style={{ display: 'inline' }}/>
+        </Button>
+      </DropdownTrigger>
+      <DropdownMenu aria-label="Static Actions" style={{ backgroundColor: '#fff' }}>
+        <DropdownItem key="floracionPancha">Floracion Pancha</DropdownItem>
+        <DropdownItem key="laCieba">La Cieba</DropdownItem>
+        <DropdownItem key="nahuales">Nahuales</DropdownItem>
+        <DropdownItem key="cowboyHats">Cowboy Hats</DropdownItem>
+        <DropdownItem key="sanSebastian">San Sebastian</DropdownItem>
+      </DropdownMenu>
+    </Dropdown>
+  );
+}
+
+function OurStory() {
+  return (
+    <Dropdown>
+      <DropdownTrigger>
+        <Button variant="bordered" >
+          Our Story {' '} <FaChevronDown style={{ display: 'inline' }}/>
+        </Button>
+      </DropdownTrigger>
+      <DropdownMenu aria-label="Static Actions" style={{ backgroundColor: '#fff' }}>
+        <DropdownItem key="floracionPancha">Story 1</DropdownItem>
+        <DropdownItem key="laCieba">Story 2</DropdownItem>
+        <DropdownItem key="nahuales">Story 3</DropdownItem>
+        <DropdownItem key="cowboyHats">Story 4</DropdownItem>
+        <DropdownItem key="sanSebastian">Story 5</DropdownItem>
+      </DropdownMenu>
+    </Dropdown>
+  );
+}
+
+function OurProcess() {
+  return (
+    <Dropdown >
+      <DropdownTrigger>
+        <Button variant="bordered" >
+          Our Process {' '} <FaChevronDown style={{ display: 'inline' }}/>
+        </Button>
+      </DropdownTrigger>
+      <DropdownMenu aria-label="Static Actions" style={{ backgroundColor: '#fff' }}>
+        <DropdownItem key="floracionPancha">Process 1</DropdownItem>
+        <DropdownItem key="laCieba">Process 2</DropdownItem>
+        <DropdownItem key="nahuales">Process 3</DropdownItem>
+        <DropdownItem key="cowboyHats">Process 4</DropdownItem>
+        <DropdownItem key="sanSebastian">Process 5</DropdownItem>
+      </DropdownMenu>
+    </Dropdown>
+  );
+}
+
+function OurImpact() {
+  return (
+    <Dropdown>
+      <DropdownTrigger>
+        <Button variant="bordered" >
+          Our Impact {' '} <FaChevronDown style={{ display: 'inline' }}/>
+        </Button>
+      </DropdownTrigger>
+      <DropdownMenu aria-label="Static Actions" style={{ backgroundColor: '#fff' }}>
+        <DropdownItem key="floracionPancha">Impact 1</DropdownItem>
+        <DropdownItem key="laCieba">Impact 2</DropdownItem>
+        <DropdownItem key="nahuales">Impact 3</DropdownItem>
+        <DropdownItem key="cowboyHats">Impact 4</DropdownItem>
+        <DropdownItem key="sanSebastian">Impact 5</DropdownItem>
+      </DropdownMenu>
+    </Dropdown>
   );
 }

@@ -1,8 +1,6 @@
 .container {
     display: flex;
     flex-direction: column;
-    /*height: 100vh; /* Full height of viewport */
-    /*width: 200vh;*/
     background-color: white;
     overflow-y: auto;
     color: white;
@@ -43,13 +41,16 @@
     height: 50px; /* Set the height of the yellow rectangle */
     background-color: white;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    box-shadow: inset 0px 3px 3px rgb(174, 174, 174);
     color: black;
+    box-shadow: inset 0px 3px 3px grey;
     overflow-y:visible;
 }
 
+.drop{
+    flex-direction: row;
+}
 .filler{
     height:60px;
 }
