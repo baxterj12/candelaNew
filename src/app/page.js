@@ -37,7 +37,7 @@ export default function Home() {
       </div>
 
       <div className="videoPage">
-        <video src="/demovid.mp4" autoPlay loop class="w-full"/>
+        <video src="/candelaMissUniverse.mov" autoPlay loop class="w-full"/>
         <h1 className="overlay"> Pieces with soul. Made in El Salvador. </h1>
       </div>
 
