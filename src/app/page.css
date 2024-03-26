@@ -4,7 +4,7 @@
     background-color: white;
     overflow-y: auto;
     color: white;
-
+    overflow-x: hidden;
 }
 
 .topBar {
@@ -38,7 +38,7 @@
 
 .videoPage {
     height: 100vh;
-    background-color: grey;
+    background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -46,7 +46,16 @@
     overflow-y: hidden;
 }
 
-.overlay{
+.overlayLogo{
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    opacity: 0.8;
+    margin-bottom: 30vh;
+}
+
+.overlayText{
     position: absolute;
     font-size: 5vh;
     font-weight: bold;
@@ -55,15 +64,17 @@
     display: flex;
     text-align: center;
     opacity: 0.8;
+    margin-top: 60vh;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .storyText {
-    height: 300vh;
+    height: 225vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
-    font-size: 6vh;
+    font-size: 5vh;
     text-align: center;
     background-color: white;
     color: black;
@@ -74,6 +85,7 @@
     margin-top: 10vh;
     font-size: 60px;
     font-weight: bold;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 
@@ -83,7 +95,7 @@
 }
 
 .newestCollection {
-    height: 250vh;
+    height: 100vh;
     background-color: white;
     display: flex;
     justify-content: flex-start;
@@ -93,34 +105,34 @@
 }
 
 .horizontal-scroll-container {
-    width: 100%; /* Set fixed width for the container */
-    overflow-x: auto; /* Enable horizontal scrolling */
-    white-space: nowrap; /* Keep items in a single line */
-    margin-left: 25vw;
+    width: 100vw; 
+    overflow-x: auto; 
+    white-space: nowrap; 
+    margin-left: 5vw;
     margin-top: 3vh;
 }
   
 .horizontal-scroll {
-    display: inline-block; /* Ensure container doesn't expand */
+    display: inline-block; 
 }
   
 .item {
-    display: inline-block; /* Display items in a row */
-    width: 100vw; /* Set width of each item */
-    height: 225vh; /* Set height of each item */
-    margin-right: 3vw; /* Add margin between items */
+    display: inline-block;
+    width: 20vw; 
+    height: 70vh; 
+    margin-right: 3vw; 
     flex-direction: column;
     justify-content: space-between;
 }
 
 .itemImage {
-    height: 175vh;
-    width: 75vw;
+    height: 50vh;
+    width: 20vw;
 }
 
 .rowCircles {
-    height: 20vh;
-    width: 75vw;
+    height: 5vh;
+    width: 20vw;
     display: flex; /* Ensures the circles are displayed in a row */
     justify-content: space-between; /* Centers the circles horizontally */
     margin-top: 3vh; /* Adjust as needed */
@@ -132,17 +144,17 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    margin-top: -5vh;
+    font-size: 3vh;
 }
 
 .allCollections {
-    height:3050px;
-    background-color: #ACA190;
+    height:470vh;
+    background-color: white;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-    color: white;
+    color: black;
 }
 
 .singleCollection{
@@ -150,42 +162,63 @@
     align-items:flex-start;
     justify-content: space-between;
     text-align: center;
-    margin-bottom: 20px;
 }
 
 .floracionPancha{
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
-    flex-direction: column;
-    margin-right: 200px;
-    width: 400px;
-}
+    margin-right: 20vw;
+    width: 25vw;
 
-.floracionPanchaHeader{
-    font-size: 30px;
-    font-weight: bold;
-    margin-top: 10px;
-    margin-left: 250px;
-    width: 482px;
 }
 .floracionPanchaImage {
-    height:435px;
-    width: 482px;
-    margin-left: 250px;
-    margin-top: 30px;
+    height:90vh;
+    width: 25vw;
+    margin-left: 25vw;
+}
+
+.collectionOverlayPancha {
+    position: absolute;
+    font-size: 5vh;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    color: white;
+    margin-left: 25vw;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin-bottom:15vh;
+}
+
+.textBoxTan{
+    position: absolute;
+    width: 11vw;
+    font-size: 3vh;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    color: black;
+    margin-left: 25vw;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: #DBD0CE;
+    margin-top:10vh;
 }
 
 .floracionPanchaText {
-    margin-top: 100px;
-    margin-right: 60px;
-    font-size: 25px;
+    margin-top: 20vh;
+    margin-right: 5vw;
+    font-size: 3.5vh;
 }
 
 .laCiebaText {
-    margin-top: 100px;
-    margin-left: 50px;
-    font-size: 25px;
+    margin-top: 20vh;
+    margin-left:5vw;
+    font-size: 3.5vh;
+    margin-top: 8vh;
 }
 
 .laCieba {
@@ -193,22 +226,43 @@
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-    margin-left: 200px;
-    width: 450px;
-}
-
-.laCiebaHeader{
-    font-size: 30px;
-    font-weight: bold;
-    margin-top: 10px;
-    margin-right: 250px;
-    width: 482px;
+    margin-left: 20vw;
+    width: 25vw;
 }
 .laCiebaImage {
-    height:570px;
-    width: 600px;
-    margin-right: 250px;
-    margin-top: 30px;
+    height:90vh;
+    width: 25vw;
+    margin-right: 25vw;
+}
+
+.collectionOverlayLaCieba {
+    position: absolute;
+    font-size: 5vh;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    color: white;
+    margin-right: 25vw;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin-top:32vh;
+}
+
+.textBoxYellow{
+    position: absolute;
+    width: 11vw;
+    font-size: 3vh;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    color: black;
+    margin-right: 25vw;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: #F3E300;
+    margin-top:48vh
 }
 
 .nahuales{
@@ -216,34 +270,57 @@
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-    margin-right: 200px;
-    width: 400px;
+    margin-right: 20vw;
+    width: 25vw;
 }
 
-.nahualesHeader{
-    font-size: 30px;
-    font-weight: bold;
-    margin-top: 10px;
-    margin-left: 250px;
-    width: 482px;
-}
 .nahualesImage {
-    height:435px;
-    width: 482px;
-    margin-left: 250px;
-    margin-top: 30px;
+    height:90vh;
+    width: 25vw;
+    margin-left: 25vw;
 }
 
 .nahualesText {
-    margin-top: 100px;
-    margin-right: 60px;
-    font-size: 25px;
+    margin-top: 20vh;
+    margin-right: 5vw;
+    font-size: 3.5vh;
+}
+
+.collectionOverlayNahuales {
+    position: absolute;
+    font-size: 5vh;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    color: white;
+    margin-left: 25vw;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin-top:32vh;
+}
+
+.textBoxRed{
+    position: absolute;
+    width: 11vw;
+    font-size: 3vh;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    color: black;
+    margin-left: 25vw;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: #CE555B;
+    margin-top:43vh
 }
 
 .cowboyHatsText {
-    margin-top: 125px;
-    margin-left: 70px;
-    font-size: 25px;
+    margin-top: 20vh;
+    margin-left:5vw;
+    font-size: 3.5vh;
+    margin-top: 20vh;
 }
 
 .cowboyHats {
@@ -251,21 +328,43 @@
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-    margin-left: 200px;
-    width: 450px;
-}
-
-.cowboyHatsHeader{
-    font-size: 30px;
-    font-weight: bold;
-    margin-top: 10px;
-    margin-right: 250px;
-    width: 482px;
+    margin-left: 20vw;
+    width: 25vw;
 }
 .cowboyHatsImage {
-    height:570px;
-    width: 600px;
-    margin-right: 250px;
+    height:90vh;
+    width: 25vw;
+    margin-right: 25vw;
+}
+
+.collectionOverlayHats {
+    position: absolute;
+    font-size: 5vh;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    color: white;
+    margin-right: 25vw;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin-top:32vh;
+}
+
+.textBoxPink{
+    position: absolute;
+    width: 11vw;
+    font-size: 3vh;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    color: black;
+    margin-right: 25vw;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: #FFBDA1;
+    margin-top:48vh
 }
 
 .sanSebastian{
@@ -273,28 +372,50 @@
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-    margin-right: 200px;
-    width: 400px;
+    margin-right: 20vw;
+    width: 25vw;
 }
 
-.sanSebastianHeader{
-    font-size: 30px;
-    font-weight: bold;
-    margin-top: 10px;
-    margin-left: 250px;
-    width: 482px;
-}
 .sanSebastianImage {
-    height:435px;
-    width: 482px;
-    margin-left: 250px;
-    margin-top: 30px;
+    height:80vh;
+    width: 25vw;
+    margin-left: 25vw;
 }
 
 .sanSebastianText {
-    margin-top: 175px;
-    margin-right: 70px;
-    font-size: 25px;
+    margin-top: 20vh;
+    margin-right: 5vw;
+    font-size: 3.5vh;
+}
+
+.collectionOverlaySanSebastian {
+    position: absolute;
+    font-size: 5vh;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    color: white;
+    margin-left: 25vw;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin-top:28vh;
+}
+
+.textBoxGray{
+    position: absolute;
+    width: 11vw;
+    font-size: 3vh;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    color: black;
+    margin-left: 25vw;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: #D7CBBB;
+    margin-top:43vh
 }
 
 .bestSellers {
@@ -442,4 +563,66 @@
 .space {
   background-color: #222222;
   height: 20px;
+}
+
+
+@media screen and (max-width: 768px) {
+    .logoImage {
+        width: 30vw;
+    }
+    .widen{
+        width: 27vw;
+    }
+    .videoPage {
+        height: 45vh;
+    }
+    .overlayLogo{
+        margin-bottom: 20vh;
+    }
+    
+    .overlayText{
+        margin-top: 19vh;
+    }
+
+    .storyText {
+        height: 275vh;
+        font-size: 4vh;
+    }
+
+    .storyParagraphs {
+        margin-left: 2vw;
+        margin-right: 2vw;
+    }
+
+    .newestCollection {
+        height: 130vh;
+    }
+    
+    .horizontal-scroll-container {
+        width: 100vw; 
+        margin-left: 20vw;
+        margin-top: 5vh;
+    }
+      
+    .item {
+        width: 100vw; 
+        height: 100vh; 
+        margin-right: 3vw; 
+    }
+    
+    .itemImage {
+        height: 80vh;
+        width: 80vw;
+    }
+    
+    .rowCircles {
+        height: 5vh;
+        width: 80vw;
+        margin-top: 3vh; /* Adjust as needed */
+    }
+    
+    .itemContent{
+        font-size: 4vh;
+        margin-right:20vw;
+    }
 }

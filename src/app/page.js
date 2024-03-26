@@ -19,8 +19,8 @@ export default function Home() {
       <TopBar/>
       <div className="videoPage">
         <video src="/candelaMissUniverse.mov" autoPlay loop class="w-full"/>
-        <h1 className="overlay">Pieces with soul.<br />Made in El Salvador.</h1>
-
+        <img src="/smallLogo.svg" className="overlayLogo"/>
+        <h1 className="overlayText">Pieces with soul.<br />Made in El Salvador.</h1>
       </div>
 
       <div className="storyText">
@@ -54,7 +54,7 @@ export default function Home() {
       </div>
 
       <div className="newestCollection">
-        <h1 className="header"> Our Newest Collection: Floracion Pancha</h1>
+        <h1 className="header"> NEW ARRIVALS</h1>
         <NewestCollection/>
       </div>
 
@@ -62,8 +62,9 @@ export default function Home() {
         <h1 className="header"> Our Collections</h1>
         <div className="singleCollection">
           <div className="floracionPancha">
-            <h1 className="floracionPanchaHeader">Floracion Pancha</h1>
             <img src="/floracionPancha.svg" className="floracionPanchaImage" />
+            <h1 className="collectionOverlayPancha">FLORACIÓN PANCHA</h1>
+            <p className="textBoxTan">Shop Now</p>
           </div>
           <p className="floracionPanchaText">Every first sunday of may, the residents of panchimalco adorn themselves 
             with flowers and create colorful palm fronds that parade in the procession 
@@ -89,14 +90,16 @@ export default function Home() {
           and tradition unite seamlessly. 
           </p>
           <div className="laCieba">
-            <h1 className="laCiebaHeader">La Cieba</h1>
             <img src="/laCieba.svg" className="laCiebaImage" />
+            <h1 className="collectionOverlayLaCieba">LA CIEBA</h1>
+            <p className="textBoxYellow">Shop Now</p>
           </div>
         </div>
         <div className="singleCollection">
           <div className="nahuales">
-            <h1 className="nahualesHeader">Nahuales</h1>
             <img src="/nahuales.svg" className="nahualesImage" />
+            <h1 className="collectionOverlayNahuales">NAHUALES</h1>
+            <p className="textBoxRed">Shop Now</p>
           </div>
           <p className="nahualesText">
           Introducing “nahuales” a captivating capsule collection inspired 
@@ -121,14 +124,16 @@ export default function Home() {
           cowboy hats offer a personalized touch. 
           </p>
           <div className="cowboyHats">
-            <h1 className="cowboyHatsHeader">Cowboy Hats</h1>
             <img src="/cowboyHats.svg" className="cowboyHatsImage" />
+            <h1 className="collectionOverlayHats">COWBOY HATS</h1>
+            <p className="textBoxPink">Shop Now</p>
           </div>
         </div>
         <div className="singleCollection">
           <div className="sanSebastian">
-            <h1 className="sanSebastianHeader">San Sebastian</h1>
             <img src="/sanSebastian.svg" className="sanSebastianImage" />
+            <h1 className="collectionOverlaySanSebastian">SAN SEBASTIAN</h1>
+            <p className="textBoxGray">Shop Now</p>
           </div>
           <p className="sanSebastianText">
           Presenting "San Sebastian," a refined capsule collection inspired 
@@ -348,10 +353,10 @@ const BestSellers = () => {
 const RowOfCircles =() =>{
   return (
     <div className="rowCircles">
-      <FaCircle size = {100} style={{ color: '#3f464f' }}/>
-      <FaCircle size = {100} style={{color: '#574f3b' }}/>
-      <FaCircle size = {100} style={{color: "#a39d8c"}}/>
-      <FaCircle size = {100} style={{color: '#5e594b'}}/>
+      <FaCircle size = {30} style={{ color: '#3f464f' }}/>
+      <FaCircle size = {30} style={{color: '#574f3b' }}/>
+      <FaCircle size = {30} style={{color: "#a39d8c"}}/>
+      <FaCircle size = {30} style={{color: '#5e594b'}}/>
     </div>
   );
 }
