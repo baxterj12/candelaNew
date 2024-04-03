@@ -66,7 +66,7 @@ export default function Home() {
             <h1 className="collectionOverlayPancha">FLORACIÓN PANCHA</h1>
             <p className="textBoxTan">Shop Now</p>
           </div>
-          <p className="floracionPanchaText">Every first sunday of may, the residents of panchimalco adorn themselves 
+          <p className="floracionPanchaText">Every first Sunday of May, the residents of panchimalco adorn themselves 
             with flowers and create colorful palm fronds that parade in the procession 
             in honor of the virgin of the rosary and the immaculate conception. To the 
             sounds of marimbas, the dance of the historiantes, and the smells of 
@@ -154,20 +154,28 @@ export default function Home() {
       <div className="instagram">
         <a href="https://www.instagram.com/_somoscandela/" target="_blank" rel="noopener noreferrer">@_somoscandela</a>
         <h1 className="header"> Shop Our Instagram </h1>
-        <div className="instagram-posts">
-        <a href="https://www.instagram.com/p/C4ZG0HvIx7w/" target="_blank" rel="noopener noreferrer">
-          <img src="birds.png" className="image"/>
-        </a>
-        <a href="https://www.instagram.com/p/C4MT6j4IFlF/?img_index=1" target="_blank" rel="noopener noreferrer">
-          <img src="boots.png" className="image" />
-        </a>
-        <a href="https://www.instagram.com/p/C4HITQUo74z/" target="_blank" rel="noopener noreferrer">
-          <img src="cactus.png" className="image"/>
-        </a>
-        <a href="https://www.instagram.com/p/C36JtEDopdQ/?img_index=1" target="_blank" rel="noopener noreferrer">
-          <img src="man.png" className="image"/>
-        </a>
-        </div>
+          <div className="instagram-posts">
+            <a href="https://www.instagram.com/p/C4ZG0HvIx7w/" target="_blank" rel="noopener noreferrer">
+              <img src="birds.png" className="image"/>
+            </a>
+            <a href="https://www.instagram.com/p/C4MT6j4IFlF/?img_index=1" target="_blank" rel="noopener noreferrer">
+              <img src="boots.png" className="image" />
+            </a>
+            <a href="https://www.instagram.com/p/C4HITQUo74z/" target="_blank" rel="noopener noreferrer">
+              <img src="cactus.png" className="image"/>
+            </a>
+          </div>
+          <div className='instagram-posts'>
+            <a href="https://www.instagram.com/p/C36JtEDopdQ/?img_index=1" target="_blank" rel="noopener noreferrer">
+              <img src="man.png" className="image"/>
+            </a>
+            <a href="https://www.instagram.com/p/C31DAffoAQ0/?img_index=1" target="_blank" rel="noopener noreferrer">
+              <img src="hair.png" className="image"/>
+            </a>
+            <a href="https://www.instagram.com/p/C3taXuEIoog/?img_index=1" target="_blank" rel="noopener noreferrer">
+              <img src="apple.png" className="image"/>
+            </a>
+          </div>
       </div>
 
       <div className="contactInfo">
@@ -280,66 +288,66 @@ const BestSellers = () => {
     <div className="horizontal-scroll-container">
       <div className="horizontal-scroll">
         {/* Items go here */}
-        <div className="item">
-          <img src="/defaultimage.JPG" className="itemImage"/>
-          <RowOfCircles/>
-          <div className="itemContent">
+        <div className="itemBS">
+          <img src="/defaultimage.JPG" className="itemImageBS"/>
+          <RowOfCirclesBS/>
+          <div className="itemContentBS">
             <p>Product 1</p>
             <p>$10</p>
           </div>
         </div>
-        <div className="item">
-          <img src="/defaultimage.JPG" className="itemImage"/>
-          <RowOfCircles/>
-          <div className="itemContent">
+        <div className="itemBS">
+          <img src="/defaultimage.JPG" className="itemImageBS"/>
+          <RowOfCirclesBS/>
+          <div className="itemContentBS">
             <p>Product 2</p>
             <p>$20</p>
           </div>
         </div>
-        <div className="item">
-          <img src="/defaultimage.JPG" className="itemImage"/>
-          <RowOfCircles/>
-          <div className="itemContent">
+        <div className="itemBS">
+          <img src="/defaultimage.JPG" className="itemImageBS"/>
+          <RowOfCirclesBS/>
+          <div className="itemContentBS">
             <p>Product 3</p>
             <p>$30</p>
           </div>
         </div>
-        <div className="item">
-          <img src="/defaultimage.JPG" className="itemImage"/>
-          <RowOfCircles/>
-          <div className="itemContent">
+        <div className="itemBS">
+          <img src="/defaultimage.JPG" className="itemImageBS"/>
+          <RowOfCirclesBS/>
+          <div className="itemContentBS">
             <p>Product 4</p>
             <p>$40</p>
           </div>
         </div>
-        <div className="item">
-          <img src="/defaultimage.JPG" className="itemImage"/>
-          <RowOfCircles/>
-          <div className="itemContent">
+        <div className="itemBS">
+          <img src="/defaultimage.JPG" className="itemImageBS"/>
+          <RowOfCirclesBS/>
+          <div className="itemContentBS">
             <p>Product 5</p>
             <p>$50</p>
           </div>
         </div>
-        <div className="item">
-          <img src="/defaultimage.JPG" className="itemImage"/>
-          <RowOfCircles/>
-          <div className="itemContent">
+        <div className="itemBS">
+          <img src="/defaultimage.JPG" className="itemImageBS"/>
+          <RowOfCirclesBS/>
+          <div className="itemContentBS">
             <p>Product 6</p>
             <p>$60</p>
           </div>
         </div>
-        <div className="item">
-          <img src="/defaultimage.JPG" className="itemImage"/>
-          <RowOfCircles/>
-          <div className="itemContent">
+        <div className="itemBS">
+          <img src="/defaultimage.JPG" className="itemImageBS"/>
+          <RowOfCirclesBS/>
+          <div className="itemContentBS">
             <p>Product 7</p>
             <p>$70</p>
           </div>
         </div>
-        <div className="item">
-          <img src="/defaultimage.JPG" className="itemImage"/>
-          <RowOfCircles/>
-          <div className="itemContent">
+        <div className="itemBS">
+          <img src="/defaultimage.JPG" className="itemImageBS"/>
+          <RowOfCirclesBS/>
+          <div className="itemContentBS">
             <p>Product 8</p>
             <p>$80</p>
           </div>
@@ -353,6 +361,17 @@ const BestSellers = () => {
 const RowOfCircles =() =>{
   return (
     <div className="rowCircles">
+      <FaCircle size = {30} style={{ color: '#3f464f' }}/>
+      <FaCircle size = {30} style={{color: '#574f3b' }}/>
+      <FaCircle size = {30} style={{color: "#a39d8c"}}/>
+      <FaCircle size = {30} style={{color: '#5e594b'}}/>
+    </div>
+  );
+}
+
+const RowOfCirclesBS =() =>{
+  return (
+    <div className="rowCirclesBS">
       <FaCircle size = {30} style={{ color: '#3f464f' }}/>
       <FaCircle size = {30} style={{color: '#574f3b' }}/>
       <FaCircle size = {30} style={{color: "#a39d8c"}}/>
