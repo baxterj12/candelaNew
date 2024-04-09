@@ -598,11 +598,20 @@
 
 
 @media screen and (max-width: 768px) {
-    .logoImage {
-        width: 30vw;
-    }
+
     .widen{
-        width: 27vw;
+        width: 10vw;
+        margin-left: 5vw;
+    }
+
+    .searchInstaBag {
+        gap: 1vw;
+        margin-right: 0vw;
+    }
+
+    .logoImage {
+        width: 40vw;
+        margin-left: 15vw;
     }
     .videoPage {
         height: 45vh;
@@ -889,5 +898,4 @@
         height: 85vh;
 
     }
-
 }
