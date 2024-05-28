@@ -3,14 +3,7 @@ import react, {useState} from 'react';
 import './page.css';
 import TopBar from './topBar.js';
 import BottomBar from './bottomBar.js';
-import { FiAlignJustify } from "react-icons/fi";
-import { FaInstagram, FaTwitter, FaEnvelope } from "react-icons/fa";
-import { IoSearch } from "react-icons/io5";
 import { FaCircle } from "react-icons/fa6";
-import { MdOutlineShoppingBag } from "react-icons/md";
-import {Dropdown, DropdownTrigger, DropdownMenu, DropdownItem, Button} from "@nextui-org/react";
-import { FaChevronDown} from "react-icons/fa";
-
 
 //default indicates that this is the home page
 //use classname to create different components
