@@ -1,159 +1,132 @@
 'use client'
-import react, {useState} from 'react';
+import react, {useState, useRef} from 'react';
 import './page.css';
-import { FiAlignJustify } from "react-icons/fi";
-import { FaInstagram, FaTwitter, FaEnvelope } from "react-icons/fa";
-import { IoSearch } from "react-icons/io5";
+import TopBar from './topBar.js';
+import BottomBar from './bottomBar.js';
 import { FaCircle } from "react-icons/fa6";
-import { MdOutlineShoppingBag } from "react-icons/md";
-import {Dropdown, DropdownTrigger, DropdownMenu, DropdownItem, Button} from "@nextui-org/react";
-import { FaChevronDown} from "react-icons/fa";
-
+import { GoUnmute, GoMute } from "react-icons/go";
 
 //default indicates that this is the home page
 //use classname to create different components
 export default function Home() {
+  const [muted, muteVideo] = useState(false);
+  const videoRef = useRef(null);
+
+  const toggleMute = () => {
+    const video = videoRef.current;
+    if (video) {
+      video.muted = !video.muted;
+      muteVideo(video.muted);
+    }
+  };
   return (
     <div class="w-full" className="container" >
-      <div className="topBar">
-        <FiAlignJustify size = {60} className="widen" />
-        <img src="/candelalogo.svg" alt="logo" className="logoImage" />
-        <div className="searchInstaBag">
-          <IoSearch size = {50}/>
-          <a href="https://www.instagram.com/_somoscandela/" target="_blank" rel="noopener noreferrer">
-            <FaInstagram size = {50}/>
-          </a>
-          <MdOutlineShoppingBag size = {50}/>
-        </div>
-      </div>
-
-      <div className="dropDownMenu">
-        <div></div>
-        <OurCollections/>
-        <OurStory/>
-        <OurProcess/>
-        <OurImpact className="drop"/>
-        <div></div>
-      </div>
-
+      <TopBar/>
       <div className="videoPage">
-        <video src="/candelaMissUniverse.mov" autoPlay loop class="w-full"/>
-        <h1 className="overlay"> Pieces with soul. Made in El Salvador. </h1>
+        <video ref= {videoRef} src="/candelaMissUniverse.mov" autoPlay loop class="w-full"/>
+        <img src="/smallLogo.svg" className="overlayLogo"/>
+        <h1 className="overlayText">Pieces with soul.<br />Made in El Salvador.</h1>
+        <button onClick={toggleMute} className="muteButton"> {muted ? <GoMute size={60} /> : <GoUnmute size={60} />} </button>
       </div>
 
       <div className="storyText">
-          <h1 className="header">Welcome to Candela</h1>
-            <p className="storyParagraphs"> "Candela is a love letter to the soul of Salvadoran culture. 
-              With each meticulously handcrafted creation, we work to ignite a flame illuminating 
-              a path for those who breathe life into our rich heritage, El Salvador artisans.
+          <h1 className="header">CANDELA'S STORY</h1>
+            <p className="storyParagraphs"> Candela is an homage to Salvadoran culture and art. Established in 2023, 
+            Candela collaborates with traditional Salvadoran artists to design and create authentic, handmade, 
+            ready-to-wear pieces that celebrate the unique cultural identity El Salvador while simultaneously preserving 
+            its artistic heritage and practices. 
             </p>
             <p className="storyParagraphs">
-            In a world where impersonal mass production often overshadows individuality, 
-            Candela emerged in Founded in 2023; our brand proudly prioritizes sustainability by utilizing recycled
-            and reused materials in our handmade creations, infusing each piece with a story of rebirth and renewal.
+              Our mission is to support the stewards of our cultural heritage by facilitating the continuation
+               and appreciation of their traditional artisanal skills that have passed down for generations. 
+               Our network of artisans, spanning six unique Salvadoran towns, are not just craftsmen — they 
+               are dream weavers, synthesizing centuries-old traditions with the contemporary fashion narrative. 
             </p>
             <p className="storyParagraphs">
-              Our artisans, who come from six distinct towns in El Salvador, are not just skilled
-              craftspeople; they are dream weavers, infusing their creations with the magic 
-              of centuries-old traditions passed down through generations.
+              Candela actively collaborates with Mater Filus, a women's shelter in El Salvador, and 
+              Diseña Tu Meta, a women's empowerment NGO, to provide training and empowerment programs for 
+              women from disadvantaged backgrounds. Our commitment extends beyond individual empowerment, 
+              as we endeavor to strengthen our community through educational workshops and initiatives 
+              designed to sustain cultural heritage and stimulate economic growth through opportunity creation.  
             </p>
             <p className="storyParagraphs">
-              Candela proudly partners with Mater Filus, a Salvadorian women’s shelter,
-              to empower women from at-risk backgrounds through training programs. 
-              Furthermore, we actively support the local artistic community by 
-              hosting educational events to preserve culture and foster job creation.
+              Candela stands as a testament to our roots, uniting tradition and innovation to bring 
+              forward collections that pay tribute to Salvadoran artistry by positioning its artisans 
+              on the global stage. Our approach, centered on building responsible partnerships, 
+              increasing community engagement, and celebrating cultural legacy, sets a new standard 
+              for how fashion brands can contribute to environmental, social, and cultural sustainability.
             </p>
-            <p className="storyParagraphs">
-              Candela stands as a tribute to our roots, weaving together the threads of 
-              our heritage into a tapestry of dreams and serving as a timeless symbol of tradition and innovation."
-            </p>
-            <p> </p>
       </div>
 
       <div className="newestCollection">
-        <h1 className="header"> Our Newest Collection: Floracion Pancha</h1>
+        <h1 className="header"> NEW ARRIVALS</h1>
         <NewestCollection/>
       </div>
 
       <div className="allCollections">
+      <div className="collectionDivider"></div>
         <h1 className="header"> Our Collections</h1>
         <div className="singleCollection">
           <div className="floracionPancha">
-            <h1 className="floracionPanchaHeader">Floracion Pancha</h1>
             <img src="/floracionPancha.svg" className="floracionPanchaImage" />
+            <h1 className="collectionOverlayPancha">FLORACIÓN PANCHA</h1>
+            <p className="textBoxTan">Shop Now</p>
           </div>
-          <p className="floracionPanchaText">Every first sunday of may, the residents of panchimalco adorn themselves 
-            with flowers and create colorful palm fronds that parade in the procession 
-            in honor of the virgin of the rosary and the immaculate conception. To the 
-            sounds of marimbas, the dance of the historiantes, and the smells of 
-            traditional food, the “festival de las flores y las palmas” is celebrated. 
-            this collection is a tribute to our history and the vibrant colors that 
-            emanate from the celebration. It is crafted using traditional techniques 
-            from El Salvador, such as waist loom weaving and manual sewing techniques.</p>
+          <p className="floracionPanchaText">Floración Pancha is a tribute to our history and the 
+          vibrant colors that emanate from the Panchimalco celebration of “las flores y las palmas.” 
+          It is crafted using traditional techniques from El Salvador, such as waist loom weaving and 
+          manual sewing techniques.</p>
         </div>
+        <div className="collectionDivider"></div>
         <div className="singleCollection">
-          <p className="laCiebaText">
-          A captivating capsule collection inspired by indigenous dance jewelry, 
-          meticulously crafted by Salvadoran artisans of Mayan heritage. Rooted in 
-          chromotherapy principles, this vibrant collection embraces ancestral wisdom. 
-          Each piece features intricate beadwork depicting creatures like spiders, jaguars, 
-          panthers, and scorpions, alongside symbols of healing and tradition. Each bracelet 
-          reflects the beauty of Mayan culture. Elements such as the mother cell and animals 
-          depicted beautifully through the beaded work. Symbolism merges with craftsmanship, 
-          with each design bearing profound significance. Unique in their creation, no two 
-          bracelets are alike, showcasing the artisan's skill and tradition's spirit. Explore 
-          heritage and adornments power in this distinctive collection, where artistry 
-          and tradition unite seamlessly. 
+          <p className="laCiebaText">La Ceiba is a captivating capsule collection inspired by Indigenous 
+          dance jewelry, meticulously crafted by Salvadoran artisans of Mayan heritage. Rooted in 
+          chromotherapy principles, this vibrant collection embraces ancestral wisdom.
           </p>
           <div className="laCieba">
-            <h1 className="laCiebaHeader">La Cieba</h1>
             <img src="/laCieba.svg" className="laCiebaImage" />
+            <h1 className="collectionOverlayLaCieba">LA <br />CIEBA</h1>
+            <p className="textBoxYellow">Shop Now</p>
           </div>
         </div>
+        <div className="collectionDivider"></div>
         <div className="singleCollection">
           <div className="nahuales">
-            <h1 className="nahualesHeader">Nahuales</h1>
             <img src="/nahuales.svg" className="nahualesImage" />
+            <h1 className="collectionOverlayNahuales">NAHUALES</h1>
+            <p className="textBoxRed">Shop Now</p>
           </div>
           <p className="nahualesText">
-          Introducing “nahuales” a captivating capsule collection inspired 
-          by indigenous dance jewelry, crafted by Salvadoran artisans of 
-          mayan heritage. Rooted in chromotherapy principles, this collection 
-          exudes vibrancy and meaning. Each piece features beadwork with colorful 
-          geometric designs and one of the twenty Mayan Nahuales – symbols of energy 
-          and spirit. “Nahual” means the essence of beings and nature. These accessories 
-          offer a link to mayan culture and a connection to our heritage. This collection 
-          invites customers to explore mayan traditions and discover their own nahual.
+          Nahuales is a captivating capsule collection inspired by Indigenous dance jewelry, 
+          crafted by Salvadoran artisans of Mayan descent. Each piece features beadwork with 
+          colorful geometric designs and one of the twenty Mayan Nahuales – symbols of energy and spirit.
           </p>
         </div>
+        <div className="collectionDivider"></div>
         <div className="singleCollection">
           <p className="cowboyHatsText">
-          Our cowboy hat collection pays homage to the rich palm and yute weaving 
-          techniques employed in crafting these iconic accessories. Each design is 
-          hand-painted, making them one-of-a-kind and customizable. Originating from the 
-          artisanal hubs of tenancingo and cojutepeque, this tradition traces back to the 
-          skilled hands that fashioned hats for "el cipitio," a legendary figure in salvadoran 
-          folklore. Designed for the adventurous and free-spirited, our hats embody a sense of 
-          exploration and cultural heritage. In addition to their inherent craftsmanship, our 
-          cowboy hats offer a personalized touch. 
+          Our cowboy hats pay homage to the rich palm and yute weaving techniques employed 
+          in crafting these iconic accessories. Each design is hand-painted, making them one 
+          of a kind and customizable.
           </p>
           <div className="cowboyHats">
-            <h1 className="cowboyHatsHeader">Cowboy Hats</h1>
             <img src="/cowboyHats.svg" className="cowboyHatsImage" />
+            <h1 className="collectionOverlayHats">COWBOY <br />HATS</h1>
+            <p className="textBoxPink">Shop Now</p>
           </div>
         </div>
+        <div className="collectionDivider"></div>
         <div className="singleCollection">
           <div className="sanSebastian">
-            <h1 className="sanSebastianHeader">San Sebastian</h1>
             <img src="/sanSebastian.svg" className="sanSebastianImage" />
+            <h1 className="collectionOverlaySanSebastian">SAN <br />SEBASTIAN</h1>
+            <p className="textBoxGray">Shop Now</p>
           </div>
           <p className="sanSebastianText">
-          Presenting "San Sebastian," a refined capsule collection inspired 
-          by the artisans of San Sebastian. Our goal is to honor and preserve 
-          handloom weaving traditions while highlighting the beauty of handmade 
-          fabrics and elevating everyday basics. This collection merges traditional 
-          Salvadoran fashion with everyday wear, infusing delicate linen pieces with 
-          colorful handwoven textiles.
+          San Sebastian is a refined capsule collection inspired by the artisans 
+          of San Sebastian. Our goal is to honor and preserve handloom weaving 
+          traditions while highlighting the beauty of handmade fabrics and elevating 
+          everyday basics.
           </p>
         </div>
       </div>
@@ -166,48 +139,30 @@ export default function Home() {
       <div className="instagram">
         <a href="https://www.instagram.com/_somoscandela/" target="_blank" rel="noopener noreferrer">@_somoscandela</a>
         <h1 className="header"> Shop Our Instagram </h1>
-        <div className="instagram-posts">
-        <a href="https://www.instagram.com/p/C4ZG0HvIx7w/" target="_blank" rel="noopener noreferrer">
-          <img src="birds.png" className="image"/>
-        </a>
-        <a href="https://www.instagram.com/p/C4MT6j4IFlF/?img_index=1" target="_blank" rel="noopener noreferrer">
-          <img src="boots.png" className="image" />
-        </a>
-        <a href="https://www.instagram.com/p/C4HITQUo74z/" target="_blank" rel="noopener noreferrer">
-          <img src="cactus.png" className="image"/>
-        </a>
-        <a href="https://www.instagram.com/p/C36JtEDopdQ/?img_index=1" target="_blank" rel="noopener noreferrer">
-          <img src="man.png" className="image"/>
-        </a>
-        </div>
-      </div>
-
-      <div className="contactInfo">
-        <div className="format">
-          <div className="getInTouch">
-            <h2>GET IN TOUCH</h2>
-            <div className="icons">
-              <FaTwitter size = {25}/>
-              <FaInstagram size = {25}/>
-              <FaEnvelope size={25} />
-              <p className="email">info@sequencecollection.com</p>
-            </div>
+          <div className="instagram-posts">
+            <a href="https://www.instagram.com/p/C4ZG0HvIx7w/" target="_blank" rel="noopener noreferrer">
+              <img src="birds.png" className="image"/>
+            </a>
+            <a href="https://www.instagram.com/p/C4MT6j4IFlF/?img_index=1" target="_blank" rel="noopener noreferrer">
+              <img src="boots.png" className="image" />
+            </a>
+            <a href="https://www.instagram.com/p/C4HITQUo74z/" target="_blank" rel="noopener noreferrer">
+              <img src="cactus.png" className="image"/>
+            </a>
           </div>
-          <div className="newsletter">
-            <h2>NEWSLETTER</h2>
-            <p>Sign up for the latest news, offers, and styles</p>
-            <div className = "input-group">
-              <input type="email" placeholder="Your email" />
-              <button type="submit">Subscribe</button>
-              </div>
+          <div className='instagram-posts'>
+            <a href="https://www.instagram.com/p/C36JtEDopdQ/?img_index=1" target="_blank" rel="noopener noreferrer">
+              <img src="man.png" className="image"/>
+            </a>
+            <a href="https://www.instagram.com/p/C31DAffoAQ0/?img_index=1" target="_blank" rel="noopener noreferrer">
+              <img src="hair.png" className="image"/>
+            </a>
+            <a href="https://www.instagram.com/p/C3taXuEIoog/?img_index=1" target="_blank" rel="noopener noreferrer">
+              <img src="apple.png" className="image"/>
+            </a>
           </div>
-        </div>
-        <div className ="space">
-          
-        </div>
-        <p>@CopyRight © 2024, Sequence Collection. Ecommerce Software by Shopify</p>
-        <p>Design by GreySkyGraphics</p>
       </div>
+      <BottomBar/>
     </div>
   );
 }
@@ -292,66 +247,66 @@ const BestSellers = () => {
     <div className="horizontal-scroll-container">
       <div className="horizontal-scroll">
         {/* Items go here */}
-        <div className="item">
-          <img src="/defaultimage.JPG" className="itemImage"/>
-          <RowOfCircles/>
-          <div className="itemContent">
+        <div className="itemBS">
+          <img src="/defaultimage.JPG" className="itemImageBS"/>
+          <RowOfCirclesBS/>
+          <div className="itemContentBS">
             <p>Product 1</p>
             <p>$10</p>
           </div>
         </div>
-        <div className="item">
-          <img src="/defaultimage.JPG" className="itemImage"/>
-          <RowOfCircles/>
-          <div className="itemContent">
+        <div className="itemBS">
+          <img src="/defaultimage.JPG" className="itemImageBS"/>
+          <RowOfCirclesBS/>
+          <div className="itemContentBS">
             <p>Product 2</p>
             <p>$20</p>
           </div>
         </div>
-        <div className="item">
-          <img src="/defaultimage.JPG" className="itemImage"/>
-          <RowOfCircles/>
-          <div className="itemContent">
+        <div className="itemBS">
+          <img src="/defaultimage.JPG" className="itemImageBS"/>
+          <RowOfCirclesBS/>
+          <div className="itemContentBS">
             <p>Product 3</p>
             <p>$30</p>
           </div>
         </div>
-        <div className="item">
-          <img src="/defaultimage.JPG" className="itemImage"/>
-          <RowOfCircles/>
-          <div className="itemContent">
+        <div className="itemBS">
+          <img src="/defaultimage.JPG" className="itemImageBS"/>
+          <RowOfCirclesBS/>
+          <div className="itemContentBS">
             <p>Product 4</p>
             <p>$40</p>
           </div>
         </div>
-        <div className="item">
-          <img src="/defaultimage.JPG" className="itemImage"/>
-          <RowOfCircles/>
-          <div className="itemContent">
+        <div className="itemBS">
+          <img src="/defaultimage.JPG" className="itemImageBS"/>
+          <RowOfCirclesBS/>
+          <div className="itemContentBS">
             <p>Product 5</p>
             <p>$50</p>
           </div>
         </div>
-        <div className="item">
-          <img src="/defaultimage.JPG" className="itemImage"/>
-          <RowOfCircles/>
-          <div className="itemContent">
+        <div className="itemBS">
+          <img src="/defaultimage.JPG" className="itemImageBS"/>
+          <RowOfCirclesBS/>
+          <div className="itemContentBS">
             <p>Product 6</p>
             <p>$60</p>
           </div>
         </div>
-        <div className="item">
-          <img src="/defaultimage.JPG" className="itemImage"/>
-          <RowOfCircles/>
-          <div className="itemContent">
+        <div className="itemBS">
+          <img src="/defaultimage.JPG" className="itemImageBS"/>
+          <RowOfCirclesBS/>
+          <div className="itemContentBS">
             <p>Product 7</p>
             <p>$70</p>
           </div>
         </div>
-        <div className="item">
-          <img src="/defaultimage.JPG" className="itemImage"/>
-          <RowOfCircles/>
-          <div className="itemContent">
+        <div className="itemBS">
+          <img src="/defaultimage.JPG" className="itemImageBS"/>
+          <RowOfCirclesBS/>
+          <div className="itemContentBS">
             <p>Product 8</p>
             <p>$80</p>
           </div>
@@ -373,79 +328,13 @@ const RowOfCircles =() =>{
   );
 }
 
-
- function OurCollections() {
+const RowOfCirclesBS =() =>{
   return (
-    <Dropdown>
-      <DropdownTrigger>
-        <Button variant="bordered" >
-          Our Collections {' '} <FaChevronDown style={{ display: 'inline' }}/>
-        </Button>
-      </DropdownTrigger>
-      <DropdownMenu aria-label="Static Actions" style={{ backgroundColor: '#fff' }}>
-        <DropdownItem key="floracionPancha">Floracion Pancha</DropdownItem>
-        <DropdownItem key="laCieba">La Cieba</DropdownItem>
-        <DropdownItem key="nahuales">Nahuales</DropdownItem>
-        <DropdownItem key="cowboyHats">Cowboy Hats</DropdownItem>
-        <DropdownItem key="sanSebastian">San Sebastian</DropdownItem>
-      </DropdownMenu>
-    </Dropdown>
-  );
-}
-
-function OurStory() {
-  return (
-    <Dropdown>
-      <DropdownTrigger>
-        <Button variant="bordered" >
-          Our Story {' '} <FaChevronDown style={{ display: 'inline' }}/>
-        </Button>
-      </DropdownTrigger>
-      <DropdownMenu aria-label="Static Actions" style={{ backgroundColor: '#fff' }}>
-        <DropdownItem key="floracionPancha">Story 1</DropdownItem>
-        <DropdownItem key="laCieba">Story 2</DropdownItem>
-        <DropdownItem key="nahuales">Story 3</DropdownItem>
-        <DropdownItem key="cowboyHats">Story 4</DropdownItem>
-        <DropdownItem key="sanSebastian">Story 5</DropdownItem>
-      </DropdownMenu>
-    </Dropdown>
-  );
-}
-
-function OurProcess() {
-  return (
-    <Dropdown >
-      <DropdownTrigger>
-        <Button variant="bordered" >
-          Our Process {' '} <FaChevronDown style={{ display: 'inline' }}/>
-        </Button>
-      </DropdownTrigger>
-      <DropdownMenu aria-label="Static Actions" style={{ backgroundColor: '#fff' }}>
-        <DropdownItem key="floracionPancha">Process 1</DropdownItem>
-        <DropdownItem key="laCieba">Process 2</DropdownItem>
-        <DropdownItem key="nahuales">Process 3</DropdownItem>
-        <DropdownItem key="cowboyHats">Process 4</DropdownItem>
-        <DropdownItem key="sanSebastian">Process 5</DropdownItem>
-      </DropdownMenu>
-    </Dropdown>
-  );
-}
-
-function OurImpact() {
-  return (
-    <Dropdown>
-      <DropdownTrigger>
-        <Button variant="bordered" >
-          Our Impact {' '} <FaChevronDown style={{ display: 'inline' }}/>
-        </Button>
-      </DropdownTrigger>
-      <DropdownMenu aria-label="Static Actions" style={{ backgroundColor: '#fff' }}>
-        <DropdownItem key="floracionPancha">Impact 1</DropdownItem>
-        <DropdownItem key="laCieba">Impact 2</DropdownItem>
-        <DropdownItem key="nahuales">Impact 3</DropdownItem>
-        <DropdownItem key="cowboyHats">Impact 4</DropdownItem>
-        <DropdownItem key="sanSebastian">Impact 5</DropdownItem>
-      </DropdownMenu>
-    </Dropdown>
+    <div className="rowCirclesBS">
+      <FaCircle size = {30} style={{ color: '#3f464f' }}/>
+      <FaCircle size = {30} style={{color: '#574f3b' }}/>
+      <FaCircle size = {30} style={{color: "#a39d8c"}}/>
+      <FaCircle size = {30} style={{color: '#5e594b'}}/>
+    </div>
   );
 }
