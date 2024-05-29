@@ -23,7 +23,7 @@ export default function Home() {
     <div class="w-full" className="container" >
       <TopBar/>
       <div className="videoPage">
-        <video ref= {videoRef} src="/candelaMissUniverse.mov" autoPlay loop class="w-full"/>
+        <video ref= {videoRef} src="/candelaMissUniverse.mov" autoPlay loop class="w-full" />
         <img src="/smallLogo.svg" className="overlayLogo"/>
         <h1 className="overlayText">Pieces with soul.<br />Made in El Salvador.</h1>
         <button onClick={toggleMute} className="muteButton"> {muted ? <GoMute size={60} /> : <GoUnmute size={60} />} </button>

@@ -3,7 +3,7 @@ import react, {useState} from 'react';
 import '../page.css';
 import TopBar from '../topBar.js';
 import BottomBar from '../bottomBar.js';
-export default function StoryMain() {
+export default function ImpactMain() {
     return (
         <div class="w-full">
             <TopBar/>
