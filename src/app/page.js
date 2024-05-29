@@ -20,7 +20,7 @@ export default function Home() {
     }
   };
   return (
-    <div class="w-full" className="container" >
+    <div>
       <TopBar/>
       <div className="videoPage">
         <video ref= {videoRef} src="/candelaMissUniverse.mov" autoPlay loop class="w-full" />
