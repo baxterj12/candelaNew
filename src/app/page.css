@@ -112,8 +112,16 @@
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+.muteButton{
+    color:white;
+    position: absolute;
+    opacity: 0.8;
+    margin-right: 95vw;
+    margin-top:80vh
+}
+
 .storyText {
-    height: 225vh;
+    height: 210vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -126,7 +134,7 @@
 }
 
 .header {
-    margin-top: 10vh;
+    margin-top: 8vh;
     font-size: 60px;
     font-weight: bold;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -239,6 +247,12 @@
     text-align: center;
 }
 
+.collectionDivider{
+    background-color:black;
+    height: 10px;
+    width: 100vw;
+}
+
 .floracionPancha{
     display: flex;
     justify-content: center;
@@ -286,14 +300,14 @@
 .floracionPanchaText {
     margin-top: 20vh;
     margin-right: 5vw;
-    font-size: 3.5vh;
+    font-size: 5vh;
 }
 
 .laCiebaText {
     margin-top: 20vh;
     margin-left:5vw;
-    font-size: 3.5vh;
-    margin-top: 8vh;
+    font-size: 5vh;
+    margin-top: 20vh;
 }
 
 .laCieba {
@@ -358,7 +372,7 @@
 .nahualesText {
     margin-top: 20vh;
     margin-right: 5vw;
-    font-size: 3.5vh;
+    font-size: 5vh;
 }
 
 .collectionOverlayNahuales {
@@ -394,7 +408,7 @@
 .cowboyHatsText {
     margin-top: 20vh;
     margin-left:5vw;
-    font-size: 3.5vh;
+    font-size: 5vh;
     margin-top: 20vh;
 }
 
@@ -449,6 +463,7 @@
     flex-direction: column;
     margin-right: 20vw;
     width: 25vw;
+    margin-top: 5vh;
 }
 
 .sanSebastianImage {
@@ -460,7 +475,7 @@
 .sanSebastianText {
     margin-top: 20vh;
     margin-right: 5vw;
-    font-size: 3.5vh;
+    font-size: 5vh;
 }
 
 .collectionOverlaySanSebastian {
@@ -668,6 +683,11 @@
         margin-top: 19vh;
     }
 
+    .muteButton{
+        margin-right: 87vw;
+        margin-top:35vh
+    }
+
     .storyText {
         height: 275vh;
         font-size: 4vh;
@@ -711,8 +731,13 @@
     }
 
     .allCollections{
-        height: 1075vh;
+        height: 870vh;
         margin-top: -10vh;
+    }
+
+    .collectionDivider{
+        background-color:white;
+        height: 0px;
     }
 
     .singleCollection{
@@ -750,6 +775,7 @@
         margin-top: -30vh;
         margin-right: 5vw;
         margin-left: 5vw;
+        font-size: 3.5vh;
     }
 
     .laCiebaText {
@@ -762,7 +788,7 @@
     .laCieba {
         margin-left: 0vw;
         width: 100vw;
-        margin-top: -260vh;
+        margin-top: -192vh;
     }
     .laCiebaImage {
         height:200vh;
@@ -772,7 +798,7 @@
     
     .collectionOverlayLaCieba {
         position: absolute;
-        font-size: 5vh;
+        font-size: 7vh;
         font-weight: bold;
         justify-content: center;
         align-items: center;
@@ -781,7 +807,7 @@
         color: white;
         margin-right: 0vw;
         font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-        margin-top:90vh;
+        margin-top:83vh;
     }
     
     .textBoxYellow{
@@ -790,7 +816,7 @@
         font-size: 5vh;
         font-weight: bold;
         margin-right: 0vw;
-        margin-top:110vh
+        margin-top:107vh
     }
 
     .nahuales{
@@ -807,6 +833,7 @@
         height:200vh;
         width: 100vw;
         margin-left: 0vw;
+        margin-top: -70vh;
     }
     
     .nahualesText {
@@ -817,16 +844,16 @@
     }
     
     .collectionOverlayNahuales {
-        font-size: 5vh;
+        font-size: 7vh;
         margin-left: 0vw;
-        margin-top:85vh;
+        margin-top:18vh;
     }
     
     .textBoxRed{
         width: 30vw;
         font-size: 5vh;
         margin-left: 0vw;
-        margin-top:95vh
+        margin-top:33vh
     }
 
     .cowboyHatsText {
@@ -840,7 +867,7 @@
     .cowboyHats {
         margin-left: 0vw;
         width: 100vw;
-        margin-top: -240vh;
+        margin-top: -195vh;
     }
     .cowboyHatsImage {
         height:200vh;
@@ -849,16 +876,16 @@
     }
     
     .collectionOverlayHats {
-        font-size: 5vh;
+        font-size: 7vh;
         margin-right: 0vw;
-        margin-top:100vh;
+        margin-top:83vh;
     }
     
     .textBoxPink{
         width: 30vw;
         font-size: 5vh;
         margin-right: 0vw;
-        margin-top:110vh
+        margin-top:107vh
     }
 
     .sanSebastian{
@@ -868,6 +895,7 @@
         flex-direction: column;
         margin-right: 0vw;
         width: 100vw;
+        margin-top: -45vh;
     }
     
     .sanSebastianImage {
@@ -877,7 +905,7 @@
     }
     
     .sanSebastianText {
-        margin-top: -15vh;
+        margin-top: -20vh;
         margin-right: 5vw;
         margin-left: 5vw;
         font-size: 3.5vh;
@@ -885,16 +913,16 @@
     
     .collectionOverlaySanSebastian {
         position: absolute;
-        font-size: 5vh;
+        font-size: 7vh;
         margin-left: 0vw;
-        margin-top:90vh;
+        margin-top:77vh;
     }
     
     .textBoxGray{
         width: 30vw;
         font-size: 5vh;
         margin-left: 0vw;
-        margin-top:100vh
+        margin-top:102vh
     }
 
     .bestSellers{

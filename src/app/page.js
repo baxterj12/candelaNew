@@ -1,20 +1,32 @@
 'use client'
-import react, {useState} from 'react';
+import react, {useState, useRef} from 'react';
 import './page.css';
 import TopBar from './topBar.js';
 import BottomBar from './bottomBar.js';
 import { FaCircle } from "react-icons/fa6";
+import { GoUnmute, GoMute } from "react-icons/go";
 
 //default indicates that this is the home page
 //use classname to create different components
 export default function Home() {
+  const [muted, muteVideo] = useState(false);
+  const videoRef = useRef(null);
+
+  const toggleMute = () => {
+    const video = videoRef.current;
+    if (video) {
+      video.muted = !video.muted;
+      muteVideo(video.muted);
+    }
+  };
   return (
     <div class="w-full" className="container" >
       <TopBar/>
       <div className="videoPage">
-        <video src="/candelaMissUniverse.mov" autoPlay loop class="w-full"/>
+        <video ref= {videoRef} src="/candelaMissUniverse.mov" autoPlay loop class="w-full"/>
         <img src="/smallLogo.svg" className="overlayLogo"/>
         <h1 className="overlayText">Pieces with soul.<br />Made in El Salvador.</h1>
+        <button onClick={toggleMute} className="muteButton"> {muted ? <GoMute size={60} /> : <GoUnmute size={60} />} </button>
       </div>
 
       <div className="storyText">
@@ -44,7 +56,6 @@ export default function Home() {
               increasing community engagement, and celebrating cultural legacy, sets a new standard 
               for how fashion brands can contribute to environmental, social, and cultural sustainability.
             </p>
-            <p> </p>
       </div>
 
       <div className="newestCollection">
@@ -53,6 +64,7 @@ export default function Home() {
       </div>
 
       <div className="allCollections">
+      <div className="collectionDivider"></div>
         <h1 className="header"> Our Collections</h1>
         <div className="singleCollection">
           <div className="floracionPancha">
@@ -60,35 +72,24 @@ export default function Home() {
             <h1 className="collectionOverlayPancha">FLORACIÓN PANCHA</h1>
             <p className="textBoxTan">Shop Now</p>
           </div>
-          <p className="floracionPanchaText">Every first Sunday of May, the residents of panchimalco adorn themselves 
-            with flowers and create colorful palm fronds that parade in the procession 
-            in honor of the virgin of the rosary and the immaculate conception. To the 
-            sounds of marimbas, the dance of the historiantes, and the smells of 
-            traditional food, the “festival de las flores y las palmas” is celebrated. 
-            this collection is a tribute to our history and the vibrant colors that 
-            emanate from the celebration. It is crafted using traditional techniques 
-            from El Salvador, such as waist loom weaving and manual sewing techniques.</p>
+          <p className="floracionPanchaText">Floración Pancha is a tribute to our history and the 
+          vibrant colors that emanate from the Panchimalco celebration of “las flores y las palmas.” 
+          It is crafted using traditional techniques from El Salvador, such as waist loom weaving and 
+          manual sewing techniques.</p>
         </div>
+        <div className="collectionDivider"></div>
         <div className="singleCollection">
-          <p className="laCiebaText">
-          A captivating capsule collection inspired by indigenous dance jewelry, 
-          meticulously crafted by Salvadoran artisans of Mayan heritage. Rooted in 
-          chromotherapy principles, this vibrant collection embraces ancestral wisdom. 
-          Each piece features intricate beadwork depicting creatures like spiders, jaguars, 
-          panthers, and scorpions, alongside symbols of healing and tradition. Each bracelet 
-          reflects the beauty of Mayan culture. Elements such as the mother cell and animals 
-          depicted beautifully through the beaded work. Symbolism merges with craftsmanship, 
-          with each design bearing profound significance. Unique in their creation, no two 
-          bracelets are alike, showcasing the artisan's skill and tradition's spirit. Explore 
-          heritage and adornments power in this distinctive collection, where artistry 
-          and tradition unite seamlessly. 
+          <p className="laCiebaText">La Ceiba is a captivating capsule collection inspired by Indigenous 
+          dance jewelry, meticulously crafted by Salvadoran artisans of Mayan heritage. Rooted in 
+          chromotherapy principles, this vibrant collection embraces ancestral wisdom.
           </p>
           <div className="laCieba">
             <img src="/laCieba.svg" className="laCiebaImage" />
-            <h1 className="collectionOverlayLaCieba">LA CIEBA</h1>
+            <h1 className="collectionOverlayLaCieba">LA <br />CIEBA</h1>
             <p className="textBoxYellow">Shop Now</p>
           </div>
         </div>
+        <div className="collectionDivider"></div>
         <div className="singleCollection">
           <div className="nahuales">
             <img src="/nahuales.svg" className="nahualesImage" />
@@ -96,46 +97,36 @@ export default function Home() {
             <p className="textBoxRed">Shop Now</p>
           </div>
           <p className="nahualesText">
-          Introducing “nahuales” a captivating capsule collection inspired 
-          by indigenous dance jewelry, crafted by Salvadoran artisans of 
-          mayan heritage. Rooted in chromotherapy principles, this collection 
-          exudes vibrancy and meaning. Each piece features beadwork with colorful 
-          geometric designs and one of the twenty Mayan Nahuales – symbols of energy 
-          and spirit. “Nahual” means the essence of beings and nature. These accessories 
-          offer a link to mayan culture and a connection to our heritage. This collection 
-          invites customers to explore mayan traditions and discover their own nahual.
+          Nahuales is a captivating capsule collection inspired by Indigenous dance jewelry, 
+          crafted by Salvadoran artisans of Mayan descent. Each piece features beadwork with 
+          colorful geometric designs and one of the twenty Mayan Nahuales – symbols of energy and spirit.
           </p>
         </div>
+        <div className="collectionDivider"></div>
         <div className="singleCollection">
           <p className="cowboyHatsText">
-          Our cowboy hat collection pays homage to the rich palm and yute weaving 
-          techniques employed in crafting these iconic accessories. Each design is 
-          hand-painted, making them one-of-a-kind and customizable. Originating from the 
-          artisanal hubs of tenancingo and cojutepeque, this tradition traces back to the 
-          skilled hands that fashioned hats for "el cipitio," a legendary figure in salvadoran 
-          folklore. Designed for the adventurous and free-spirited, our hats embody a sense of 
-          exploration and cultural heritage. In addition to their inherent craftsmanship, our 
-          cowboy hats offer a personalized touch. 
+          Our cowboy hats pay homage to the rich palm and yute weaving techniques employed 
+          in crafting these iconic accessories. Each design is hand-painted, making them one 
+          of a kind and customizable.
           </p>
           <div className="cowboyHats">
             <img src="/cowboyHats.svg" className="cowboyHatsImage" />
-            <h1 className="collectionOverlayHats">COWBOY HATS</h1>
+            <h1 className="collectionOverlayHats">COWBOY <br />HATS</h1>
             <p className="textBoxPink">Shop Now</p>
           </div>
         </div>
+        <div className="collectionDivider"></div>
         <div className="singleCollection">
           <div className="sanSebastian">
             <img src="/sanSebastian.svg" className="sanSebastianImage" />
-            <h1 className="collectionOverlaySanSebastian">SAN SEBASTIAN</h1>
+            <h1 className="collectionOverlaySanSebastian">SAN <br />SEBASTIAN</h1>
             <p className="textBoxGray">Shop Now</p>
           </div>
           <p className="sanSebastianText">
-          Presenting "San Sebastian," a refined capsule collection inspired 
-          by the artisans of San Sebastian. Our goal is to honor and preserve 
-          handloom weaving traditions while highlighting the beauty of handmade 
-          fabrics and elevating everyday basics. This collection merges traditional 
-          Salvadoran fashion with everyday wear, infusing delicate linen pieces with 
-          colorful handwoven textiles.
+          San Sebastian is a refined capsule collection inspired by the artisans 
+          of San Sebastian. Our goal is to honor and preserve handloom weaving 
+          traditions while highlighting the beauty of handmade fabrics and elevating 
+          everyday basics.
           </p>
         </div>
       </div>
