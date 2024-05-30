@@ -67,17 +67,17 @@
 
 .searchInstaBag {
     height: 10vh; /* Take up remaining space */
-    gap: 2vw;
     background-color: white;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-right: 2vw;
+    margin-right: 20px;
 }
 
 .logoImage {
     height: 40vh;
     width: 15vw;
+    justify-content: center;
 }
 
 .videoPage {
@@ -138,6 +138,8 @@
     font-size: 60px;
     font-weight: bold;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    justify-content: center;
+    text-align: center;
 }
 
 
@@ -665,12 +667,13 @@
 
     .searchInstaBag {
         gap: 1vw;
-        margin-right: 0vw;
+        margin-right: 20px;
     }
 
     .logoImage {
         width: 40vw;
-        margin-left: 15vw;
+        margin-left: 0vw;
+        height:50vh;
     }
     .videoPage {
         height: 45vh;
@@ -926,7 +929,7 @@
     }
 
     .bestSellers{
-        height: 100vh;
+        height: 110vh;
 
     }
 
