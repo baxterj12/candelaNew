@@ -20,11 +20,11 @@ export default function Home() {
     }
   };
   return (
-    <div class="w-full" className="container" >
+    <div >
       <TopBar/>
       <div className="videoPage">
-        <video ref= {videoRef} src="/candelaMissUniverse.mov" autoPlay loop class="w-full"/>
-        <img src="/smallLogo.svg" className="overlayLogo"/>
+        <video ref= {videoRef} src="candelaMissUniverse.mov" autoPlay loop class="w-full"/>
+        <img src="smallLogo.svg" className="overlayLogo"/>
         <h1 className="overlayText">Pieces with soul.<br />Made in El Salvador.</h1>
         <button onClick={toggleMute} className="muteButton"> {muted ? <GoMute size={60} /> : <GoUnmute size={60} />} </button>
       </div>
@@ -68,7 +68,7 @@ export default function Home() {
         <h1 className="header"> Our Collections</h1>
         <div className="singleCollection">
           <div className="floracionPancha">
-            <img src="/floracionPancha.svg" className="floracionPanchaImage" />
+            <img src="floracionPancha.svg" className="floracionPanchaImage" />
             <h1 className="collectionOverlayPancha">FLORACIÓN PANCHA</h1>
           </div>
           <p className="floracionPanchaText">Floración Pancha is a tribute to our history and the 
@@ -83,14 +83,14 @@ export default function Home() {
           chromotherapy principles, this vibrant collection embraces ancestral wisdom.
           </p>
           <div className="laCieba">
-            <img src="/laCieba.svg" className="laCiebaImage" />
+            <img src="laCieba.svg" className="laCiebaImage" />
             <h1 className="collectionOverlayLaCieba">LA <br />CIEBA</h1>
           </div>
         </div>
         <div className="collectionDivider"></div>
         <div className="singleCollection">
           <div className="nahuales">
-            <img src="/nahuales.svg" className="nahualesImage" />
+            <img src="nahuales.svg" className="nahualesImage" />
             <h1 className="collectionOverlayNahuales">NAHUALES</h1>
           </div>
           <p className="nahualesText">
@@ -107,14 +107,14 @@ export default function Home() {
           of a kind and customizable.
           </p>
           <div className="cowboyHats">
-            <img src="/cowboyHats.svg" className="cowboyHatsImage" />
+            <img src="cowboyHats.svg" className="cowboyHatsImage" />
             <h1 className="collectionOverlayHats">COWBOY <br />HATS</h1>
           </div>
         </div>
         <div className="collectionDivider"></div>
         <div className="singleCollection">
           <div className="sanSebastian">
-            <img src="/sanSebastian.svg" className="sanSebastianImage" />
+            <img src="sanSebastian.svg" className="sanSebastianImage" />
             <h1 className="collectionOverlaySanSebastian">SAN <br />SEBASTIAN</h1>
           </div>
           <p className="sanSebastianText">
@@ -167,7 +167,7 @@ const NewestCollection = () => {
       <div className="horizontal-scroll">
         {/* Items go here */}
         <div className="item">
-          <img src="/defaultimage.JPG" className="itemImage"/>
+          <img src="defaultimage.JPG" className="itemImage"/>
           <RowOfCircles/>
           <div className="itemContent">
             <p>Product 1</p>
@@ -175,7 +175,7 @@ const NewestCollection = () => {
           </div>
         </div>
         <div className="item">
-          <img src="/defaultimage.JPG" className="itemImage"/>
+          <img src="defaultimage.JPG" className="itemImage"/>
           <RowOfCircles/>
           <div className="itemContent">
             <p>Product 2</p>
@@ -183,7 +183,7 @@ const NewestCollection = () => {
           </div>
         </div>
         <div className="item">
-          <img src="/defaultimage.JPG" className="itemImage"/>
+          <img src="defaultimage.JPG" className="itemImage"/>
           <RowOfCircles/>
           <div className="itemContent">
             <p>Product 3</p>
@@ -191,7 +191,7 @@ const NewestCollection = () => {
           </div>
         </div>
         <div className="item">
-          <img src="/defaultimage.JPG" className="itemImage"/>
+          <img src="defaultimage.JPG" className="itemImage"/>
           <RowOfCircles/>
           <div className="itemContent">
             <p>Product 4</p>
@@ -199,7 +199,7 @@ const NewestCollection = () => {
           </div>
         </div>
         <div className="item">
-          <img src="/defaultimage.JPG" className="itemImage"/>
+          <img src="defaultimage.JPG" className="itemImage"/>
           <RowOfCircles/>
           <div className="itemContent">
             <p>Product 5</p>
@@ -207,7 +207,7 @@ const NewestCollection = () => {
           </div>
         </div>
         <div className="item">
-          <img src="/defaultimage.JPG" className="itemImage"/>
+          <img src="defaultimage.JPG" className="itemImage"/>
           <RowOfCircles/>
           <div className="itemContent">
             <p>Product 6</p>
@@ -215,7 +215,7 @@ const NewestCollection = () => {
           </div>
         </div>
         <div className="item">
-          <img src="/defaultimage.JPG" className="itemImage"/>
+          <img src="defaultimage.JPG" className="itemImage"/>
           <RowOfCircles/>
           <div className="itemContent">
             <p>Product 7</p>
@@ -223,7 +223,7 @@ const NewestCollection = () => {
           </div>
         </div>
         <div className="item">
-          <img src="/defaultimage.JPG" className="itemImage"/>
+          <img src="defaultimage.JPG" className="itemImage"/>
           <RowOfCircles/>
           <div className="itemContent">
             <p>Product 8</p>
@@ -242,7 +242,7 @@ const BestSellers = () => {
       <div className="horizontal-scroll">
         {/* Items go here */}
         <div className="itemBS">
-          <img src="/defaultimage.JPG" className="itemImageBS"/>
+          <img src="defaultimage.JPG" className="itemImageBS"/>
           <RowOfCirclesBS/>
           <div className="itemContentBS">
             <p>Product 1</p>
@@ -250,7 +250,7 @@ const BestSellers = () => {
           </div>
         </div>
         <div className="itemBS">
-          <img src="/defaultimage.JPG" className="itemImageBS"/>
+          <img src="defaultimage.JPG" className="itemImageBS"/>
           <RowOfCirclesBS/>
           <div className="itemContentBS">
             <p>Product 2</p>
@@ -258,7 +258,7 @@ const BestSellers = () => {
           </div>
         </div>
         <div className="itemBS">
-          <img src="/defaultimage.JPG" className="itemImageBS"/>
+          <img src="defaultimage.JPG" className="itemImageBS"/>
           <RowOfCirclesBS/>
           <div className="itemContentBS">
             <p>Product 3</p>
@@ -266,7 +266,7 @@ const BestSellers = () => {
           </div>
         </div>
         <div className="itemBS">
-          <img src="/defaultimage.JPG" className="itemImageBS"/>
+          <img src="defaultimage.JPG" className="itemImageBS"/>
           <RowOfCirclesBS/>
           <div className="itemContentBS">
             <p>Product 4</p>
@@ -274,7 +274,7 @@ const BestSellers = () => {
           </div>
         </div>
         <div className="itemBS">
-          <img src="/defaultimage.JPG" className="itemImageBS"/>
+          <img src="defaultimage.JPG" className="itemImageBS"/>
           <RowOfCirclesBS/>
           <div className="itemContentBS">
             <p>Product 5</p>
@@ -282,7 +282,7 @@ const BestSellers = () => {
           </div>
         </div>
         <div className="itemBS">
-          <img src="/defaultimage.JPG" className="itemImageBS"/>
+          <img src="defaultimage.JPG" className="itemImageBS"/>
           <RowOfCirclesBS/>
           <div className="itemContentBS">
             <p>Product 6</p>
@@ -290,7 +290,7 @@ const BestSellers = () => {
           </div>
         </div>
         <div className="itemBS">
-          <img src="/defaultimage.JPG" className="itemImageBS"/>
+          <img src="defaultimage.JPG" className="itemImageBS"/>
           <RowOfCirclesBS/>
           <div className="itemContentBS">
             <p>Product 7</p>
@@ -298,7 +298,7 @@ const BestSellers = () => {
           </div>
         </div>
         <div className="itemBS">
-          <img src="/defaultimage.JPG" className="itemImageBS"/>
+          <img src="defaultimage.JPG" className="itemImageBS"/>
           <RowOfCirclesBS/>
           <div className="itemContentBS">
             <p>Product 8</p>
