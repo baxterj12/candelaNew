@@ -15,23 +15,19 @@ export default function TopBar() {
     };
     return (
         <div className="topBar">
-            <FiAlignJustify size = {60} className="widen" onClick={toggleSidebar}/>
-            <Link href="/"><img src="/candelalogo.svg" alt="logo" className="logoImage" /></Link>
+            <FiAlignJustify size = {60}  onClick={toggleSidebar} style={{ marginLeft: '20px' }}/>
+            <img src="/candelalogo.svg" alt="logo" className="logoImage" />
             <div className="searchInstaBag">
-                <IoSearch size = {50}/>
+
                 <a href="https://www.instagram.com/_somoscandela/" target="_blank" rel="noopener noreferrer">
-                    <FaInstagram size = {50}/>
+                    <FaInstagram size = {60}/>
                 </a>
-                <MdOutlineShoppingBag size = {50}/>
             </div>
             <div className={`sidebar ${sidebarVisible ? 'visible' : ''}`}>
                 <ul>
                     <li><FiAlignJustify size = {60} onClick={toggleSidebar}/></li>
-                    <li><Link href="/collections">Our Collections</Link></li>
-                    <li><Link href="/story">Our Story</Link></li>
-                    <li><Link href="/processes">Our Processes</Link></li>
-                    <li><Link href="/partnerships">Our Partnerships</Link></li>
-                    <li><Link href="/impact">Our Impact</Link></li>
+                    <li><p>Coming soon!</p></li>
+
                 </ul>
             </div>
         </div>

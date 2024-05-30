@@ -30,7 +30,7 @@ export default function Home() {
       </div>
 
       <div className="storyText">
-          <h1 className="header">CANDELA'S STORY</h1>
+          <h1 className="header">CANDELA&rsquo;S STORY</h1>
             <p className="storyParagraphs"> Candela is an homage to Salvadoran culture and art. Established in 2023, 
             Candela collaborates with traditional Salvadoran artists to design and create authentic, handmade, 
             ready-to-wear pieces that celebrate the unique cultural identity El Salvador while simultaneously preserving 
@@ -43,8 +43,8 @@ export default function Home() {
                are dream weavers, synthesizing centuries-old traditions with the contemporary fashion narrative. 
             </p>
             <p className="storyParagraphs">
-              Candela actively collaborates with Mater Filus, a women's shelter in El Salvador, and 
-              Diseña Tu Meta, a women's empowerment NGO, to provide training and empowerment programs for 
+              Candela actively collaborates with Mater Filus, a women&rsquo;s shelter in El Salvador, and 
+              Diseña Tu Meta, a women&rsquo;s empowerment NGO, to provide training and empowerment programs for 
               women from disadvantaged backgrounds. Our commitment extends beyond individual empowerment, 
               as we endeavor to strengthen our community through educational workshops and initiatives 
               designed to sustain cultural heritage and stimulate economic growth through opportunity creation.  
@@ -70,7 +70,6 @@ export default function Home() {
           <div className="floracionPancha">
             <img src="/floracionPancha.svg" className="floracionPanchaImage" />
             <h1 className="collectionOverlayPancha">FLORACIÓN PANCHA</h1>
-            <p className="textBoxTan">Shop Now</p>
           </div>
           <p className="floracionPanchaText">Floración Pancha is a tribute to our history and the 
           vibrant colors that emanate from the Panchimalco celebration of “las flores y las palmas.” 
@@ -86,7 +85,6 @@ export default function Home() {
           <div className="laCieba">
             <img src="/laCieba.svg" className="laCiebaImage" />
             <h1 className="collectionOverlayLaCieba">LA <br />CIEBA</h1>
-            <p className="textBoxYellow">Shop Now</p>
           </div>
         </div>
         <div className="collectionDivider"></div>
@@ -94,7 +92,6 @@ export default function Home() {
           <div className="nahuales">
             <img src="/nahuales.svg" className="nahualesImage" />
             <h1 className="collectionOverlayNahuales">NAHUALES</h1>
-            <p className="textBoxRed">Shop Now</p>
           </div>
           <p className="nahualesText">
           Nahuales is a captivating capsule collection inspired by Indigenous dance jewelry, 
@@ -112,7 +109,6 @@ export default function Home() {
           <div className="cowboyHats">
             <img src="/cowboyHats.svg" className="cowboyHatsImage" />
             <h1 className="collectionOverlayHats">COWBOY <br />HATS</h1>
-            <p className="textBoxPink">Shop Now</p>
           </div>
         </div>
         <div className="collectionDivider"></div>
@@ -120,7 +116,6 @@ export default function Home() {
           <div className="sanSebastian">
             <img src="/sanSebastian.svg" className="sanSebastianImage" />
             <h1 className="collectionOverlaySanSebastian">SAN <br />SEBASTIAN</h1>
-            <p className="textBoxGray">Shop Now</p>
           </div>
           <p className="sanSebastianText">
           San Sebastian is a refined capsule collection inspired by the artisans 
@@ -132,7 +127,7 @@ export default function Home() {
       </div>
 
       <div className="bestSellers">
-        <h1 className="header"> Best Sellers </h1>
+        <h1 className="header"> Pre-order coming soon! </h1>
       <BestSellers/>
       </div>
 
@@ -162,7 +157,6 @@ export default function Home() {
             </a>
           </div>
       </div>
-      <BottomBar/>
     </div>
   );
 }
