@@ -30,7 +30,7 @@ export default function Home() {
       </div>
 
       <div className="storyText">
-          <h1 className="header">CANDELA'S STORY</h1>
+          <h1 className="header">CANDELA&rsquo;S STORY</h1>
             <p className="storyParagraphs"> Candela is an homage to Salvadoran culture and art. Established in 2023, 
             Candela collaborates with traditional Salvadoran artists to design and create authentic, handmade, 
             ready-to-wear pieces that celebrate the unique cultural identity El Salvador while simultaneously preserving 
@@ -43,8 +43,8 @@ export default function Home() {
                are dream weavers, synthesizing centuries-old traditions with the contemporary fashion narrative. 
             </p>
             <p className="storyParagraphs">
-              Candela actively collaborates with Mater Filus, a women's shelter in El Salvador, and 
-              Diseña Tu Meta, a women's empowerment NGO, to provide training and empowerment programs for 
+              Candela actively collaborates with Mater Filus, a women&rsquo;s shelter in El Salvador, and 
+              Diseña Tu Meta, a women&rsquo;s empowerment NGO, to provide training and empowerment programs for 
               women from disadvantaged backgrounds. Our commitment extends beyond individual empowerment, 
               as we endeavor to strengthen our community through educational workshops and initiatives 
               designed to sustain cultural heritage and stimulate economic growth through opportunity creation.  
