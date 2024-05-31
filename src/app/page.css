@@ -76,18 +76,20 @@
 
 .logoImage {
     height: 40vh;
-    width: 15vw;
+    width: 225px;
     justify-content: center;
 }
 
 .videoPage {
-    height: 90vh;
+    width: 100vw;
+    max-height: 90vh;
     background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
     overflow-y: hidden;
+    position: relative;
 }
 
 .overlayLogo{
@@ -96,19 +98,20 @@
     align-items: center;
     display: flex;
     opacity: 0.8;
-    margin-bottom: 30vh;
+    width: 8vw;
+    top: 25%;
 }
 
 .overlayText{
     position: absolute;
-    font-size: 5vh;
+    font-size: 2.5vw;
     font-weight: bold;
     justify-content: center;
     align-items: center;
     display: flex;
     text-align: center;
     opacity: 0.8;
-    margin-top: 60vh;
+    top: 70%;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
@@ -116,8 +119,9 @@
     color:white;
     position: absolute;
     opacity: 0.8;
-    margin-right: 95vw;
-    margin-top:80vh
+    left: 0;
+    bottom: 0;
+    margin: 10px;
 }
 
 .storyText {
@@ -671,25 +675,17 @@
     }
 
     .logoImage {
-        width: 40vw;
         margin-left: 0vw;
-        height:50vh;
-    }
-    .videoPage {
-        height: 45vh;
-    }
-    .overlayLogo{
-        margin-bottom: 20vh;
     }
     
-    .overlayText{
+    /*.overlayText{
         margin-top: 19vh;
     }
 
     .muteButton{
         margin-right: 87vw;
         margin-top:35vh
-    }
+    }*/
 
     .storyText {
         height: 275vh;

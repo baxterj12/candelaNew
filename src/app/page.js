@@ -58,6 +58,7 @@ export default function Home() {
             </p>
       </div>
 
+      {/*
       <div className="newestCollection">
         <h1 className="header"> NEW ARRIVALS</h1>
         <NewestCollection/>
@@ -157,6 +158,7 @@ export default function Home() {
             </a>
           </div>
       </div>
+      */}
     </div>
   );
 }
