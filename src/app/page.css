@@ -125,25 +125,25 @@
 }
 
 .storyText {
-    height: 210vh;
+    height: auto;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    text-align: left;
     flex-direction: column;
     font-size: 5vh;
-    text-align: center;
     background-color: white;
     color: black;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    position: relative;
 }
 
-.header {
-    margin-top: 8vh;
+.storyHeader {
+    margin-top: 25px;
     font-size: 60px;
     font-weight: bold;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    justify-content: center;
-    text-align: center;
+    justify-content: left;
+    margin-left: 2vw;
 }
 
 
@@ -678,16 +678,8 @@
         margin-left: 0vw;
     }
     
-    /*.overlayText{
-        margin-top: 19vh;
-    }
 
-    .muteButton{
-        margin-right: 87vw;
-        margin-top:35vh
-    }*/
-
-    .storyText {
+    /*.storyText {
         height: 275vh;
         font-size: 4vh;
     }
@@ -695,7 +687,7 @@
     .storyParagraphs {
         margin-left: 2vw;
         margin-right: 2vw;
-    }
+    }*/
 
     .newestCollection {
         height: 130vh;

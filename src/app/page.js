@@ -30,7 +30,7 @@ export default function Home() {
       </div>
 
       <div className="storyText">
-          <h1 className="header">CANDELA&rsquo;S STORY</h1>
+          <h1 className="storyHeader">CANDELA&rsquo;S STORY</h1>
             <p className="storyParagraphs"> Candela is an homage to Salvadoran culture and art. Established in 2023, 
             Candela collaborates with traditional Salvadoran artists to design and create authentic, handmade, 
             ready-to-wear pieces that celebrate the unique cultural identity El Salvador while simultaneously preserving 
