@@ -23,14 +23,13 @@ export default function Home() {
     <div >
       <TopBar/>
       <div className="videoPage">
-        <video ref= {videoRef} src="candelaMissUniverse.mov" autoPlay loop class="w-full"/>
+        <video ref= {videoRef} src="https://baxterj12.github.io/candelaNew/candelaMissUniverse.mov" autoPlay loop class="w-full"/>
         <img src="smallLogo.svg" className="overlayLogo"/>
-        <h1 className="overlayText">Pieces with soul.<br />Made in El Salvador.</h1>
         <button onClick={toggleMute} className="muteButton"> {muted ? <GoMute size={60} /> : <GoUnmute size={60} />} </button>
       </div>
 
       <div className="storyText">
-          <h1 className="storyHeader">CANDELA&rsquo;S STORY</h1>
+          <h1 className="storyHeader">Who Are We?</h1>
             <p className="storyParagraphs"> Candela is an homage to Salvadoran culture and art. Established in 2023, 
             Candela collaborates with traditional Salvadoran artists to design and create authentic, handmade, 
             ready-to-wear pieces that celebrate the unique cultural identity El Salvador while simultaneously preserving 
@@ -43,19 +42,13 @@ export default function Home() {
                are dream weavers, synthesizing centuries-old traditions with the contemporary fashion narrative. 
             </p>
             <p className="storyParagraphs">
-              Candela actively collaborates with Mater Filus, a women&rsquo;s shelter in El Salvador, and 
-              Diseña Tu Meta, a women&rsquo;s empowerment NGO, to provide training and empowerment programs for 
-              women from disadvantaged backgrounds. Our commitment extends beyond individual empowerment, 
-              as we endeavor to strengthen our community through educational workshops and initiatives 
-              designed to sustain cultural heritage and stimulate economic growth through opportunity creation.  
-            </p>
-            <p className="storyParagraphs">
               Candela stands as a testament to our roots, uniting tradition and innovation to bring 
               forward collections that pay tribute to Salvadoran artistry by positioning its artisans 
               on the global stage. Our approach, centered on building responsible partnerships, 
               increasing community engagement, and celebrating cultural legacy, sets a new standard 
               for how fashion brands can contribute to environmental, social, and cultural sustainability.
             </p>
+          <h1 className="slogan">Pieces with soul.<br />Handmade in El Salvador.</h1>
       </div>
 
       {/*
