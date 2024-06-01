@@ -692,6 +692,10 @@
         font-size: 4vw;
     }
 
+    .storyText {
+        gap: 3vw;
+    }
+
     .storyHeader{
         font-size: 5vw;
     }
