@@ -23,9 +23,9 @@ export default function Home() {
     <div >
       <TopBar/>
       <div className="videoPage">
-        <video ref= {videoRef} src="candelaMissUniverse.mp4" type="video/mp4" autoPlay loop class="w-full"/>
+        <video ref= {videoRef} src="candelaMissUniverse.mp4" type="video/mp4" autoPlay loop playsinline class="w-full"/>
         <img src="smallLogo.svg" className="overlayLogo"/>
-        <button onClick={toggleMute} className="muteButton"> {muted ? <GoMute size={60} /> : <GoUnmute size={60} />} </button>
+        <button onClick={toggleMute} className="muteButton"> {muted ? <GoMute style={{width: '5vw',height: '5vw'}}/> : <GoUnmute style={{width: '5vw',height: '5vw'}}/>} </button>
       </div>
 
       <div className="storyText">
