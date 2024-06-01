@@ -134,11 +134,11 @@
     color: black;
     font-family: 'Inter', sans-serif;
     position: relative;
-    gap: 25px;
+    gap: 1.5vw;
 }
 
 .storyHeader {
-    margin-top: 40px;
+    margin-top: 2vw;
     font-size: 2.5vw;
     font-weight: normal;
     justify-content: left;
@@ -157,7 +157,7 @@
     text-align: center;
     font-size: 3vw;
     line-height: 1.2;
-    margin-bottom: 30px;
+    margin-bottom: 2vw;
 }
 
 .newestCollection {

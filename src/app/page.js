@@ -23,7 +23,7 @@ export default function Home() {
     <div >
       <TopBar/>
       <div className="videoPage">
-        <video ref= {videoRef} src="https://baxterj12.github.io/candelaNew/candelaMissUniverse.mov" autoPlay loop class="w-full"/>
+        <video ref= {videoRef} src="candelaMissUniverse.mp4" type="video/mp4" autoPlay loop class="w-full"/>
         <img src="smallLogo.svg" className="overlayLogo"/>
         <button onClick={toggleMute} className="muteButton"> {muted ? <GoMute size={60} /> : <GoUnmute size={60} />} </button>
       </div>
