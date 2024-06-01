@@ -9,7 +9,7 @@ import { GoUnmute, GoMute } from "react-icons/go";
 //default indicates that this is the home page
 //use classname to create different components
 export default function Home() {
-  const [muted, muteVideo] = useState(false);
+  const [muted, muteVideo] = useState(true);
   const videoRef = useRef(null);
 
   const toggleMute = () => {
@@ -23,7 +23,7 @@ export default function Home() {
     <div >
       <TopBar/>
       <div className="videoPage">
-        <video ref= {videoRef} src="candelaMissUniverseCompress2.mp4" type="video/mp4" autoPlay loop playsinline preload="auto" class="w-full"/>
+        <video ref= {videoRef} src="candelaMissUniverse.mp4" type="video/mp4" autoPlay muted loop playsinline preload="auto" class="w-full"/>
         <img src="smallLogo.svg" className="overlayLogo"/>
         <button onClick={toggleMute} className="muteButton"> {muted ? <GoMute style={{width: '5vw',height: '5vw'}}/> : <GoUnmute style={{width: '5vw',height: '5vw'}}/>} </button>
       </div>
