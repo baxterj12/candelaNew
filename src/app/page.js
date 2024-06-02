@@ -2,6 +2,7 @@
 import react, {useState, useRef} from 'react';
 import './page.css';
 import TopBar from './topBar.js';
+import ItemLayout from './itemLayout.js';
 import BottomBar from './bottomBar.js';
 import { FaCircle } from "react-icons/fa6";
 import { GoUnmute, GoMute } from "react-icons/go";
@@ -11,6 +12,20 @@ import { GoUnmute, GoMute } from "react-icons/go";
 export default function Home() {
   const [muted, muteVideo] = useState(true);
   const videoRef = useRef(null);
+
+  const pantsPics = [
+    '/items/pancha/panchaPants/image1.svg',
+    '/items/pancha/panchaPants/image2.svg',
+    '/items/pancha/panchaPants/image3.svg',
+    '/items/pancha/panchaPants/image4.svg',
+  ]
+
+  const jacketPics = [
+    '/items/sanSebastian/sanSebastianJacket/image1.png',
+    '/items/sanSebastian/sanSebastianJacket/image2.svg',
+    '/items/sanSebastian/sanSebastianJacket/image3.svg',
+    '/items/sanSebastian/sanSebastianJacket/image4.svg',
+  ]
 
   const toggleMute = () => {
     const video = videoRef.current;
@@ -49,6 +64,13 @@ export default function Home() {
               for how fashion brands can contribute to environmental, social, and cultural sustainability.
             </p>
           <h1 className="slogan">Pieces with soul.<br />Handmade in El Salvador.</h1>
+      </div>
+      <div className="preorders">
+        <h1 className="storyHeader">Pre-Order Now</h1>
+        <p className="preorderNames">Pancha Pants</p>
+        <ItemLayout images={pantsPics}/>
+        <p className="preorderNames">San Sebastian Jacket</p>
+        <ItemLayout images={jacketPics}/>
       </div>
 
       {/*

@@ -145,6 +145,7 @@
     font-size: 2.5vw;
     font-weight: 600;
     justify-content: left;
+    font-family: 'Inter', sans-serif;
     margin-left: 5vw;
 }
 
@@ -161,6 +162,24 @@
     font-size: 2.5vw;
     line-height: 1.2;
     margin-bottom: 2vw;
+}
+
+.preorders{
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    flex-direction: column;
+    background-color: white;
+    color: black;
+    font-family: 'Inter', sans-serif;
+    position: relative;
+    gap: 1.5vw;
+}
+
+.preorderNames{
+    font-size: 1.5vw;
+    margin-left: 5vw;
 }
 
 .newestCollection {
