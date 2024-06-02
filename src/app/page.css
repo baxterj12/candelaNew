@@ -100,19 +100,7 @@
     opacity: 0.8;
     width: 8vw;
     top: 25%;
-}
-
-.overlayText{
-    position: absolute;
-    font-size: 2.5vw;
-    font-weight: bold;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    text-align: center;
-    opacity: 0.8;
-    top: 70%;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    z-index: 10;
 }
 
 .muteButton{
@@ -123,7 +111,21 @@
     bottom: 0;
     margin: 10px;
     width: 5vw;
+    z-index: 10;
 }
+
+/*.overlayText{
+    position: absolute;
+    font-size: 2.5vw;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    opacity: 0.8;
+    top: 70%;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}*/
 
 .storyText {
     height: auto;
@@ -698,10 +700,12 @@
 
     .storyHeader{
         font-size: 5vw;
+        margin-top: 4vw;
     }
 
     .slogan{
-        font-size: 5vw;
+        font-size: 7vw;
+        margin-bottom: 4vw;
     }
 
     .newestCollection {
