@@ -17,7 +17,7 @@ export default function Home() {
   const [products, setProducts] = useState([]);
   useEffect(() => {
     async function fetchProducts() {
-      const res = await fetch('/data/products.json');
+      const res = await fetch('data/products.json');
       if (!res.ok) {
         throw new Error('Failed to fetch products');
       }
