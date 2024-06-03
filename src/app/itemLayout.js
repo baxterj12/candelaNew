@@ -3,10 +3,8 @@ import react, {useState} from 'react';
 import './itemLayout.css';
 import Link from 'next/link';
 
-export default function ItemLayout({images}) {
-
-    const [ , , category] = images[0].split('/');
-    const newhref = `/preorder/${category}`;
+export default function ItemLayout({images, desc, name, price, shortName}) {
+    const newhref = `/preorder/${shortName}`;
     return (
         <div className="itemContainer">
                 <img src={images[0]} className="firstCol"/>

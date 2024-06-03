@@ -1,0 +1,26 @@
+[
+    {
+      "name": "Pancha Pants",
+      "images": [
+        "items/pancha/panchaPants/image1.png",
+        "items/pancha/panchaPants/image2.png",
+        "items/pancha/panchaPants/image3.png",
+        "items/pancha/panchaPants/image4.png"
+      ],
+      "desc": "These handmade low-waisted wide legged pants feature adorned ends with hand-sewn flower-like textile textures. Pants come with a zipper closure at the back and are made from 100% linen.",
+      "price": 180.00,
+      "shortName": "PanchaPants"
+    },
+    {
+      "name": "San Sebastian Jacket",
+      "images": [
+        "items/sanSebastian/sanSebastianJacket/image1.png",
+        "items/sanSebastian/sanSebastianJacket/image2.png",
+        "items/sanSebastian/sanSebastianJacket/image3.png",
+        "items/sanSebastian/sanSebastianJacket/image4.png"
+      ],
+      "desc": "placeholder jacket description",
+      "price": 145.00,
+      "shortName": "SanSebastianJacket"
+    }
+  ]
