@@ -14,17 +14,17 @@ export default function Home() {
   const videoRef = useRef(null);
 
   const pantsPics = [
-    'items/pancha/panchaPants/image1.svg',
-    'items/pancha/panchaPants/image2.svg',
-    'items/pancha/panchaPants/image3.svg',
-    'items/pancha/panchaPants/image4.svg',
+    'items/pancha/panchaPants/image1.png',
+    'items/pancha/panchaPants/image2.png',
+    'items/pancha/panchaPants/image3.png',
+    'items/pancha/panchaPants/image4.png',
   ]
 
   const jacketPics = [
     'items/sanSebastian/sanSebastianJacket/image1.png',
-    'items/sanSebastian/sanSebastianJacket/image2.svg',
-    'items/sanSebastian/sanSebastianJacket/image3.svg',
-    'items/sanSebastian/sanSebastianJacket/image4.svg',
+    'items/sanSebastian/sanSebastianJacket/image2.png',
+    'items/sanSebastian/sanSebastianJacket/image3.png',
+    'items/sanSebastian/sanSebastianJacket/image4.png',
   ]
 
   const toggleMute = () => {

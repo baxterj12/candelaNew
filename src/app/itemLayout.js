@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 export default function ItemLayout({images}) {
 
-    const [, , , category] = images[0].split('/');
+    const [ , , category] = images[0].split('/');
     const newhref = `/preorder/${category}`;
     return (
         <div className="itemContainer">
