@@ -37,10 +37,11 @@ export default function Home() {
   };
   return (
     <div >
+      <title>Candela</title>
       <TopBar paramHelp=""/>
       <div className="videoPage">
         <video ref= {videoRef} src="candelaMissUniverse.mp4" type="video/mp4" autoPlay muted loop playsInline preload="auto" class="w-full"/>
-        <img src="smallLogo.svg" className="overlayLogo"/>
+        <img src="smallLogo.png" className="overlayLogo"/>
         <button onClick={toggleMute} className="muteButton"> {muted ? <GoMute style={{width: '5vw',height: '5vw'}}/> : <GoUnmute style={{width: '5vw',height: '5vw'}}/>} </button>
       </div>
 
