@@ -28,7 +28,7 @@ export default function Preorder({ params }) {
   }
   return (
     <div>
-      <TopBar/>
+      <TopBar paramHelp="../"/>
       <div className="preorderContainer">
         <div className="images">
           <img src={product.images[1]} className="image1" />
