@@ -61,11 +61,6 @@
     transform: translateX(0);
 }
 
-.widen{
-    align-items: flex-start;
-    width: 15vw;
-}
-
 .searchInstaBag {
     height: 10vh; /* Take up remaining space */
     background-color: white;
@@ -73,12 +68,14 @@
     align-items: center;
     justify-content: space-between;
     margin-right: 20px;
+    gap: 1vw;
 }
 
 .logoImage {
     height: auto;
     width: auto;
-    justify-content: center;
+    transform: translateX(20%);
+
 }
 
 .videoPage {
@@ -708,6 +705,7 @@
 
     .logoImage {
         margin-left: 0vw;
+        width: 35vw;
     }
     
 

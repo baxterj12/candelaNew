@@ -3,9 +3,10 @@ import react, {useState} from 'react';
 import './page.css';
 import { FiAlignJustify } from "react-icons/fi";
 import { FaInstagram, FaTwitter, FaEnvelope } from "react-icons/fa";
-import { IoSearch } from "react-icons/io5";
-import { MdOutlineShoppingBag } from "react-icons/md";
+import { CartProvider } from './cart';
+
 import Link from 'next/link';
+import { IoCartOutline } from "react-icons/io5";
 
 export default function TopBar({paramHelp}) {
     const [sidebarVisible, setSidebarVisible] = useState(false);
@@ -14,14 +15,16 @@ export default function TopBar({paramHelp}) {
         setSidebarVisible(!sidebarVisible);
     };
     return (
+        <CartProvider>
         <div className="topBar">
             <FiAlignJustify size = {60}  onClick={toggleSidebar} style={{ marginLeft: '20px' }}/>
             <Link href="/"><img src={paramHelp+"candelaLogo.png"} alt="logo" className="logoImage"/></Link>
             <div className="searchInstaBag">
-
                 <a href="https://www.instagram.com/_somoscandela/" target="_blank" rel="noopener noreferrer">
                     <FaInstagram size = {60}/>
                 </a>
+                <Link href="/myCart"><IoCartOutline size={60}/></Link>
+
             </div>
             <div className={`sidebar ${sidebarVisible ? 'visible' : ''}`}>
                 <ul>
@@ -31,5 +34,6 @@ export default function TopBar({paramHelp}) {
                 </ul>
             </div>
         </div>
+        </CartProvider>
     );
 }

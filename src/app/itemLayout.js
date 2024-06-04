@@ -14,7 +14,7 @@ export default function ItemLayout({images, desc, name, price, shortName}) {
             </div>
             <div className="thridCol">
                 <img src={images[3]} className="thirdImg"/>
-                <Link href={newhref}><p className="button">Pre-Order</p></Link>
+                <Link href={newhref}><p className="preOrderbutton">Pre-Order</p></Link>
             </div>
         </div>
     );
