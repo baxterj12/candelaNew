@@ -12,8 +12,8 @@ export async function generateStaticParams() {
   return products.map(product => ({
     shortName: product.shortName,
     smallLogo: `/preorder/[shortName]/smallLogo.svg`,
-    candelaMissUniverse: `/preorder/[shortName]/candelaMissUniverse.mp4`,
-    candelaLogo: `/preorder/candelaLogo.png`
+    candelaMissUniverse: `/candelaMissUniverse.mp4`,
+    candelaLogo: `/candelaLogo.png`
   }));
 }
 

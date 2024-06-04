@@ -93,17 +93,17 @@ button {
     }
 
     .name{
-        font-size: 5vw;
+        font-size: 6vw;
     }
 
     .desc{
-        font-size: 3vw;
+        font-size: 4vw;
         width: 90vw;
         margin-right: 2vw;
     }
 
     .disclaimer{
-        font-size: 2vw;
+        font-size: 3vw;
         width: 90vw;
         margin-right: 2vw;
     }
