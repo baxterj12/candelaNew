@@ -16,7 +16,7 @@ export default function TopBar() {
     return (
         <div className="topBar">
             <FiAlignJustify size = {60}  onClick={toggleSidebar} style={{ marginLeft: '20px' }}/>
-            <img src="candelalogo.svg" alt="logo" className="logoImage"/>
+            <Link href="/"><img src="../candelaLogo.png" alt="logo" className="logoImage"/></Link>
             <div className="searchInstaBag">
 
                 <a href="https://www.instagram.com/_somoscandela/" target="_blank" rel="noopener noreferrer">

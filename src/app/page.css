@@ -18,6 +18,7 @@
     overflow-y: hidden;
     position: relative;
     z-index: 1000;
+    width: 100vw;
 }
 .sidebar {
     position: fixed;
@@ -75,8 +76,8 @@
 }
 
 .logoImage {
-    height: 40vh;
-    width: 225px;
+    height: auto;
+    width: auto;
     justify-content: center;
 }
 
@@ -106,6 +107,7 @@
 .muteButton{
     color:white;
     position: absolute;
+    background-color: transparent;
     opacity: 0.8;
     left: 0;
     bottom: 0;
@@ -727,6 +729,9 @@
         margin-bottom: 4vw;
     }
 
+    .preorderNames{
+        font-size: 4vw;
+    }
     .newestCollection {
         height: 130vh;
     }
