@@ -53,7 +53,12 @@
     font-size: 1.5vw;
 }
 
-button {
+.price{
+    color: black;
+    size: 1vw;
+}
+
+.button {
     background-color: black;
     text-align: center;
     justify-content: center;
@@ -99,6 +104,10 @@ button {
 
     .name{
         font-size: 6vw;
+    }
+
+    .price{
+        font-size: 3vw;
     }
 
     .desc{

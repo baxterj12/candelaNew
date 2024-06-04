@@ -3,6 +3,8 @@ import fs from 'fs';
 import path from 'path';
 import TopBar from '../../topBar.js';
 import './preorder.css';
+import Circles from './circles.js'
+import SizeDrop from './sizeDrop.js'
 
 export async function generateStaticParams() {
   const filePath = path.join(process.cwd(), 'public', 'data', 'products.json');
@@ -28,6 +30,7 @@ export default function Preorder({ params }) {
   }
   return (
     <div>
+      <title>Candela | Preorder</title>
       <TopBar paramHelp="../"/>
       <div className="preorderContainer">
         <div className="images">
@@ -39,10 +42,11 @@ export default function Preorder({ params }) {
         </div>
         <div className="text">
           <h1 className="name">{product.name}</h1>
-          <p>colors</p>
-          <p>sizes</p>
+          <p className="price">${product.price.toFixed(2)}</p>
+          <Circles colors={product.colors}/>
+          <SizeDrop sizes={product.sizes}/>
           <p className="desc">{product.desc}</p>
-          <p className="button">Add to Cart</p>
+          <button type="submit" className="button">Add to Cart</button>
           <p className="disclaimer">Because our items are 100% handmade by artisans in 
           El Salvador, our pre-order process takes between 4-6 weeks. Once you have 
           placed your pre-order, we will updating you on the production process. This 

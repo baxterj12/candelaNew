@@ -10,7 +10,15 @@
       ],
       "desc": "These handmade low-waisted wide legged pants feature adorned ends with hand-sewn flower-like textile textures. Pants come with a zipper closure at the back and are made from 100% linen.",
       "price": 180.00,
-      "shortName": "PanchaPants"
+      "shortName": "PanchaPants",
+      "colors": [
+        "#ACA090",
+        "#FCFCFC",
+        "#D5A5A5"
+      ],
+      "sizes": [
+        "Medium","Small","Large"
+      ]
     },
     {
       "name": "San Sebastian Jacket",
@@ -21,8 +29,16 @@
         "items/sanSebastian/sanSebastianJacket/image4.png",
         "items/sanSebastian/sanSebastianJacket/image5.png"
       ],
-      "desc": "placeholder jacket description",
+      "desc": "Kimono style linen jacket with artisanal textile intervention on the sleeves. The artisanal textiles in our jackets come from artisans in San Sebastian.",
       "price": 145.00,
-      "shortName": "SanSebastianJacket"
+      "shortName": "SanSebastianJacket",
+      "colors": [
+        "#DE3163",
+        "#FCFCFC",
+        "#000080"
+      ],
+      "sizes": [
+        "One size fits all"
+      ]
     }
   ]
