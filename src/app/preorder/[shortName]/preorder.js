@@ -1,8 +1,12 @@
+'use client'
+import React, { useState } from 'react';
 import './preorder.css';
 import Circles from './circles.js'
 import SizeDrop from './sizeDrop.js'
 
 export default function Preorder({ product }) {
+  const [clickedIndex, setClickedIndex] = useState(0);
+  const [selectedSize, setSelectedSize] = useState(product.sizes[0]);
 
     return (
       <div>
@@ -17,8 +21,8 @@ export default function Preorder({ product }) {
           <div className="text">
             <h1 className="name">{product.name}</h1>
             <p className="price">${product.price.toFixed(2)}</p>
-            <Circles colors={product.colors}/>
-            <SizeDrop sizes={product.sizes} />
+            <Circles colors={product.colors} clickedIndex={clickedIndex} setClickedIndex={setClickedIndex}/>
+            <SizeDrop sizes={product.sizes} selectedSize={selectedSize} setSelectedSize={setSelectedSize}/>
             <p className="desc">{product.desc}</p>
             <button type="submit" className="button">Add to Cart</button>
             <p className="disclaimer">Because our items are 100% handmade by artisans in 

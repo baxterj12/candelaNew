@@ -3,8 +3,7 @@ import React, { useState } from 'react';
 import './circles.css';
 import { FaCircle } from "react-icons/fa6";
 
-export default function Circles({ colors }) {
-    const [clickedIndex, setClickedIndex] = useState(0);
+export default function Circles({ colors,clickedIndex,setClickedIndex}) {
 
     return (
         <div className="circleContainer">

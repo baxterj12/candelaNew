@@ -2,8 +2,7 @@
 import React, { useState } from 'react';
 import './sizeDrop.css';
 
-export default function SizeDrop({ sizes }) {
-    const [selectedSize, setSelectedSize] = useState(sizes[0]);
+export default function SizeDrop({ sizes, selectedSize, setSelectedSize}) {
 
     return (
         <div>
