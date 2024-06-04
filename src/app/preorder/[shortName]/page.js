@@ -11,6 +11,8 @@ export async function generateStaticParams() {
 
   return products.map(product => ({
     shortName: product.shortName,
+    smallLogo: `/preorder/${product.shortName}/smallLogo.svg`,
+    candelaMissUniverse: `/preorder/${product.shortName}/candelaMissUniverse.mp4`
   }));
 }
 
@@ -21,7 +23,7 @@ export default function Preorder({ params }) {
   const products = JSON.parse(jsonData);
   const product = products.find(product => product.shortName === params.shortName);
   for (let i = 0; i < product.images.length; i++) {
-    product.images[i] = `../../../${product.images[i]}`;
+    product.images[i] = `../../${product.images[i]}`;
   }
   return (
     <div>
