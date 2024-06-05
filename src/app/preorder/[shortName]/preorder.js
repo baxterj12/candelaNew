@@ -11,7 +11,6 @@ export default function Preorder({ product }) {
   const [selectedSize, setSelectedSize] = useState(product.sizes[0]);
 
     return (
-      <CartProvider>
       <div>
         <div className="preorderContainer">
           <div className="images">
@@ -36,6 +35,5 @@ export default function Preorder({ product }) {
           </div>
         </div>
       </div>
-      </CartProvider>
     );
   }

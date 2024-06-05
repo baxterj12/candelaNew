@@ -8,7 +8,6 @@ export default function Button({ product, selectedSize, clickedIndex}) {
     const [showConfirmation, setShowConfirmation] = useState(false);
     const handleAddToCart = () => {
         addToCart(product, product.colors[clickedIndex], selectedSize);
-        addToCart(product, product.colors[clickedIndex], selectedSize);
         setShowConfirmation(true);
 
         // Hide the confirmation after 3 seconds

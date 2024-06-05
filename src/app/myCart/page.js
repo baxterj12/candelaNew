@@ -7,12 +7,10 @@ import TopBar from './../topBar.js';
 export default function CartItems() {
 
     return (
-        <CartProvider>
         <div>
             <TopBar paramHelp="../"/>
             <h2>Cart Items</h2>
             <DisplayItems/>
         </div>
-        </CartProvider>
     );
 }

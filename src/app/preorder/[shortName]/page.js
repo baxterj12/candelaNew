@@ -3,8 +3,6 @@ import fs from 'fs';
 import path from 'path';
 import TopBar from '../../topBar.js';
 import './preorder.css';
-import Circles from './circles.js'
-import SizeDrop from './sizeDrop.js'
 import Preorder from './preorder.js'
 
 export async function generateStaticParams() {
