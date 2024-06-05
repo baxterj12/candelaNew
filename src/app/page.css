@@ -179,6 +179,8 @@
 .preorderNames{
     font-size: 1.5vw;
     margin-left: 5vw;
+    margin-bottom: 1vw;
+    font-family: 'Inter', sans-serif;
 }
 
 .newestCollection {

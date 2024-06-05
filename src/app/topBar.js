@@ -3,7 +3,6 @@ import react, {useState} from 'react';
 import './page.css';
 import { FiAlignJustify } from "react-icons/fi";
 import { FaInstagram, FaTwitter, FaEnvelope } from "react-icons/fa";
-import { CartProvider } from './cart';
 
 import Link from 'next/link';
 import { IoCartOutline } from "react-icons/io5";
@@ -15,7 +14,6 @@ export default function TopBar({paramHelp}) {
         setSidebarVisible(!sidebarVisible);
     };
     return (
-        <CartProvider>
         <div className="topBar">
             <FiAlignJustify size = {60}  onClick={toggleSidebar} style={{ marginLeft: '20px' }}/>
             <Link href="/"><img src={paramHelp+"candelaLogo.png"} alt="logo" className="logoImage"/></Link>
@@ -34,6 +32,5 @@ export default function TopBar({paramHelp}) {
                 </ul>
             </div>
         </div>
-        </CartProvider>
     );
 }
