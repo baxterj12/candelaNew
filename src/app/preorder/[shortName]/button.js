@@ -20,15 +20,6 @@ export default function Button({ product, selectedSize, clickedIndex}) {
         <div className="buttonHolder">
             <button type="submit" className="button" onClick={handleAddToCart}>Add to Cart</button>
             {showConfirmation && <p className="confirmation">Item added to cart!</p>}
-            {cartItems.map((item, index) => (
-                <div key={index}>
-                    <p>Product: {item.product.name}</p>
-                    <p>Color: {item.color}</p>
-                    <p>Size: {item.size}</p>
-                    <p>Price: {item.product.price}</p>
-                    <hr />
-                </div>
-            ))}
         </div>
     );
 }

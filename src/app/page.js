@@ -37,7 +37,6 @@ export default function Home() {
     }
   };
   return (
-    <CartProvider>
     <div >
       <title>Candela</title>
       <TopBar paramHelp=""/>
@@ -85,6 +84,5 @@ export default function Home() {
         ))}
       </div>
     </div>
-    </CartProvider>
   );
 }

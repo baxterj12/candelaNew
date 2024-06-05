@@ -7,15 +7,20 @@ export default function DisplayItems() {
     const { cartItems } = useCart();
 
     return (
-        <div className="cartDisplay">
+        <div clasName="itemsContainer">
             {cartItems.map((item, index) => (
-                <div key={index}>
-                    <p>Product: {item.product.name}</p>
+                <React.Fragment key={index}>
+                <div className="singleItem">
+                    <img src={item.product.images[0]} className="cartImage" alt={item.product.name} />
+                    <p>{item.product.name}</p>
                     <p>Color: {item.color}</p>
-                    <p>Size: {item.size}</p>
-                    <p>Price: {item.product.price}</p>
+                    <p>{item.size}</p>
+                    <p>${item.product.price.toFixed(2)}</p>
+                    <p>Remove Item</p>
                     <hr />
                 </div>
+                 <div className="divider"/>
+                </React.Fragment>
             ))}
         </div>
     );

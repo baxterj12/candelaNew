@@ -7,9 +7,9 @@ import TopBar from './../topBar.js';
 export default function CartItems() {
 
     return (
-        <div>
+        <div className="cartContainer">
             <TopBar paramHelp="../"/>
-            <h2>Cart Items</h2>
+            <h2 className="yourCart">Your Cart</h2>
             <DisplayItems/>
         </div>
     );

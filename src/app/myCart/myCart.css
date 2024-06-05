@@ -1,3 +1,37 @@
-.cartDisplay{
-    color: black;
+.cartContainer{
+    font-family: 'Inter', sans-serif;
+    background-color: white;
+}
+
+.yourCart{
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+    margin-left: 7vw;
+    font-size: 3vw;
+    font-weight: 300;
+}
+
+.divider{
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+    width: 100vw;
+    height: 2px;
+    background-color: gainsboro;
+}
+
+.singleItem{
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    justify-content: space-between;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    align-items: center;
+    font-size: 1.5vw;
+    font-weight: 300;
+
+}
+
+.cartImage{
+    width: 8vw;
 }
