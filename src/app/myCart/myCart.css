@@ -11,6 +11,15 @@
     font-weight: 300;
 }
 
+.circleOutline{
+    height: 36px;
+    width: 36px;
+}
+
+.cartCircle{
+    font-size: 36px;
+}
+
 .divider{
     margin-top: 2vw;
     margin-bottom: 2vw;
@@ -41,7 +50,35 @@
     flex-direction: row;
     width: 90vw;
     justify-content: center;
-    gap: 20vw;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    gap: 10vw;
     font-size: 2vw;
     font-weight: 300;
+
+}
+
+@media screen and (max-width: 768px) {
+
+    .circleOutline{
+        height: 3vw;
+        width: 3vw;
+    }
+
+    .yourCart{
+        font-size: 5vw;
+    }
+
+    .cartCircle{
+        font-size: 3vw;
+    }
+
+    .singleItem{
+        font-size: 2.5vw;
+    }
+
+    .totals{
+        font-size: 3vw;
+    }
+
 }

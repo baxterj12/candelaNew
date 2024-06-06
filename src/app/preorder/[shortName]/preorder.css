@@ -116,7 +116,7 @@
     }
 
     .price{
-        font-size: 3vw;
+        font-size: 5vw;
     }
 
     .desc{
@@ -125,9 +125,14 @@
         margin-right: 2vw;
     }
 
+    .confirmation {
+        font-size: 5vw;
+    }
+
     .disclaimer{
-        font-size: 3vw;
+        font-size: 4vw;
         width: 90vw;
         margin-right: 2vw;
+        margin-bottom: 5vw;
     }
 }
