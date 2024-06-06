@@ -11,9 +11,8 @@ export default function DisplayItems() {
     return (
         <div className="itemsContainer">
             {cartItems.map((item, itemIndex) => (
-                <div>
+                <div key = {item}>
                 <div className="singleItem">
-                <React.Fragment key={index}>
                     <img src={item.product.images[0]} className="cartImage" alt={item.product.name} />
                     <p>{item.product.name}</p>
                     <div  style={{borderColor: 'black', borderWidth: '2px',
@@ -25,9 +24,8 @@ export default function DisplayItems() {
                     <p>${item.product.price.toFixed(2)}</p>
                     <p style={{ color: 'red', cursor: 'pointer' }} onClick={() => removeFromCart(itemIndex)}>Remove Item </p>
                     <hr />
-                </ React.Fragment>
                 </div>
-                 <div className="divider"/>
+                <div className="divider"/>
                 </div>
             ))}
             <div className="totals">
