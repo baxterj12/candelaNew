@@ -22,7 +22,7 @@
 .singleItem{
     display: flex;
     flex-direction: row;
-    width: 100vw;
+    width: 90vw;
     justify-content: space-between;
     margin-left: 5vw;
     margin-right: 5vw;
@@ -34,4 +34,14 @@
 
 .cartImage{
     width: 8vw;
+}
+
+.totals{
+    display: flex;
+    flex-direction: row;
+    width: 90vw;
+    justify-content: center;
+    gap: 20vw;
+    font-size: 2vw;
+    font-weight: 300;
 }

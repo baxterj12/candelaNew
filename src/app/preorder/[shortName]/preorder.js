@@ -1,9 +1,8 @@
 'use client'
-import React, { useState, useContext } from 'react';
+import React, { useState } from 'react';
 import './preorder.css';
 import Circles from './circles.js'
 import SizeDrop from './sizeDrop.js'
-import { CartProvider } from './../../cart.js';
 import Button from './button.js'
 
 export default function Preorder({ product }) {

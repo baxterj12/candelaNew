@@ -60,14 +60,14 @@
 }
 
 .button {
-    background-color: black;
     text-align: center;
     justify-content: center;
     align-items: center;
     display: flex;
-    color: white;
     height: 40px;
     border-radius: 10px;
+    border-width: 2px;
+    border-color: black;
     width: 40vw;
     font-family: 'Inter', sans-serif;
 }

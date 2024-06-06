@@ -20,6 +20,10 @@
     z-index: 1000;
     width: 100vw;
 }
+
+.icon{
+    font-size: 60px;
+}
 .sidebar {
     position: fixed;
     top: 0;
@@ -695,10 +699,10 @@
 
 @media screen and (max-width: 768px) {
 
-    .widen{
-        width: 10vw;
-        margin-left: 5vw;
+    .icon{
+        font-size: 3vw;
     }
+
 
     .searchInstaBag {
         gap: 1vw;

@@ -4,13 +4,12 @@ import './preorder.css';
 import {  useCart } from './../../cart.js';
 
 export default function Button({ product, selectedSize, clickedIndex}) {
-    const { addToCart, cartItems } = useCart();
+    const { addToCart } = useCart();
     const [showConfirmation, setShowConfirmation] = useState(false);
     const handleAddToCart = () => {
         addToCart(product, product.colors[clickedIndex], selectedSize);
         setShowConfirmation(true);
 
-        // Hide the confirmation after 3 seconds
         setTimeout(() => {
             setShowConfirmation(false);
         }, 1000);
@@ -18,7 +17,10 @@ export default function Button({ product, selectedSize, clickedIndex}) {
 
     return (
         <div className="buttonHolder">
-            <button type="submit" className="button" onClick={handleAddToCart}>Add to Cart</button>
+            <button type="submit" className="button" onClick={showConfirmation ? null : handleAddToCart}
+            style={{backgroundColor: showConfirmation ? 'white' : 'black', color: showConfirmation ? 'black' : 'white'}}>
+                Add to Cart
+            </button>
             {showConfirmation && <p className="confirmation">Item added to cart!</p>}
         </div>
     );
