@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useMemo, useEffect } from 'react';
+import React, { createContext, useContext, useState, useMemo } from 'react';
 
 // Create a context for the cart
 const CartContext = createContext();
@@ -6,20 +6,7 @@ const CartContext = createContext();
 export const useCart = () => useContext(CartContext);
 
 export const CartProvider = ({ children }) => {
-  const [cartItems, setCartItems] = useState(() => {
-    const local_storage_value_str = localStorage.getItem('cartItems');
-    if (local_storage_value_str) {
-      return JSON.parse(local_storage_value_str);
-    } else {
-      return [];
-    }
-  });
-
-  const [state, setState] = useState(null);
-
-  useEffect(() => {
-    localStorage.setItem('cartItems', JSON.stringify(cartItems));
-  }, [cartItems]);
+  const [cartItems, setCartItems] = useState([]);
 
   function removeFromCart(index) {
     const updatedCartItems = [...cartItems];
