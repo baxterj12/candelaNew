@@ -10,6 +10,22 @@ export default function DisplayItems() {
     const { removeFromCart, cartItems, clearCart} = useCart();
     const totalCost = cartItems.reduce((total, item) => total + item.product.price, 0);
     const [boolCheckout, setBoolCheckout]=useState(false);
+    const [paymentLink, setPaymentLink] = useState('');
+
+    const handleCheckout = async () => {
+        try {
+          const response = await fetch('../api/callingPaymentLink', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ totalCost })
+          });
+          const data = await response.json();
+          setPaymentLink(data.paymentLink);
+          setBoolCheckout(true);
+        } catch (error) {
+          console.error('Error creating payment link:', error);
+        }
+      };
 
     return (
         <div className="itemsContainer">
@@ -37,11 +53,15 @@ export default function DisplayItems() {
                 <p>Total Cost: ${totalCost.toFixed(2)}</p>
             </div>
             {cartItems.length>0 &&
-                <div style={{ cursor: 'pointer' }} onClick={() => setBoolCheckout(!boolCheckout)} className="checkoutButton">
+                <div style={{ cursor: 'pointer' }} onClick={handleCheckout} className="checkoutButton">
                     <p>Check Out</p>
                 </div>
             }
-            {boolCheckout && <Checkout cost={totalCost} />}
+            {boolCheckout && paymentLink && (
+                <div className="checkoutContainer">
+                <a href={paymentLink} target="_blank" rel="noopener noreferrer">Complete Payment</a>
+                </div>
+            )}
         </div>
     );
 }
