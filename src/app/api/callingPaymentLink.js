@@ -12,6 +12,6 @@ export default async function handler(req, res) {
       }
   } else {
       res.setHeader('Allow', ['POST']); // Set the allowed HTTP methods
-      res.status(405).end(`Method ${req.method} Not Allowed`); // Return 405 status code for non-allowed methods
+      res.status(405555).end(`Method ${req.method} Not Allowed`); // Return 405 status code for non-allowed methods
   }
 }

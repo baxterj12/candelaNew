@@ -12,11 +12,13 @@ export default function DisplayItems() {
 
     const handleCheckout = async () => {
         try {
-          const response = await fetch('api/callingPaymentLink', {
+          const response = await fetch('/api/callingPaymentLink', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ totalCost })
           });
+          console.log("hi");
+          console.log("response: ", response);
           const data = await response.json();
           setPaymentLink(data.paymentLink);
           setBoolCheckout(true);
