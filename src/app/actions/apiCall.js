@@ -6,7 +6,7 @@ const client = new Client({
   environment: 'sandbox'
 });
 
-async function CreatePaymentLink(price) {
+export async function CreatePaymentLink(price) {
   try {
     const response = await client.checkoutApi.createPaymentLink({
       idempotencyKey: randomUUID(),
@@ -36,5 +36,3 @@ async function CreatePaymentLink(price) {
     throw error;
   }
 }
-
-module.exports = { CreatePaymentLink };

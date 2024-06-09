@@ -2,9 +2,7 @@
 import {React, useState} from 'react';
 import {useCart} from './../cart.js';
 import "./myCart.css"
-import "./checkout.css"
 import { FaCircle } from "react-icons/fa6";
-import Checkout from "./checkout.js";
 
 export default function DisplayItems() {
     const { removeFromCart, cartItems, clearCart} = useCart();
@@ -14,7 +12,7 @@ export default function DisplayItems() {
 
     const handleCheckout = async () => {
         try {
-          const response = await fetch('../api/callingPaymentLink', {
+          const response = await fetch('api/callingPaymentLink', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ totalCost })
