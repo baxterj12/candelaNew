@@ -1,12 +1,15 @@
 'use client'
-import {React} from 'react';
+import {React, useState} from 'react';
 import {useCart} from './../cart.js';
 import "./myCart.css"
+import "./checkout.css"
 import { FaCircle } from "react-icons/fa6";
+import Checkout from "./checkout.js";
 
 export default function DisplayItems() {
     const { removeFromCart, cartItems, clearCart} = useCart();
     const totalCost = cartItems.reduce((total, item) => total + item.product.price, 0);
+    const [boolCheckout, setBoolCheckout]=useState(false);
 
     return (
         <div className="itemsContainer">
@@ -33,6 +36,12 @@ export default function DisplayItems() {
                 <p>Total Items: {cartItems.length}</p>
                 <p>Total Cost: ${totalCost.toFixed(2)}</p>
             </div>
+            {cartItems.length>0 &&
+                <div style={{ cursor: 'pointer' }} onClick={() => setBoolCheckout(!boolCheckout)} className="checkoutButton">
+                    <p>Check Out</p>
+                </div>
+            }
+            {boolCheckout && <Checkout cost={totalCost} />}
         </div>
     );
 }

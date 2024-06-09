@@ -55,7 +55,26 @@
     gap: 10vw;
     font-size: 2vw;
     font-weight: 300;
+}
 
+.checkoutButton{
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    margin-top: 3vw;
+    font-size: 3vw;
+    border-radius: 10px;
+    border-width: 2px;
+    background-color: black;
+    color: white;
+    font-weight: 300;
+    width: 20vw;
+    margin-left: 40vw;
+}
+
+.ttt{
+    color: black;
+    font-size: 100vw;
 }
 
 @media screen and (max-width: 768px) {

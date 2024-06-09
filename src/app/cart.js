@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useMemo } from 'react';
+import React, { createContext, useContext, useState, useEffect } from 'react';
 
 // Create a context for the cart
 const CartContext = createContext();
