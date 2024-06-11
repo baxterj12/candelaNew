@@ -11,7 +11,12 @@ export default function BagLayout({images, desc, name, price, shortName, status}
                 <img src={images[0]} className="firstBagCol"/>
                 <img src={images[1]} className="secondBagCol"/>
             </div>
-            <Link href={newhref}><p className="preOrderBagbutton">{status}</p></Link>
+            <Link href={newhref}>
+            {
+                status==="Available" ? <p className='preOrderBagbutton'>View Item</p> : 
+                <p className='preOrderBagbutton'>{status}</p>
+            }
+            </Link>
         </div>
     );
 }

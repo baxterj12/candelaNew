@@ -41,17 +41,20 @@
     margin-top: 2vw;
     gap: 1vw;
     font-family: 'Inter', sans-serif;
+    color: black;
 }
 
 .name{
     font-size:3vw;
     font-weight: 600;
+    color: black;
 }
 
 .desc{
     width: 40vw;
     font-weight: 550;
     font-size: 1.5vw;
+    color: black;
 }
 
 .price{
@@ -76,6 +79,7 @@
     font-family: 'Inter', sans-serif;
     margin-top: 2vw;
     font-size: 2vw;
+    color: black;
 }
 
 .disclaimer{
@@ -93,11 +97,13 @@
     margin-top: 1vw;
     font-weight: bold;
     cursor: pointer;
+    color: black;
 }
 
 .additionalInfo{
     font-size: 1vw;
     width: 40vw;
+    color: black;
 }
 
 .chevrons{

@@ -14,7 +14,12 @@ export default function ClothingLayout({images, desc, name, price, shortName, st
             </div>
             <div className="thridCol">
                 <img src={images[3]} className="thirdImg"/>
-                <Link href={newhref}><p className="preOrderbutton">{status}</p></Link>
+                <Link href={newhref}>
+                {
+                status==="Available" ? <p className='preOrderbutton'>View Item</p> : 
+                <p className='preOrderbutton'>{status}</p>
+                }
+                </Link>
             </div>
         </div>
     );
