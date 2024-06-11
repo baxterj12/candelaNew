@@ -20,6 +20,12 @@
     font-size: 36px;
 }
 
+.whitespace{
+    background-color: white;
+    color: white;
+    width: 4vw;
+}
+
 .divider{
     margin-top: 2vw;
     margin-bottom: 2vw;
@@ -93,6 +99,10 @@
 
     .totals{
         font-size: 3vw;
+    }
+
+    .whitespace{
+        width: 5.5vw;
     }
 
 }

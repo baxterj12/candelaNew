@@ -9,7 +9,7 @@ export default function CartItems() {
     return (
         <div className="cartContainer">
             <title>Candela | View Cart</title>
-            <TopBar paramHelp="../"/>
+            <TopBar/>
             <h2 className="yourCart">Your Cart</h2>
             <DisplayItems/>
         </div>

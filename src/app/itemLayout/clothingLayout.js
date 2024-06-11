@@ -1,10 +1,10 @@
 'use client'
 import react, {useState} from 'react';
-import './itemLayout.css';
+import './clothingLayout.css';
 import Link from 'next/link';
 
-export default function ItemLayout({images, desc, name, price, shortName}) {
-    const newhref = `/preorder/${shortName}`;
+export default function ClothingLayout({images, desc, name, price, shortName, status}) {
+    const newhref = `/viewOrder/${shortName}`;
     return (
         <div className="itemContainer">
                 <img src={images[0]} className="firstCol"/>
@@ -14,7 +14,7 @@ export default function ItemLayout({images, desc, name, price, shortName}) {
             </div>
             <div className="thridCol">
                 <img src={images[3]} className="thirdImg"/>
-                <Link href={newhref}><p className="preOrderbutton">Pre-Order</p></Link>
+                <Link href={newhref}><p className="preOrderbutton">{status}</p></Link>
             </div>
         </div>
     );

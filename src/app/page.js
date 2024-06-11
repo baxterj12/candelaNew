@@ -2,13 +2,9 @@
 import react, {useState, useEffect, useRef} from 'react';
 import './page.css';
 import TopBar from './topBar.js';
-import ItemLayout from './itemLayout.js';
-import BottomBar from './bottomBar.js';
-import { FaCircle } from "react-icons/fa6";
+import ClothingLayout from './itemLayout/clothingLayout.js';
+import BagLayout from './itemLayout/bagLayout.js';
 import { GoUnmute, GoMute } from "react-icons/go";
-import { IoContrastSharp } from 'react-icons/io5';
-import { CartProvider } from './cart.js';
-
 //default indicates that this is the home page
 //use classname to create different components
 
@@ -19,9 +15,6 @@ export default function Home() {
   useEffect(() => {
     async function fetchProducts() {
       const res = await fetch('data/products.json');
-      {/*if (!res.ok) {
-        throw new Error('Failed to fetch products');
-      }*/}
       const data = await res.json();
       setProducts(data);
     }
@@ -39,7 +32,7 @@ export default function Home() {
   return (
     <div >
       <title>Candela</title>
-      <TopBar paramHelp=""/>
+      <TopBar/>
       <div className="videoPage">
         <video ref= {videoRef} src="candelaMissUniverse.mp4" type="video/mp4" autoPlay muted loop playsInline preload="auto" class="w-full"/>
         <img src="smallLogo.png" className="overlayLogo"/>
@@ -68,20 +61,41 @@ export default function Home() {
             </p>
           <h1 className="slogan">Pieces with soul.<br />Handmade in El Salvador.</h1>
       </div>
+      <div className="availables">
+        <h1 className="storyHeader">Available Now</h1>
+          {products 
+            .filter(product => product.status === 'Available')
+            .map((product, index) => (
+              <div key={index}>
+                <p className="availableNames">{product.name}</p>
+                <BagLayout
+                  images={product.images}
+                  name={product.name}
+                  desc={product.desc}
+                  price={product.price}
+                  shortName={product.shortName}
+                  status={product.status}
+                />
+              </div>
+          ))}
+      </div>
       <div className="preorders">
-      <h1 className="storyHeader">Pre-Order Now</h1>
-        {products.map((product, index) => (
-          <div key={index}>
-            <p className="preorderNames">{product.name}</p>
-            <ItemLayout
-              images={product.images}
-              name={product.name}
-              desc={product.desc}
-              price={product.price}
-              shortName={product.shortName}
-            />
-          </div>
-        ))}
+        <h1 className="storyHeader">Pre-Order Now</h1>
+          {products 
+            .filter(product => product.status === 'Pre-Order')
+            .map((product, index) => (
+              <div key={index}>
+                <p className="preorderNames">{product.name}</p>
+                <ClothingLayout
+                  images={product.images}
+                  name={product.name}
+                  desc={product.desc}
+                  price={product.price}
+                  shortName={product.shortName}
+                  status={product.status}
+                />
+              </div>
+          ))}
       </div>
     </div>
   );

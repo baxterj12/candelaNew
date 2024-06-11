@@ -2,8 +2,8 @@ import React from 'react';
 import fs from 'fs';
 import path from 'path';
 import TopBar from '../../topBar.js';
-import './preorder.css';
-import Preorder from './preorder.js'
+import './item.css';
+import Item from './item.js'
 
 export async function generateStaticParams() {
   const filePath = path.join(process.cwd(), 'public', 'data', 'products.json');
@@ -30,8 +30,8 @@ export default function PreorderPage({ params }) {
   return (
     <div>
       <title>Candela | Preorder</title>
-      <TopBar paramHelp="../"/>
-      <Preorder product={product}/>
+      <TopBar/>
+      <Item product={product}/>
     </div>
   );
 }

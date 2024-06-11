@@ -7,25 +7,7 @@ import { FaCircle } from "react-icons/fa6";
 export default function DisplayItems() {
     const { removeFromCart, cartItems, clearCart} = useCart();
     const totalCost = cartItems.reduce((total, item) => total + item.product.price, 0);
-    const [boolCheckout, setBoolCheckout]=useState(false);
-    const [paymentLink, setPaymentLink] = useState('');
 
-    const handleCheckout = async () => {
-        try {
-          const response = await fetch('/api/callingPaymentLink', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ totalCost })
-          });
-          console.log("hi");
-          console.log("response: ", response);
-          const data = await response.json();
-          setPaymentLink(data.paymentLink);
-          setBoolCheckout(true);
-        } catch (error) {
-          console.error('Error creating payment link:', error);
-        }
-      };
 
     return (
         <div className="itemsContainer">
@@ -34,12 +16,14 @@ export default function DisplayItems() {
                 <div className="singleItem">
                     <img src={item.product.images[0]} className="cartImage" alt={item.product.name} />
                     <p>{item.product.name}</p>
+                    {item.product.colors[0]==="N/A" ?    <div className='whitespace'/> :
                     <div className = "circleOutline" style={{borderColor: 'black', borderWidth: '2px',
                     borderStyle: 'solid', borderRadius: '50%', display: 'flex', alignItems: 'center',
                     justifyContent: 'center', cursor: 'pointer'}}>
                         <FaCircle className="cartCircle" style={{ color: item.color }} />
-                    </div>
-                    <p>{item.size}</p>
+                    </div>}
+                    {item.product.sizes[0]==="N/A" ? <div className="whitespace"/> :
+                    <p>{item.size}</p>}
                     <p>${item.product.price.toFixed(2)}</p>
                     <p style={{ color: 'red', cursor: 'pointer' }} onClick={() => removeFromCart(itemIndex)}>Remove Item </p>
                     <hr />
@@ -53,15 +37,10 @@ export default function DisplayItems() {
                 <p>Total Cost: ${totalCost.toFixed(2)}</p>
             </div>
             {cartItems.length>0 &&
-                <div style={{ cursor: 'pointer' }} onClick={handleCheckout} className="checkoutButton">
+                <div style={{ cursor: 'pointer' }} className="checkoutButton">
                     <p>Check Out</p>
                 </div>
             }
-            {boolCheckout && paymentLink && (
-                <div className="checkoutContainer">
-                <a href={paymentLink} target="_blank" rel="noopener noreferrer">Complete Payment</a>
-                </div>
-            )}
         </div>
     );
 }

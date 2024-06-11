@@ -9,8 +9,7 @@ export default function SizeDrop({ sizes, selectedSize, setSelectedSize}) {
             <select 
                 value={selectedSize} 
                 onChange={(e) => setSelectedSize(e.target.value)}
-                className="sizeDropdown"
-            >
+                className="sizeDropdown">
                 {sizes.map((size, index) => (
                     <option key={index} value={size}>
                         {size}

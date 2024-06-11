@@ -84,6 +84,31 @@
     font-size: 1.25vw;
 }
 
+.nameAndChevron{
+    display: flex;
+    flex-direction: row;
+    width: 30vw;
+    justify-content: space-between;
+    font-size: 1vw;
+    margin-top: 1vw;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.additionalInfo{
+    font-size: 1vw;
+    width: 40vw;
+}
+
+.chevrons{
+    color: grey;
+    font-size: 1vw;
+}
+
+.preorderBuffer{
+    height: 5vw;
+}
+
 @media screen and (max-width: 768px) {
 
     .preorderContainer{
@@ -134,5 +159,20 @@
         width: 90vw;
         margin-right: 2vw;
         margin-bottom: 5vw;
+    }
+
+    .nameAndChevron{
+        font-size: 4vw;
+        width: 80vw;
+    }
+    
+    .additionalInfo{
+        font-size: 3vw;
+        width: 90vw;
+    }
+    
+    .chevrons{
+        color: grey;
+        font-size: 4vw;
     }
 }
