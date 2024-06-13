@@ -48,7 +48,7 @@ export const CartProvider = ({ children }) => {
     try {
       const totalCost = cartItems.reduce((total, item) => total + item.product.price, 0);
       const items=stringifyCart()
-      const response = await axios.post('https://candela-ten.vercel.app/api',{cartItems: items, totalCost: totalCost},
+      const response = await axios.post('/api',{cartItems: items, totalCost: totalCost},
         { headers: {'Content-Type': 'application/json'}});
       window.location.href = response.data.url;
     } catch (error) {
