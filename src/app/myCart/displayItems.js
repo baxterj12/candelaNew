@@ -3,9 +3,10 @@ import {React, useState} from 'react';
 import {useCart} from './../cart.js';
 import "./myCart.css"
 import { FaCircle } from "react-icons/fa6";
+import Link from 'next/link';
 
 export default function DisplayItems() {
-    const { removeFromCart, cartItems, clearCart} = useCart();
+    const { removeFromCart, cartItems, clearCart, checkout} = useCart();
     const totalCost = cartItems.reduce((total, item) => total + item.product.price, 0);
 
 
@@ -38,7 +39,7 @@ export default function DisplayItems() {
             </div>
             {cartItems.length>0 &&
                 <div style={{ cursor: 'pointer' }} className="checkoutButton">
-                    <p>Check Out</p>
+                    <p onClick={checkout}>Check Out</p>
                 </div>
             }
         </div>
