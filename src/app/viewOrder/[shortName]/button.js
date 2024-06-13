@@ -7,7 +7,7 @@ export default function Button({ product, selectedSize, clickedIndex}) {
     const { addToCart } = useCart();
     const [showConfirmation, setShowConfirmation] = useState(false);
     const handleAddToCart = () => {
-        addToCart(product, product.colors[clickedIndex], selectedSize);
+        addToCart(product, product.colors[clickedIndex], selectedSize, product.colorNames[clickedIndex]);
         setShowConfirmation(true);
 
         setTimeout(() => {

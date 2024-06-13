@@ -3,13 +3,13 @@ import {React, useState} from 'react';
 import {useCart} from './../cart.js';
 import "./myCart.css"
 import { FaCircle } from "react-icons/fa6";
-import Link from 'next/link';
 
 export default function DisplayItems() {
     const { removeFromCart, cartItems, clearCart, checkout} = useCart();
     const totalCost = cartItems.reduce((total, item) => total + item.product.price, 0);
-
-
+    const handleAddressChange = (e) => {
+        setShippingAddress(e.target.value);
+    };
     return (
         <div className="itemsContainer">
             {cartItems.map((item, itemIndex) => (

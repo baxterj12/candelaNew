@@ -1,29 +1,37 @@
-import {express} from 'express'
+import express, { request } from 'express';
+import bodyParser from 'body-parser';
 import { Client, Environment } from 'square';
 import {NextRequest, NextResponse} from 'next/server'
 
-//const app = express();
-
 const client = new Client({
   accessToken: process.env.SQUARE_ACCESS_TOKEN,
-  environment: Environment.Sandbox, // Change to Environment.Production for production
+  environment: Environment.Production, // Change to Environment.Production for production
 });
 
-//app.use(express.json());
 
-export async function POST(res, req) {
+
+// Example API route handler
+export async function POST(req, res) {
   try {
-    //app.use(express.bodyParser());
-    //const {cartItems, totalCost} = req.body;
+    const { cartItems, totalCost, address } = await req.json();
     const response = await client.checkoutApi.createPaymentLink({
       idempotencyKey: new Date().getTime().toString(),
       quickPay: {
-        name: 'demo',
+        name: cartItems,
         priceMoney: {
-          amount: 100,
+          amount: totalCost * 100,
           currency: 'USD'
         },
         locationId: process.env.SQUARE_LOCATION_ID
+      },
+      checkoutOptions: {
+        askForShippingAddress: true,
+        acceptedPaymentMethods: {
+          applePay: true,
+          googlePay: true,
+          cashAppPay: true,
+          afterpayClearpay: true
+        }
       }
     });
 
@@ -32,4 +40,4 @@ export async function POST(res, req) {
     console.error(error);
     return NextResponse.json({ error: error.message }, { status: 500 });
   }
-}
+};
