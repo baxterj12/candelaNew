@@ -48,8 +48,10 @@ export const CartProvider = ({ children }) => {
     try {
       const totalCost = cartItems.reduce((total, item) => total + item.product.price, 0);
       const items=stringifyCart()
+      console.log("before axios call")
       const response = await axios.post('/api',{cartItems: items, totalCost: totalCost},
         { headers: {'Content-Type': 'application/json'}});
+      console.log("after axios call")
       window.location.href = response.data.url;
     } catch (error) {
       console.error("error in cart async: ", error);

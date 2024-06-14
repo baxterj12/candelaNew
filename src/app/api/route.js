@@ -12,6 +12,7 @@ const client = new Client({
 
 // Example API route handler
 export async function POST(req, res) {
+  console.log("entered post")
   try {
     const { cartItems, totalCost, address } = await req.json();
     const response = await client.checkoutApi.createPaymentLink({
