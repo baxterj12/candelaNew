@@ -7,14 +7,12 @@ console.log("entered API")
 
 const client = new Client({
   accessToken: process.env.SQUARE_ACCESS_TOKEN,
-  environment: Environment.Production, // Change to Environment.Production for production
+  environment: Environment.Production
 });
 
 
 
-// Example API route handler
 export async function POST(req, res) {
-  console.log("entered post")
   try {
     const { cartItems, totalCost, address } = await req.json();
     const response = await client.checkoutApi.createPaymentLink({
