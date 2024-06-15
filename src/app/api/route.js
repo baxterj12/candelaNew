@@ -13,8 +13,9 @@ const client = new Client({
 
 
 export async function POST(req, res) {
+  console.log("POST request received");
   try {
-    const { cartItems, totalCost, address } = await req.json();
+    const { cartItems, totalCost} = await req.json();
     const response = await client.checkoutApi.createPaymentLink({
       idempotencyKey: new Date().getTime().toString(),
       quickPay: {
@@ -40,5 +41,15 @@ export async function POST(req, res) {
   } catch (error) {
     console.error(error);
     return NextResponse.json({ error: error.message }, { status: 500 });
+  }
+};
+
+export default (req, res) => {
+  console.log("in default")
+  if (req.method === 'POST') {
+    return POST(req, res);
+  } else {
+    res.setHeader('Allow', ['POST']);
+    res.status(405).end(`Method ${req.method} Not Allowed`);
   }
 };
