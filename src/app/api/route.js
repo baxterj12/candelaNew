@@ -2,7 +2,6 @@ import express, { request } from 'express';
 import bodyParser from 'body-parser';
 import { Client, Environment } from 'square';
 import {NextRequest, NextResponse} from 'next/server'
-import cors from './middleware/cors.js'
 
 console.log("entered API")
 
@@ -14,7 +13,6 @@ const client = new Client({
 
 
 export async function POST(req, res) {
-  await cors(req, res);
   console.log("POST request received");
   try {
     const { cartItems, totalCost} = await req.json();
