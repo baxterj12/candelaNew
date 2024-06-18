@@ -7,9 +7,6 @@ import { FaCircle } from "react-icons/fa6";
 export default function DisplayItems() {
     const { removeFromCart, cartItems, clearCart, checkout} = useCart();
     const totalCost = cartItems.reduce((total, item) => total + item.product.price, 0);
-    const handleAddressChange = (e) => {
-        setShippingAddress(e.target.value);
-    };
     return (
         <div className="itemsContainer">
             {cartItems.map((item, itemIndex) => (
@@ -24,8 +21,8 @@ export default function DisplayItems() {
                         <FaCircle className="cartCircle" style={{ color: item.color }} />
                     </div>}
                     {item.product.sizes[0]==="N/A" ? <div className="whitespace"/> :
-                    <p>{item.size}</p>}
-                    <p>${item.product.price.toFixed(2)}</p>
+                    <p style={{color : 'black'}}>{item.size}</p>}
+                    <p style={{color : 'black'}}>${item.product.price.toFixed(2)}</p>
                     <p style={{ color: 'red', cursor: 'pointer' }} onClick={() => removeFromCart(itemIndex)}>Remove Item </p>
                     <hr />
                 </div>
@@ -34,8 +31,8 @@ export default function DisplayItems() {
             ))}
             <div className="totals">
                 <p style={{ color: 'red', cursor: 'pointer' }} onClick={clearCart}>Clear Cart</p>
-                <p>Total Items: {cartItems.length}</p>
-                <p>Total Cost: ${totalCost.toFixed(2)}</p>
+                <p style={{color : 'black'}}>Total Items: {cartItems.length}</p>
+                <p style={{color : 'black'}}>Total Cost: ${totalCost.toFixed(2)}</p>
             </div>
             {cartItems.length>0 &&
                 <div style={{ cursor: 'pointer' }} className="checkoutButton">
