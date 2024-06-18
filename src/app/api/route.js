@@ -2,6 +2,7 @@ import express, { request } from 'express';
 import bodyParser from 'body-parser';
 import { Client, Environment } from 'square';
 import {NextRequest, NextResponse} from 'next/server'
+import cors from './middleware/cors.js'
 
 console.log("entered API")
 
@@ -13,6 +14,7 @@ const client = new Client({
 
 
 export async function POST(req, res) {
+  await cors(req, res);
   console.log("POST request received");
   try {
     const { cartItems, totalCost} = await req.json();
@@ -41,15 +43,5 @@ export async function POST(req, res) {
   } catch (error) {
     console.error(error);
     return NextResponse.json({ error: error.message }, { status: 500 });
-  }
-};
-
-export default (req, res) => {
-  console.log("in default")
-  if (req.method === 'POST') {
-    return POST(req, res);
-  } else {
-    res.setHeader('Allow', ['POST']);
-    res.status(405).end(`Method ${req.method} Not Allowed`);
   }
 };
