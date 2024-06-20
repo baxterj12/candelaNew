@@ -5,6 +5,7 @@ import {NextRequest, NextResponse} from 'next/server'
 
 console.log("entered API")
 
+
 const client = new Client({
   accessToken: process.env.SQUARE_ACCESS_TOKEN,
   environment: Environment.Production
