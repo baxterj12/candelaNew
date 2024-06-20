@@ -1,4 +1,4 @@
-/*import express, { request } from 'express';
+import express, { request } from 'express';
 import bodyParser from 'body-parser';
 import { Client, Environment } from 'square';
 import {NextRequest, NextResponse} from 'next/server'
@@ -15,7 +15,7 @@ const client = new Client({
 
 export async function POST(req, res) {
   console.log("POST request received");
-  try {
+  //try {
     const { cartItems, totalCost} = await req.json();
     const response = await client.checkoutApi.createPaymentLink({
       idempotencyKey: new Date().getTime().toString(),
@@ -39,13 +39,13 @@ export async function POST(req, res) {
     });
 
     return NextResponse.json({ url: response.result.paymentLink.url }, { status: 200 });
-  } catch (error) {
+  /*} catch (error) {
     console.error(error);
     return NextResponse.json({ error: error.message }, { status: 500 });
-  }
-};*/
+  }*/
+};
 
-import express, { request } from 'express';
+/*import express, { request } from 'express';
 import bodyParser from 'body-parser';
 import { Client, Environment } from 'square';
 import { NextRequest, NextResponse } from 'next/server';
@@ -102,4 +102,4 @@ export async function POST(req, res) {
     console.error(error);
     return NextResponse.json({ error: error.message }, { status: 500 });
   }
-};
+};*/
