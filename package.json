@@ -12,8 +12,7 @@
     "test": "vitest",
     "test-ui": "vitest --ui --coverage",
     "coverage": "vitest run --coverage",
-    "vitest-preview": "vitest-preview",
-    "export": "next export"
+    "vitest-preview": "vitest-preview"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.18",
