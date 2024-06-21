@@ -1,0 +1,14 @@
+Uncomment the following to deploy this app as a static site on render
+- type: web
+  name: nextjs-static
+  runtime: static
+  buildCommand: yarn; yarn build
+  staticPublishPath: out
+  pullRequestPreviewsEnabled: true     # optional
+  envVars:
+  - key: NODE_ENV
+    value: production
+  - key: SQUARE_ACCESS_TOKEN
+    value: EAAAlunr0HjzuyQgkFM9r5KQB7bxUJhJZWyKKoXL4aqGbyBMPPNbb7w79oBuxrGx
+  - key: SQUARE_LOCATION_ID
+    value: L9GHNTSR04172

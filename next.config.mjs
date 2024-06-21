@@ -2,6 +2,7 @@
 const nextConfig = {
     output: 'export',
     distDir:'dist',
+    reactStrictMode: true,
     async headers() {
         return [
             {
