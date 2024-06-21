@@ -6,7 +6,6 @@ import axios from 'axios'
 
 console.log("entered API")
 
-//matbe: put this in resource
 const client = new Client({
   accessToken: process.env.SQUARE_ACCESS_TOKEN,
   environment: Environment.Production
