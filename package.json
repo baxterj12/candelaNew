@@ -7,7 +7,7 @@
     "build": "cp .env.prod .env && next build",
     "build:dev": "cp .env.local .env && next build",
     "build:prod": "cp .env.prod .env && next build",
-    "start": "HOST=0.0.0.0 PORT=3000 next start",
+    "start": "next start",
     "lint": "next lint",
     "test": "vitest",
     "test-ui": "vitest --ui --coverage",
