@@ -14,6 +14,7 @@ const client = new Client({
 
 
 export async function POST(req, res) {
+  await cors(req, res);
   console.log("POST request received");
   try {
     const { cartItems, totalCost} = await req.json();
@@ -47,8 +48,8 @@ export async function POST(req, res) {
 };
 
 export default async function handler(req, res) {
-  //await cors(req, res);
-  return POST(req, res);
+  await cors(req, res);
+  //return POST(req, res);
   if (req.method === 'POST') {
     return POST(req, res);
   } else {
