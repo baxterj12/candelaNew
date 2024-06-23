@@ -43,7 +43,7 @@ export async function POST(req, res) {
   }
 };
 
-export default function handler(req, res) {
+export default async function handler(req, res) {
   if (req.method === 'POST') {
     return POST(req, res);
   } else {

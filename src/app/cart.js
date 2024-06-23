@@ -48,10 +48,16 @@ export const CartProvider = ({ children }) => {
     try {
       const totalCost = cartItems.reduce((total, item) => total + item.product.price, 0);
       const items=stringifyCart()
-      const response = await axios.post('/api',{cartItems: items, totalCost: totalCost},
+      /*const response = await axios.post('/api',{cartItems: items, totalCost: totalCost},
         { headers: {'Content-Type': 'application/json'}},
-        { withCredentials: true });
-      window.location.href = response.data.url;
+        { withCredentials: true });*/
+        const response = await fetch('/api', { method: 'POST', headers: {
+            'Content-Type': 'application/json'}, credentials: 'include',
+          body: JSON.stringify({ cartItems: items, totalCost: totalCost })
+        });
+      const data = await response.json();
+      window.location.href = data.url;
+      //window.location.href = response.data.url;
     } catch (error) {
       console.error("error in cart async: ", error);
       alert('Something went wrong during checkout');
