@@ -47,7 +47,7 @@ export async function POST(req, res) {
 };
 
 export default async function handler(req, res) {
-  await cors(req, res);
+  //await cors(req, res);
   return POST(req, res);
   if (req.method === 'POST') {
     return POST(req, res);
