@@ -1,6 +1,8 @@
 import { Client, Environment } from 'square';
 import {NextRequest, NextResponse} from 'next/server'
+import InitMiddleware from './../lib/init-middleware.js';
 
+const cors = InitMiddleware();
 console.log("entered API")
 
 //matbe: put this in resource
@@ -45,6 +47,7 @@ export async function POST(req, res) {
 };
 
 export default async function handler(req, res) {
+  await cors(req, res);
   if (req.method === 'POST') {
     return POST(req, res);
   } else {
