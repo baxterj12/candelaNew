@@ -55,11 +55,14 @@ export const CartProvider = ({ children }) => {
             'Content-Type': 'application/json'}, credentials: 'include',
           body: JSON.stringify({ cartItems: items, totalCost: totalCost })
         });
-      const data = await response.json();
-      window.location.href = data.url;
+        console.log("response: ");
+        console.log(response.json);
+        const { url } = await response.json();
+        window.location.href = url;
       //window.location.href = response.data.url;
     } catch (error) {
       console.error("error in cart async: ", error);
+      console.error("Status: ${response.status}")
       alert('Something went wrong during checkout');
     }
   };
