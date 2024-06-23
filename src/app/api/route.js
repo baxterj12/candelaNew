@@ -38,6 +38,7 @@ export async function POST(req, res) {
 
     return NextResponse.json({ url: response.result.paymentLink.url }, { status: 200 });
   } catch (error) {
+    console.log("in POST error")
     console.error(error);
     return NextResponse.json({ error: error.message }, { status: 500 });
   }
