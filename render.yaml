@@ -1,13 +1,20 @@
+# Exported from Render on 2024-06-26T23:37:12Z
+services:
 - type: web
-  name: nextjs-static
-  runtime: static
-  buildCommand: yarn; yarn build
-  staticPublishPath: out
-  pullRequestPreviewsEnabled: true     # optional
+  name: Candela
+  runtime: node
+  repo: https://github.com/baxterj12/candelaNew
+  plan: free
   envVars:
-  - key: NODE_ENV
-    value: production
-  - key: SQUARE_ACCESS_TOKEN
-    value: EAAAlunr0HjzuyQgkFM9r5KQB7bxUJhJZWyKKoXL4aqGbyBMPPNbb7w79oBuxrGx
+  - key: NODE_VERSION
+    sync: false
   - key: SQUARE_LOCATION_ID
-    value: L9GHNTSR04172
+    sync: false
+  - key: SQUARE_ACCESS_TOKEN
+    sync: false
+  - key: PORT
+    sync: false
+  region: ohio
+  buildCommand: npm install; npm run build
+  startCommand: npm run start
+version: "1"
