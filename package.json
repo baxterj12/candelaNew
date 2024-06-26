@@ -3,10 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "cp .env.local .env && next dev",
-    "build": "cp .env.prod .env && next build",
-    "build:dev": "cp .env.local .env && next build",
-    "build:prod": "cp .env.prod .env && next build",
+    "dev": "next dev",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "test": "vitest",
