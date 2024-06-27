@@ -11,14 +11,14 @@ const client = new Client({
   environment: Environment.Production
 });
 
-
+const {checkoutApi} = client;
 
 export async function POST(req, res) {
-  await cors(req, res);
+  //await cors(req, res);
   console.log("POST request received");
   try {
     const { cartItems, totalCost} = await req.json();
-    const response = await client.checkoutApi.createPaymentLink({
+    const response = await checkoutApi.createPaymentLink({
       idempotencyKey: new Date().getTime().toString(),
       quickPay: {
         name: cartItems,
